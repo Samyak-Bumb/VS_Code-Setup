@@ -1,0 +1,7 @@
+// Created/Written By Samyak Bumb
+{
+	"Tab": {
+		"prefix": "$",
+		"body": "${${1:0}:${2:}}"
+	}
+}

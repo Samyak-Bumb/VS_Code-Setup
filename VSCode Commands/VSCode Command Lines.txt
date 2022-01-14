@@ -1,0 +1,32 @@
+# Open code with current directory
+code .
+
+# Open the Current Directory in the Most Recently used Code Window
+code -r .
+
+# Create a New Window
+code -n
+
+# Print process usage and diagnostics information
+code -s
+
+# Change the Language
+code --locale=es
+
+# Open diff Editor
+code --diff <file1> <file2>
+
+# Open file at specific line and column <file:line[:character]>
+code --goto package.json:10:5
+
+# List the installed extensions
+code --list-extensions
+
+# Disable all Installed Extensions
+code --disable-extensions .
+
+# See help Options
+code --help
+
+# Print Visul Studio Code Version
+code -v

@@ -1,0 +1,62 @@
+// Created/Written By Samyak Bumb
+{
+	"if else elif": {
+		"prefix": "if",
+		"body": [
+			"if ${1:condition}:",
+			"\t${2:pass}",
+			"else:",
+			"\t${0:pass}",
+		]
+	},
+	"Print": {
+		"prefix": "pr",
+		"body": "print(${0:})"
+	},
+	"Len": {
+		"prefix": "l",
+		"body": "len(${0:})"
+	},
+	"Range": {
+		"prefix": "ra",
+		"body": "range(${1:})"
+	},
+	"Input": {
+		"prefix": "ip",
+		"body": "input(\"${0:}\")"
+	},
+	"String": {
+		"prefix": "str",
+		"body": "str(${0:})"
+	},
+	"Integer": {
+		"prefix": "it",
+		"body": "int(${0:})"
+	},
+	"Sum": {
+		"prefix": "su",
+		"body": "sum(${0:})"
+	},
+	"else": {
+		"prefix": "els",
+		"body": [
+			"else:",
+			"\tprint(\"${0:}\")"
+		]
+	},
+	"def": {
+		"prefix": "df",
+		"body": [
+			"def ${1:function}(${2:parameter}):",
+			"\t${0:}"
+		]
+	},
+	"Tk Import": {
+		"prefix": "tki",
+		"body": "from tkinter import *"
+	},
+	"Tk Import tk": {
+		"prefix": "attki",
+		"body": "import tkinter as tk"
+	},
+}

@@ -1,0 +1,32 @@
+// Created/Written By Samyak Bumb
+{
+	"HTML Boilerplate": {
+		"prefix": "q",
+		"body": [
+			"<!DOCTYPE html>",
+			"<html lang=\"en\">",
+			"<!-- Created/Designed By Samyak Bumb -->",
+			"<head>",
+			"\t<meta charset=\"UTF-8\">",
+			"\t<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">",
+			"\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">",
+			"\t<title>${1:} By Samyak</title>",
+			"\t<link rel=\"stylesheet\" href=\"style.css\">",
+			"</head>",
+			"<body>",
+			"",
+			"\t.${0:}",
+			"",
+			"</body>",
+			"</html>"
+		]
+	},
+	"Created/Designed By Samyak Bumb": {
+		"prefix": "cd",
+		"body": "<!-- Created/Designed By Samyak Bumb -->"
+	},
+	"Script Src": {
+		"prefix": "sc",
+		"body": "<script src=\"${0:script}.js\"></script>"
+	}
+}
