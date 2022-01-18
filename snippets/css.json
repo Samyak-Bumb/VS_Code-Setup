@@ -1,6 +1,6 @@
 // Created/Written By Samyak Bumb
 {
-	"Basic CSS Boilerplate By Samyak": {
+	"CSS Boilerplate with Loader By Samyak": {
 		"prefix": "q",
 		"body": [
 			"@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');",
@@ -13,12 +13,30 @@
 			"}",
 			"::selection{",
 			"\ttext-shadow: none;",
-			"\tbackground: #a8cefc;",
+			"\tbackground: #ea4c89;",// "a8cefc", "fad00052"
 			"}",
 			"body{",
 			"\tmin-height: 100vh;",
 			"\tcolor: #eee;",
 			"\tbackground: #000",
+			"}",
+			"#loader{",
+			"\tposition: fixed;",
+			"\twidth: 100%;",
+			"\theight: 100%;",
+			"\topacity: 1;",
+			"\tz-index: 9999;",
+			"\ttransform: translateY(0);",
+			"\tanimation: fadeinall 1s normal both;",
+			"\tanimation-delay: 300ms;",
+			"\tanimation-fill-mode: forwards",
+			"}",
+			"@keyframes fadeinall{",
+			"\t0%{opacity: 1}",
+			"\t97%{opacity: 0}",
+			"\t98%{opacity: 0; transform: translateY(0)}",
+			"\t99%{opacity: 0; transform: translateY(-100%)}",
+			"\t100%{opacity: 0; z-index: -1}",
 			"}",
 			"${0:}"
 		]
@@ -71,7 +89,7 @@
 		"body": [
 			"@font-face {",
 			"\tfont-family: Samyak;",
-			"\tsrc: url(\"./font/${0:}.ttf\");",
+			"\tsrc: url(\"./font/${0:.ttf}\");",
 			"}"
 		]
 	},
@@ -89,13 +107,23 @@
 			"height: ${0:100%};"
 		]
 	},
+	"Box Model":{
+		"prefix":"bxm",
+		"body":[
+			"display: ${1:block} ;",
+			"position: ${2:absolute};",
+			"width: ${3: 50px};",
+			"height: ${4: 50px};",
+			"background : #${0:000}"
+		]
+	},
 	"Border": {
 		"prefix": "bd",
 		"body": "border: ${1:1}px solid ${0:#000};"
 	},
 	"Align items: center": {
 		"prefix": "ai",
-		"body": "align-items: center;"
+		"body": "align-items: center"
 	},
 	"Border & Outline: none": {
 		"prefix": "bo",
@@ -134,6 +162,22 @@
 		"body": [
 			"::after{",
 			"\tcontent: '';",
+			"\t${0:}",
+			"}"
+		]
+	},
+	"Last Psedu": {
+		"prefix": ":l",
+		"body": [
+			":last-child{",
+			"\t${0:}",
+			"}"
+		]
+	},
+	"nth Child": {
+		"prefix": ":n",
+		"body": [
+			":nth-child(${1:}){",
 			"\t${0:}",
 			"}"
 		]

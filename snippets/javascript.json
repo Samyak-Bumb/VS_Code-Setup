@@ -1,5 +1,15 @@
 // Created/Written By Samyak Bumb
 {
+	"Loader By Samyak": {
+		"prefix": "q",
+		"body": [
+			"window.onload = function(){",
+			"\tsetTimeout(function(){",
+			"\t\tdocument.getElementById(\"loader\").remove();",
+			"\t},1000);",
+			"};"
+		]
+	},
 	"import": {
 		"prefix": "imp",
 		"body": "import ${2:moduleName} from '${1:module}';$0"

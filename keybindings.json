@@ -309,10 +309,6 @@
 		"when": "python.hasActiveTensorBoardSession"
 	},
 	{
-		"key": "alt+u",
-		"command": "workbench.extensions.action.checkForUpdates"
-	},
-	{
 		"key": "ctrl+shift+q",
 		"command": "-workbench.action.quickOpenNavigatePreviousInViewPicker",
 		"when": "inQuickOpen && inViewsPicker"
@@ -337,7 +333,7 @@
 		"when": "activeEditorGroupEmpty && multipleEditorGroups"
 	},
 	{
-		"key": "ctrl+f5",
+		"key": "ctrl+f4",
 		"command": "workbench.action.closeFolder"
 	},
 	{
@@ -354,10 +350,6 @@
 		"key": "ctrl+i",
 		"command": "-toggleSuggestionDetails",
 		"when": "suggestWidgetVisible && textInputFocus"
-	},
-	{
-		"key": "ctrl+i",
-		"command": "workbench.extensions.action.updateAllExtensions"
 	},
 	{
 		"key": "ctrl+k ctrl+shift+c",
@@ -462,7 +454,7 @@
 		"command": "workbench.extensions.action.refreshExtension"
 	},
 	{
-		"key": "ctrl+f4",
+		"key": "ctrl+f5",
 		"command": "workbench.action.reloadWindow"
 	},
 	{
@@ -506,7 +498,7 @@
 		"when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
 	},
 	{
-		"key": "ctrl+shift+q",
+		"key": "ctrl+shift+a u",
 		"command": "update.checkForVSCodeUpdate"
 	},
 	{
@@ -550,20 +542,12 @@
 		"command": "-workbench.action.files.copyPathOfActiveFile"
 	},
 	{
-		"key": "alt+m alt+c",
-		"command": "workbench.action.clearRecentFiles"
-	},
-	{
 		"key": "ctrl+k ctrl+r",
 		"command": "workbench.action.openGlobalKeybindingsFile"
 	},
 	{
 		"key": "ctrl+shift+w",
 		"command": "workbench.action.openSettingsJson"
-	},
-	{
-		"key": "alt+v",
-		"command": "workbench.extensions.action.installVSIX"
 	},
 	{
 		"key": "alt+n",
@@ -607,5 +591,27 @@
 		"key": "shift+alt+r",
 		"command": "-revealFileInOS",
 		"when": "!editorFocus"
+	},
+	{
+		"key": "ctrl+shift+.",
+		"command": "-breadcrumbs.focusAndSelect",
+		"when": "breadcrumbsPossible"
+	},
+	{
+		"key": "ctrl+shift+.",
+		"command": "breadcrumbs.toggle",
+		"when": "breadcrumbsPossible"
+	},
+	{
+		"key": "ctrl+shift+a a",
+		"command": "workbench.action.toggleActivityBarVisibility"
+	},
+	{
+		"key": "ctrl+shift+a s",
+		"command": "workbench.action.toggleStatusbarVisibility"
+	},
+	{
+		"key": "ctrl+shift+a c",
+		"command": "workbench.extensions.action.clearExtensionsSearchResults"
 	}
 ]
