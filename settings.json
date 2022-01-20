@@ -73,7 +73,7 @@
   ],
   "editor.quickSuggestions": {
     "other": true,
-    "comments": false,
+    "comments": true,
     "strings": false
   },
   "debug.confirmOnExit": "always",
@@ -109,7 +109,8 @@
   "files.enableTrash": false,
   "files.trimTrailingWhitespace": true,
   "files.associations": {
-    ".Doctype": "html"
+    ".Doctype": "html",
+    "*.html": "html"
   },
   "workbench.preferredLightColorTheme": "Samyak Bumb",
   "workbench.preferredDarkColorTheme": "Samyak Bumb",
@@ -134,8 +135,8 @@
   "liveSassCompile.settings.generateMap": false,
   "liveSassCompile.settings.showOutputWindow": false,
   "editor.fontLigatures": true,
-  "editor.fontWeight": "300",
-  "editor.fontFamily": "'Operator Mono', Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontWeight": "330",
+  "editor.fontFamily": "'Cascadia Code', Menlo, Monaco, 'Courier New', monospace",
   "git.autofetch": true,
   "git.enableSmartCommit": true,
   "git.confirmSync": false,
@@ -387,6 +388,6 @@
   "npm.fetchOnlinePackageInfo": false,
   "workbench.colorTheme": "Samyak Bumb",
   "testing.automaticallyOpenPeekView": "never",
-  "workbench.activityBar.visible": false,
-  "workbench.statusBar.visible": false
+  "extensions.autoUpdate": false,
+  "workbench.activityBar.visible": false
 }
