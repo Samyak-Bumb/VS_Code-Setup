@@ -58,7 +58,7 @@
 	"Box Model": {
 		"prefix": "bxm",
 		"body": [
-			"display: ${1:block} ;",
+			"display: ${1:block};",
 			"position: ${2:absolute};",
 			"width: ${3: 50px};",
 			"height: ${4: 50px};",
