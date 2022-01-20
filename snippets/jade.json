@@ -1,15 +1,200 @@
 {
-	// Place your snippets for jade here. Each snippet is defined under a snippet name and has a prefix, body and 
-	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
-	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
-	// same ids are connected.
-	// Example:
-	// "Print to console": {
-	// 	"prefix": "log",
-	// 	"body": [
-	// 		"console.log('$1');",
-	// 		"$2"
-	// 	],
-	// 	"description": "Log output to console"
-	// }
+	"Pug/Jade HTML Template": {
+		"prefix": "html",
+		"body": [
+			"doctype",
+			"html(lang='en')",
+			"\thead",
+			"\t\tmeta(charset='utf-8')",
+			"\t\ttitle",
+			"\tbody"
+		]
+	},
+	//
+	"favicon": {
+		"prefix": "favicon",
+		"body": "link(rel=\"${1:shortcut-icon}\", href=\"${2:path}.ico\")"
+	},
+	"meta": {
+		"prefix": "meta",
+		"body": "meta(name=\"${1:name}\" content=\"${2:content}\")"
+	},
+	//
+	"lorem lipsum text": {
+		"prefix": "lorem",
+		"body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+	},
+	"require pug": {
+		"prefix": "cpug",
+		"body": "const pug = require('pug');"
+	},
+	"import pug": {
+		"prefix": "ipug",
+		"body": "import pug from 'pug';"
+	},
+	"font-awesome icon": {
+		"prefix": "fa",
+		"body": "i.fa.fa-${1:value}(aria-hidden='true') &nbsp;"
+	},
+	//
+	"image": {
+		"prefix": "img",
+		"body": "img(src=\"$1\", alt=\"${2:alt}\")"
+	},
+	"form": {
+		"prefix": "form",
+		"body": "form(action=\"$1\" method=\"${2:method}\")"
+	},
+	//
+	"extends": {
+		"prefix": "ext",
+		"body": "extends $1"
+	},
+	"include": {
+		"prefix": "inc",
+		"body": "include ./includes/$1"
+	},
+	"blockname": {
+		"prefix": "block",
+		"body": "block $1"
+	},
+	"render file": {
+		"prefix": "pugrf",
+		"body": "pug.renderFile($1);"
+	},
+	//
+	"class": {
+		"prefix": "class",
+		"body": "class=\"$1\"$0"
+	},
+	"id": {
+		"prefix": "id",
+		"body": "id=\"$1\"$0"
+	},
+	"data": {
+		"prefix": "data",
+		"body": "data-$1=\"$2\"$0"
+	},
+	"aria": {
+		"prefix": "aria",
+		"body": "aria-$1=\"$2\"$0"
+	},
+	"role": {
+		"prefix": "role",
+		"body": "role=\"$1\"$0"
+	},
+	"method": {
+		"prefix": "method",
+		"body": "method=\"$1\"$0"
+	},
+	"action": {
+		"prefix": "action",
+		"body": "action=\"$1\"$0"
+	},
+	"type": {
+		"prefix": "type",
+		"body": "type=\"$1\"$0"
+	},
+	"name": {
+		"prefix": "name",
+		"body": "name=\"$1\"$0"
+	},
+	"placeholder": {
+		"prefix": "placeholder",
+		"body": "placeholder=\"$1\"$0"
+	},
+	"value": {
+		"prefix": "value",
+		"body": "value=\"$1\"$0"
+	},
+	//
+	"var": {
+		"prefix": "var",
+		"body": "- var ${1:name} = $0"
+	},
+	"block": {
+		"prefix": "block",
+		"body": "block ${1:name}\n\t$2\n$0"
+	},
+	"case": {
+		"prefix": "case",
+		"body": "case ${1:variable}\n\twhen ${2:condition}\n\t\t${3:code}\n\tdefault\n\t\t${4:code}\n$0"
+	},
+	"each": {
+		"prefix": "each",
+		"body": "each ${1:val} in ${2:[]}\n\t$3\n$0"
+	},
+	"while": {
+		"prefix": "while",
+		"body": "while ${1:condition}\n\t$2\n$0"
+	},
+	"mixin": {
+		"prefix": "mixin",
+		"body": "mixin ${1:name}(${2:vars})\n\t$3\n$0"
+	},
+	"mixin:call": {
+		"prefix": "mixin:call",
+		"body": "+${1:name}(${2:attrs})${3:(${4:attrs})}\n$0"
+	},
+	//
+	"link": {
+		"prefix": "link",
+		"body": "link(rel=\"stylesheet\", href=\"${1:path.css}\", ${3:attr})"
+	},
+	"style": {
+		"prefix": "style",
+		"body": "style.\n\t$1\n$0"
+	},
+	"style include": {
+		"prefix": "style:include",
+		"body": "style\n\tinclude ${1:./file.css}\n$0"
+	},
+	//
+	"script": {
+		"prefix": "script",
+		"body": "script(src=\"${1:file}.js\")\n$0"
+	},
+	"script.": {
+		"prefix": "script:inline",
+		"body": "script.\n\t$1\n$0"
+	},
+	"script include": {
+		"prefix": "script:include",
+		"body": "script\n\tinclude ${1:./file.js}\n$0"
+	},
+	//
+	"a": {
+		"prefix": "a",
+		"body": "a(href=\"${2:#}\", title=\"${3:title}\")${1:.class} $0"
+	},
+	// "anchor": {
+	// 	"prefix": "a",
+	// 	"body": "a(href=\"$1\") ${2:link}"
+	// },
+	"figure": {
+		"prefix": "figure",
+		"body": [
+			"figure",
+			"\timg(src=\"${2:source}\", alt=\"${3:alt}\")${1:.class}",
+			"\tfigcaption $0"
+		]
+	},
+	"input":{
+		"prefix": "inp",
+		"body": "input(type=\"${1:text}\", name=\"${0:}\")"
+	},
+	"Pug Boilerplate": {
+		"prefix": "q",
+		"body": [
+			"doctype html",
+			"html(lang=\"en\")",
+			"<!-- Created/Designed By Samyak Bumb -->",
+			"\thead",
+			"\t\tmeta(charset=\"UTF-8\")",
+			"\t\tmeta(http-equiv=\"X-UA-Compatible\", content=\"IE=edge\")",
+			"\t\tmeta(name=\"viewport\", content=\"width=device-width, initial-scale=1.0\")",
+			"\t\ttitle ${1:} By Samyak",
+			"\tbody\n\t\t${0:}"
+		]
+	}
 }

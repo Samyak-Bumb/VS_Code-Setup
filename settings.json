@@ -11,6 +11,7 @@
     "Chaturthi",
     "chkdsk",
     "clac",
+    "Claymorphism",
     "clrbut",
     "codepen",
     "dayformat",
@@ -95,6 +96,7 @@
   "files.exclude": {
     "**/.classpath": true,
     "**/.DS_Store": false,
+    "**/.node_modules": true,
     "**/.hg": false,
     "**/.factorypath": true,
     "**/.git": false,
@@ -245,7 +247,6 @@
   "editor.scrollbar.verticalScrollbarSize": 12,
   "editor.tabCompletion": "on",
   "editor.wrappingStrategy": "advanced",
-  "terminal.integrated.confirmOnExit": "hasChildProcesses",
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.fastScrollSensitivity": 7,
   "terminal.integrated.ignoreProcessNames": [
@@ -267,8 +268,7 @@
   "cSpell.checkLimit": 100,
   "cSpell.showStatusAlignment": "Left",
   "cSpell.showStatus": false,
-  "liveServer.settings.CustomBrowser": "chrome:PrivateMode",
-  "liveServer.settings.useLocalIp": true,
+  "liveServer.settings.CustomBrowser": "chrome",
   "liveServer.settings.wait": 10,
   "bookmarks.sideBar.expanded": true,
   "editor.peekWidgetDefaultFocus": "editor",
@@ -326,7 +326,8 @@
       "comments": false,
       "strings": false
     },
-    "editor.suggest.insertMode": "replace"
+    "editor.suggest.insertMode": "replace",
+    "editor.defaultFormatter": "vscode.html-language-features"
   },
   "[css]": {
     "editor.quickSuggestions": {
@@ -337,7 +338,8 @@
     "editor.suggest.insertMode": "replace"
   },
   "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.typescript-language-features",
+    "editor.formatOnSave": true
   },
   "[json]": {
     "editor.quickSuggestions": {
@@ -378,15 +380,13 @@
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
   "editor.formatOnType": true,
-  "livePugCompiler.savePath": "./index.html",
   "css.lint.vendorPrefix": "ignore",
   "explorer.autoReveal": false,
   "editor.hover.sticky": false,
   "breadcrumbs.enabled": false,
   "npm.fetchOnlinePackageInfo": false,
-  "editor.insertSpaces": false,
-  "workbench.statusBar.visible": false,
   "workbench.colorTheme": "Samyak Bumb",
   "testing.automaticallyOpenPeekView": "never",
-  "workbench.activityBar.visible": false
+  "workbench.activityBar.visible": false,
+  "workbench.statusBar.visible": false
 }

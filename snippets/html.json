@@ -11,18 +11,13 @@
 			"\t<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">",
 			"\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">",
 			"\t<title>${1:} By Samyak</title>",
-			"\t<link rel=\"icon\" sizes=\"128*128\" href=\"https://raw.githubusercontent.com/Samyak-Bumb/xyz/Samyak/samyak.png\">",
 			"\t<link rel=\"stylesheet\" href=\"style.css\">",
 			"</head>",
-			"<body>",
-			"",
-			"\t<div id=\"loader\"></div>",
-			"\t.${0:}",
-			"",
-			"<script src=\"script.js\"></script>",
-			"",
+			"<body>\n",
+			"\t.${0:}\n",
+			"<script src=\"script.js\"></script>\n",
 			"</body>",
-			"</html>"
+			"</html>\n"
 		]
 	},
 	"Created/Designed By Samyak Bumb": {
