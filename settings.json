@@ -86,7 +86,6 @@
   "window.openFoldersInNewWindow": "off",
   "window.restoreWindows": "folders",
   "window.dialogStyle": "native",
-  "emmet.triggerExpansionOnTab": true,
   "liveServer.settings.donotVerifyTags": true,
   "liveServer.settings.donotShowInfoMsg": true,
   "php.validate.executablePath": "E:\\php-8.0.10-Win32-vs16-x64\\",
@@ -246,7 +245,6 @@
   "editor.mouseWheelZoom": true,
   "editor.mouseWheelScrollSensitivity": 3,
   "editor.scrollbar.verticalScrollbarSize": 12,
-  "editor.tabCompletion": "on",
   "editor.wrappingStrategy": "advanced",
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.fastScrollSensitivity": 7,
@@ -316,6 +314,7 @@
   "material-icon-theme.opacity": 0.93,
   "editor.padding.bottom": 0,
   "editor.padding.top": 0,
+  "editor.formatOnSave": false,
   "editor.renderWhitespace": "none",
   "workbench.list.multiSelectModifier": "alt",
   "workbench.settings.settingsSearchTocBehavior": "filter",
@@ -339,8 +338,8 @@
     "editor.suggest.insertMode": "replace"
   },
   "[javascript]": {
+    "editor.formatOnSave": true,
     "editor.defaultFormatter": "vscode.typescript-language-features",
-    "editor.formatOnSave": true
   },
   "[json]": {
     "editor.quickSuggestions": {
@@ -380,7 +379,6 @@
   "editor.inlineSuggest.enabled": true,
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
-  "editor.formatOnType": true,
   "css.lint.vendorPrefix": "ignore",
   "explorer.autoReveal": false,
   "editor.hover.sticky": false,
@@ -388,6 +386,9 @@
   "npm.fetchOnlinePackageInfo": false,
   "workbench.colorTheme": "Samyak Bumb",
   "testing.automaticallyOpenPeekView": "never",
+  "prettier.withNodeModules": true,
+  "workbench.activityBar.visible": false,
   "extensions.autoUpdate": false,
-  "workbench.activityBar.visible": false
+  "timeline.pageOnScroll": true,
+  "editor.tabCompletion": "on"
 }

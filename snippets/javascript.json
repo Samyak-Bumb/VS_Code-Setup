@@ -1,977 +1,977 @@
 // Created/Written By Samyak Bumb
 {
-	"import": {
-		"prefix": "imp",
-		"body": "import ${2:moduleName} from '${1:module}';$0"
-	},
-	"importNoModuleName": {
-		"prefix": "imn",
-		"body": "import '${1:module}';$0"
-	},
-	"importDestructing": {
-		"prefix": "imd",
-		"body": "import{ $2 } from '${1:module}';$0"
-	},
-	"importEverything": {
-		"prefix": "ime",
-		"body": "import * as ${2:alias} from '${1:module}';$0"
-	},
-	"importAs": {
-		"prefix": "ima",
-		"body": "import{ ${2:originalName} as ${3:alias} } from '${1:module}';$0"
-	},
-	"require": {
-		"prefix": "rqr",
-		"body": "require('${1:package}');"
-	},
-	"requireToConst": {
-		"prefix": "req",
-		"body": "const ${1:packageName} = require('${1:package}');$0"
-	},
-	"moduleExports": {
-		"prefix": "mde",
-		"body": "module.exports ={\n\t$0\n};\n"
-	},
-	"exportNamedVariable": {
-		"prefix": "env",
-		"body": "export const ${1:exportVariable} = ${2:localVariable};\n"
-	},
-	"exportNamedFunction": {
-		"prefix": "enf",
-		"body": "export const ${1:functionName} = (${2:params}) =>{\n\t$0\n};\n"
-	},
-	"exportDefaultFunction": {
-		"prefix": "edf",
-		"body": "export default function ${1:${TM_FILENAME_BASE}}(${2:params}){\n\t$0\n};\n"
-	},
-	"exportClass": {
-		"prefix": "ecl",
-		"body": "export default class ${1:className}{\n\t$0\n};\n"
-	},
-	"exportClassExtends": {
-		"prefix": "ece",
-		"body": "export default class ${1:className} extends ${2:baseclassName}{\n\t$0\n};\n"
-	},
-	"constructor": {
-		"prefix": "con",
-		"body": "constructor(${1:params}){\n\t${0}\n}"
-	},
-	"method": {
-		"prefix": "met",
-		"body": "${1:methodName}(${2:params}){\n\t${0}\n}"
-	},
-	"propertyGet": {
-		"prefix": "pge",
-		"body": "get ${1:propertyName}(){\n\treturn this.${0};\n}"
-	},
-	"propertyset": {
-		"prefix": "pse",
-		"body": "set ${1:propertyName}(${2:value}){\n\t${0};\n}"
-	},
-	"forEach": {
-		"prefix": "fre",
-		"body": "${1:array}.forEach(${2:currentItem} =>{\n\t${0}\n});"
-	},
-	"forOf": {
-		"prefix": "fof",
-		"body": "for (const ${1:item} of ${2:object}){\n\t${0}\n}"
-	},
-	"forIn": {
-		"prefix": "fin",
-		"body": "for (const ${1:item} in ${2:object}){\n\t${0}\n}"
-	},
-	"anonymousFunction": {
-		"prefix": "anfn",
-		"body": "(${1:params}) =>{\n\t${2}\n}"
-	},
-	"namedFunction": {
-		"prefix": "nfn",
-		"body": "const ${1:name} = (${2:params}) =>{\n\t${3}\n}"
-	},
-	"destructingObject": {
-		"prefix": "dob",
-		"body": "const{${2:propertyName}} = ${1:objectToDestruct};"
-	},
-	"destructingArray": {
-		"prefix": "dar",
-		"body": "const[${2:propertyName}] = ${1:arrayToDestruct};"
-	},
-	"setInterval": {
-		"prefix": "sti",
-		"body": "setInterval(() =>{\n\t${2}\n}, ${0:intervalInms});"
-	},
-	"setTimeOut": {
-		"prefix": "sto",
-		"body": "setTimeout(() =>{\n\t${2}\n}, ${1:delayInms});"
-	},
-	"promise": {
-		"prefix": "prom",
-		"body": "return new Promise((resolve, reject) =>{\n\t${1}\n});"
-	},
-	"thenCatch": {
-		"prefix": "thenc",
-		"body": ".then((${1:result}) =>{\n\t${2}\n}).catch((${3:err}) =>{\n\t${4}\n});"
-	},
-	"consoleAssert": {
-		"prefix": "cas",
-		"body": "console.assert(${1:expression}, ${2:object});"
-	},
-	"consoleClear": {
-		"prefix": "ccl",
-		"body": "console.clear();"
-	},
-	"consoleCount": {
-		"prefix": "cco",
-		"body": "console.count(${1:label});"
-	},
-	"consoleDebug": {
-		"prefix": "cdb",
-		"body": "console.debug(${1:object});"
-	},
-	"consoleDir": {
-		"prefix": "cdi",
-		"body": "console.dir(${1:object});"
-	},
-	"consoleError": {
-		"prefix": "cer",
-		"body": "console.error(${1:object});"
-	},
-	"consoleGroup": {
-		"prefix": "cgr",
-		"body": "console.group('${1:label}');"
-	},
-	"consoleGroupEnd": {
-		"prefix": "cge",
-		"body": "console.groupEnd();"
-	},
-	"consoleLog": {
-		"prefix": "clg",
-		"body": "console.log(${1:object});"
-	},
-	"consoleLogObject": {
-		"prefix": "clo",
-		"body": "console.log('${1:object} :>> ', ${1:object});"
-	},
-	"consoleTrace": {
-		"prefix": "ctr",
-		"body": "console.trace(${1:object});"
-	},
-	"consoleWarn": {
-		"prefix": "cwa",
-		"body": "console.warn(${1:object});"
-	},
-	"consoleInfo": {
-		"prefix": "cin",
-		"body": "console.info(${1:object});"
-	},
-	"consoleTable": {
-		"prefix": "clt",
-		"body": "console.table(${1:object});"
-	},
-	"consoleTime": {
-		"prefix": "cti",
-		"body": "console.time(${1:object});"
-	},
-	"consoleTimeEnd": {
-		"prefix": "cte",
-		"body": "console.timeEnd(${1:object});"
-	},
-	// Jquery Snippets
-	"jqAfter": {
-		"prefix": "jqAfter",
-		"body": "$(${selector}).after(${content});"
-	},
-	"jqAjax": {
-		"prefix": "jqAjax",
-		"body": [
-			"$.ajax({",
-			"\ttype: \"${method}\",",
-			"\turl: \"${url}\",",
-			"\tdata: \"${data}\",",
-			"\tdataType: \"${dataType}\",",
-			"\tsuccess: function (response){",
-			"\t\t$0",
-			"\t}",
-			"});"
-		]
-	},
-	"jqAjaxAspNetWebService": {
-		"prefix": "jqAjaxAspNetWebService",
-		"body": [
-			"$.ajax({",
-			"\ttype: \"POST\",",
-			"\tcontentType: \"application/json; charset=utf-8\",",
-			"\tdataType: \"${dataType}\",",
-			"\turl: \"${url}\",",
-			"\tdata: \"${data}\",",
-			"\tsuccess: function (response){",
-			"\t\t$0",
-			"\t}",
-			"});"
-		]
-	},
-	"jqAppend": {
-		"prefix": "jqAppend",
-		"body": "$(${selector}).append(${content});"
-	},
-	"jqAppendTo": {
-		"prefix": "jqAppendTo",
-		"body": "$(${content}).appendTo(${selector});"
-	},
-	"jqAttrGet": {
-		"prefix": "jqAttrGet",
-		"body": "$(${selector}).attr(${attributeName});"
-	},
-	"jqAttrRemove": {
-		"prefix": "jqAttrRemove",
-		"body": "$(${selector}).removeAttr(${attributeName});"
-	},
-	"jqAttrSet": {
-		"prefix": "jqAttrSet",
-		"body": "$(${selector}).attr(${attributeName}, ${value});"
-	},
-	"jqAttrSetFn": {
-		"prefix": "jqAttrSetFn",
-		"body": [
-			"$(${selector}).attr(${attributeName}, function (index, attr){ ",
-			"\t$0 ",
-			"});"
-		]
-	},
-	"jqAttrSetObj": {
-		"prefix": "jqAttrSetObj",
-		"body": [
-			"$(${selector}).attr({",
-			"\t${name}: ${value}",
-			"\t$0",
-			"});"
-		]
-	},
-	"jqBefore": {
-		"prefix": "jqBefore",
-		"body": "$(${selector}).before(${content});"
-	},
-	"jqBind": {
-		"prefix": "jqBind",
-		"body": [
-			"$(${selector}).bind(${eventType}, function (e){",
-			"\t$0",
-			"});"
-		]
-	},
-	"jqBindWithData": {
-		"prefix": "jqBindWithData",
-		"body": [
-			"$(${selector}).bind(${eventType}, ${eventData}, function (e){",
-			"\t$0",
-			"});"
-		]
-	},
-	"jqBlur": {
-		"prefix": "jqBlur",
-		"body": [
-			"$(${selector}).blur(function (e){ ",
-			"\te.preventDefault();",
-			"\t$0",
-			"});"
-		]
-	},
-	"jqChange": {
-		"prefix": "jqChange",
-		"body": [
-			"$(${selector}).change(function (e){ ",
-			"\te.preventDefault();",
-			"\t$0",
-			"});"
-		]
-	},
-	"jqClassAdd": {
-		"prefix": "jqClassAdd",
-		"body": "$(${selector}).addClass(${className});"
-	},
-	"jqClassRemove": {
-		"prefix": "jqClassRemove",
-		"body": "$(${selector}).removeClass(${className});"
-	},
-	"jqClassToggle": {
-		"prefix": "jqClassToggle",
-		"body": "$(${selector}).toggleClass(${className});"
-	},
-	"jqClassToggleSwitch": {
-		"prefix": "jqClassToggleSwitch",
-		"body": "$(${selector}).toggleClass(${className}, ${switch});"
-	},
-	"jqClick": {
-		"prefix": "jqClick",
-		"body": [
-			"$(${selector}).click(function (e){ ",
-			"\te.preventDefault();",
-			"\t$0",
-			"});"
-		]
-	},
-	"jqClone": {
-		"prefix": "jqClone",
-		"body": "$(${selector}).clone();"
-	},
-	"jqCloneWithEvents": {
-		"prefix": "jqCloneWithEvents",
-		"body": "$(${selector}).clone(true);"
-	},
-	"jqCssGet": {
-		"prefix": "jqCssGet",
-		"body": "$(${selector}).css(${propertyName});"
-	},
-	"jqCssSet": {
-		"prefix": "jqCssSet",
-		"body": "$(${selector}).css(${propertyName}, ${value});"
-	},
-	"jqCssSetObj": {
-		"prefix": "jqCssSetObj",
-		"body": [
-			"$(${selector}).css({",
-			"\t${propertyName}: ${value}",
-			"\t$0",
-			"});"
-		]
-	},
-	"jqDataGet": {
-		"prefix": "jqDataGet",
-		"body": "$(${selector}).data(${key});"
-	},
-	"jqDataRemove": {
-		"prefix": "jqDataRemove",
-		"body": "$(${selector}).removeData(${element});"
-	},
-	"jqDataSet": {
-		"prefix": "jqDataSet",
-		"body": "$(${selector}).data(${key}, ${value});"
-	},
-	"jqDataSetObj": {
-		"prefix": "jqDataSetObj",
-		"body": [
-			"$(${selector}).data({",
-			"\t${key}: ${value}",
-			"\t$0",
-			"});"
-		]
-	},
-	"jqDie": {
-		"prefix": "jqDie",
-		"body": "$(${selector}).die(${eventType});"
-	},
-	"jqDieAll": {
-		"prefix": "jqDieAll",
-		"body": "$(${selector}).die();"
-	},
-	"jqDieFn": {
-		"prefix": "jqDieFn",
-		"body": "$(${selector}).die(${eventType}, ${handler});"
-	},
-	"jqDocReady": {
-		"prefix": "jqDocReady",
-		"body": [
-			"$(document).ready(function (){",
-			"\t$0",
-			"});"
-		]
-	},
-	"jqDocReadyShort": {
-		"prefix": "jqDocReadyShort",
-		"body": [
-			"$(function (){",
-			"\t$0",
-			"});"
-		]
-	},
-	"jqEach": {
-		"prefix": "jqEach",
-		"body": [
-			"$.each(${collection}, function (indexInArray, valueOfElement){ ",
-			"\t$0 ",
-			"});"
-		]
-	},
-	"jqEachElement": {
-		"prefix": "jqEachElement",
-		"body": [
-			"$(${selector}).each(function (index, element){",
-			"\t// element == this",
-			"\t$0",
-			"});"
-		]
-	},
-	"jqEmpty": {
-		"prefix": "jqEmpty",
-		"body": "$(${selector}).empty();"
-	},
-	"jqFadeIn": {
-		"prefix": "jqFadeIn",
-		"body": "$(${selector}).fadeIn();"
-	},
-	"jqFadeInFull": {
-		"prefix": "jqFadeInFull",
-		"body": [
-			"$(${selector}).fadeIn(${duration}, function (){",
-			"\t$0",
-			"});"
-		]
-	},
-	"jqFadeOut": {
-		"prefix": "jqFadeOut",
-		"body": "$(${selector}).fadeOut();"
-	},
-	"jqFadeOutFull": {
-		"prefix": "jqFadeOutFull",
-		"body": [
-			"$(${selector}).fadeOut(${duration}, function (){",
-			"\t$0",
-			"});"
-		]
-	},
-	"jqFadeTo": {
-		"prefix": "jqFadeTo",
-		"body": "$(${selector}).fadeTo(${duration}, ${opacity});"
-	},
-	"jqFadeToFull": {
-		"prefix": "jqFadeToFull",
-		"body": [
-			"$(${selector}).fadeTo(${duration}, ${opacity}, function (){",
-			"\t$0",
-			"});"
-		]
-	},
-	"jqFind": {
-		"prefix": "jqFind",
-		"body": "$(${selector}).find(${selector2});"
-	},
-	"jqFocus": {
-		"prefix": "jqFocus",
-		"body": [
-			"$(${selector}).focus(function (e){ ",
-			"\te.preventDefault();",
-			"\t$0",
-			"});"
-		]
-	},
-	"jqGet": {
-		"prefix": "jqGet",
-		"body": [
-			"$.get(\"${url}\", ${data},",
-			"\tfunction (data, textStatus, jqXHR){",
-			"\t\t$0",
-			"\t},",
-			"\t\"${dataType}\"",
-			");"
-		]
-	},
-	"jqGetJson": {
-		"prefix": "jqGetJson",
-		"body": [
-			"$.getJSON(\"${url}\", ${data},",
-			"\tfunction (data, textStatus, jqXHR){",
-			"\t\t$0",
-			"\t}",
-			");"
-		]
-	},
-	"jqGetScript": {
-		"prefix": "jqGetScript",
-		"body": [
-			"$.getScript(\"${url}\", function (script, textStatus, jqXHR){",
-			"\t$0",
-			"});"
-		]
-	},
-	"jqHasClass": {
-		"prefix": "jqHasClass",
-		"body": "$(${selector}).hasClass(${className});"
-	},
-	"jqHeightGet": {
-		"prefix": "jqHeightGet",
-		"body": "$(${selector}).height();"
-	},
-	"jqHeightSet": {
-		"prefix": "jqHeightSet",
-		"body": "$(${selector}).height(${value});"
-	},
-	"jqHide": {
-		"prefix": "jqHide",
-		"body": "$(${selector}).hide();"
-	},
-	"jqHideFull": {
-		"prefix": "jqHideFull",
-		"body": [
-			"$(${selector}).hide(${duration}, function (){",
-			"\t$0",
-			"});"
-		]
-	},
-	"jqHover": {
-		"prefix": "jqHover",
-		"body": [
-			"$(${selector}).hover(function (){",
-			"\t\t// over",
-			"\t\t$0",
-			"\t}, function (){",
-			"\t\t// out",
-			"\t}",
-			");"
-		]
-	},
-	"jqHtmlGet": {
-		"prefix": "jqHtmlGet",
-		"body": "$(${selector}).html();"
-	},
-	"jqHtmlSet": {
-		"prefix": "jqHtmlSet",
-		"body": "$(${selector}).html(${htmlString});"
-	},
-	"jqInnerHeight": {
-		"prefix": "jqInnerHeight",
-		"body": "$(${selector}).innerHeight();"
-	},
-	"jqInnerWidth": {
-		"prefix": "jqInnerWidth",
-		"body": "$(${selector}).innerWidth();"
-	},
-	"jqInsertAfter": {
-		"prefix": "jqInsertAfter",
-		"body": "$(${target}).insertAfter(${selector});"
-	},
-	"jqInsertBefore": {
-		"prefix": "jqInsertBefore",
-		"body": "$(${target}).insertBefore(${selector});"
-	},
-	"jqKeyDown": {
-		"prefix": "jqKeyDown",
-		"body": [
-			"$(${selector}).keydown(function (e){ ",
-			"\t$0",
-			"});"
-		]
-	},
-	"jqKeyPress": {
-		"prefix": "jqKeyPress",
-		"body": [
-			"$(${selector}).keypress(function (e){ ",
-			"\t$0",
-			"});"
-		]
-	},
-	"jqKeyUp": {
-		"prefix": "jqKeyUp",
-		"body": [
-			"$(${selector}).keyup(function (e){ ",
-			"\t$0",
-			"});"
-		]
-	},
-	"jqLoadGet": {
-		"prefix": "jqLoadGet",
-		"body": [
-			"$(${selector}).load(\"${url}\", \"${data}\", function (response, status, request){",
-			"\tthis; // dom element",
-			"\t$0",
-			"});"
-		]
-	},
-	"jqLoadPost": {
-		"prefix": "jqLoadPost",
-		"body": [
-			"$(${selector}).load(\"${url}\", \"${data}\", function (response, status, request){",
-			"\tthis; // dom element",
-			"\t$0",
-			"});"
-		]
-	},
-	"jqMap": {
-		"prefix": "jqMap",
-		"body": [
-			"$.map(${arrayOrObject}, function (elementOrValue, indexOrKey){",
-			"\t$0",
-			"});"
-		]
-	},
-	"jqMouseDown": {
-		"prefix": "jqMouseDown",
-		"body": [
-			"$(${selector}).mousedown(function (){ ",
-			"\t$0",
-			"});"
-		]
-	},
-	"jqMouseEnter": {
-		"prefix": "jqMouseEnter",
-		"body": [
-			"$(${selector}).mouseenter(function (){ ",
-			"\t$0",
-			"});"
-		]
-	},
-	"jqMouseLeave": {
-		"prefix": "jqMouseLeave",
-		"body": [
-			"$(${selector}).mouseleave(function (){ ",
-			"\t$0",
-			"});"
-		]
-	},
-	"jqMouseMove": {
-		"prefix": "jqMouseMove",
-		"body": [
-			"$(${selector}).mousemove(function (e){ ",
-			"\t// values: e.clientX, e.clientY, e.pageX, e.pageY",
-			"\t$0",
-			"});"
-		]
-	},
-	"jqMouseOut": {
-		"prefix": "jqMouseOut",
-		"body": [
-			"$(${selector}).mouseout(function (){ ",
-			"\t$0",
-			"});"
-		]
-	},
-	"jqMouseOver": {
-		"prefix": "jqMouseOver",
-		"body": [
-			"$(${selector}).mouseover(function (){ ",
-			"\t$0",
-			"});"
-		]
-	},
-	"jqMouseUp": {
-		"prefix": "jqMouseUp",
-		"body": [
-			"$(${selector}).mouseup(function (){ ",
-			"\t$0",
-			"});"
-		]
-	},
-	"jqNamespace": {
-		"prefix": "jqNamespace",
-		"body": [
-			"(function ( ${name}, $, undefined ){",
-			"\t// Private Property",
-			"\tmyPrivateProperty = \"Private Property\";",
-			"\t\t",
-			"\t// Public Property",
-			"\t${name}.myPublicProperty = \"Publically Accessible Property\";",
-			"\t\t",
-			"\t// Private Method",
-			"\tfunction myPrivateMethod (){",
-			"\t\t",
-			"\t}",
-			"\t\t",
-			"\t// Public Method",
-			"\t${name}.myPublicMethod = function (){",
-			"\t\t",
-			"\t};  ",
-			"}(window.${name} = window.${name} ||{}, jQuery ));"
-		]
-	},
-	"jqOffsetGet": {
-		"prefix": "jqOffsetGet",
-		"body": [
-			"var offset = $(${selector}).offset();",
-			"var top = offset.top;",
-			"var left = offset.left;",
-			"$0"
-		]
-	},
-	"jqOffsetParent": {
-		"prefix": "jqOffsetParent",
-		"body": [
-			"var offset = $(${selector}).offsetParent();",
-			"var top = offset.top;",
-			"var left = offset.left;",
-			"$0"
-		]
-	},
-	"jqOn": {
-		"prefix": "jqOn",
-		"body": [
-			"$(${selector}).on(${events}, function (){",
-			"\t$0",
-			"});"
-		]
-	},
-	"jqOne": {
-		"prefix": "jqOne",
-		"body": [
-			"$(${selector}).one(${events}, function (e){",
-			"\t$0",
-			"});"
-		]
-	},
-	"jqOneWithData": {
-		"prefix": "jqOneWithData",
-		"body": [
-			"$(${selector}).one(${events}, ${data}, function (e){",
-			"\t$0",
-			"});"
-		]
-	},
-	"jqOuterHeight": {
-		"prefix": "jqOuterHeight",
-		"body": "$(${selector}).outerHeight(${includeMargin});"
-	},
-	"jqOuterWidth": {
-		"prefix": "jqOuterWidth",
-		"body": "$(${selector}).outerWidth(${includeMargin});"
-	},
-	"jqPlugin": {
-		"prefix": "jqPlugin",
-		"body": [
-			"(function ($){",
-			"\tjQuery.fn.${pluginName} = function (settings){",
-			"\t\tvar config ={\u0027foo\u0027: \u0027bar\u0027};",
-			" ",
-			"\t\tif (settings) jQuery.extend(config, settings);",
-			" ",
-			"\t\tthis.each(function (){",
-			"\t\t\t// element-specific code here",
-			"\t\t\t$0",
-			"\t\t});",
-			" ",
-			"\t\treturn this;",
-			"\t};",
-			"})(jQuery);"
-		]
-	},
-	"jqPosition": {
-		"prefix": "jqPosition",
-		"body": [
-			"var position = $(${selector}).position();",
-			"var top = position.top;",
-			"var left = position.left;",
-			"$0"
-		]
-	},
-	"jqPost": {
-		"prefix": "jqPost",
-		"body": [
-			"$.post(\"${url}\", ${data},",
-			"\tfunction (data, textStatus, jqXHR){",
-			"\t\t$0",
-			"\t},",
-			"\t\"${dataType}\"",
-			");"
-		]
-	},
-	"jqPrepend": {
-		"prefix": "jqPrepend",
-		"body": "$(${selector}).prepend(${content});"
-	},
-	"jqPrependTo": {
-		"prefix": "jqPrependTo",
-		"body": "$(${content}).prependTo(${selector});"
-	},
-	"jqRemove": {
-		"prefix": "jqRemove",
-		"body": "$(${selector}).remove();"
-	},
-	"jqRemoveExp": {
-		"prefix": "jqRemoveExp",
-		"body": "$(${selector}).remove(${expression});"
-	},
-	"jqReplaceAll": {
-		"prefix": "jqReplaceAll",
-		"body": "$(${selector}).replaceAll(${target});"
-	},
-	"jqReplaceWith": {
-		"prefix": "jqReplaceWith",
-		"body": "$(${selector}).replaceWith(${newContent});"
-	},
-	"jqResize": {
-		"prefix": "jqResize",
-		"body": [
-			"$(${selector}).resize(function (){ ",
-			"\t$0",
-			"});"
-		]
-	},
-	"jqScroll": {
-		"prefix": "jqScroll",
-		"body": [
-			"$(${selector}).scroll(function (){ ",
-			"\t$0",
-			"});"
-		]
-	},
-	"jqScrollLeftGet": {
-		"prefix": "jqScrollLeftGet",
-		"body": "$(${selector}).scrollLeft();"
-	},
-	"jqScrollLeftSet": {
-		"prefix": "jqScrollLeftSet",
-		"body": "$(${selector}).scrollLeft(${value});"
-	},
-	"jqScrollTopGet": {
-		"prefix": "jqScrollTopGet",
-		"body": "$(${selector}).scrollTop();"
-	},
-	"jqScrollTopSet": {
-		"prefix": "jqScrollTopSet",
-		"body": "$(${selector}).scrollTop(${value});"
-	},
-	"jqSelect": {
-		"prefix": "jqSelect",
-		"body": [
-			"$(${selector}).select(function (){ ",
-			"\t$0",
-			"});"
-		]
-	},
-	"jqSelectTrigger": {
-		"prefix": "jqSelectTrigger",
-		"body": "$(${selector}).select();"
-	},
-	"jqShow": {
-		"prefix": "jqShow",
-		"body": "$(${selector}).show();"
-	},
-	"jqShowFull": {
-		"prefix": "jqShowFull",
-		"body": [
-			"$(${selector}).show(${duration}, function (){",
-			"\t$0",
-			"});"
-		]
-	},
-	"jqSlideDown": {
-		"prefix": "jqSlideDown",
-		"body": "$(${selector}).slideDown();"
-	},
-	"jqSlideDownFull": {
-		"prefix": "jqSlideDownFull",
-		"body": [
-			"$(${selector}).slideDown(${duration}, function (){",
-			"\t$0",
-			"});"
-		]
-	},
-	"jqSlideToggle": {
-		"prefix": "jqSlideToggle",
-		"body": "$(${selector}).slideToggle();"
-	},
-	"jqSlideToggleFull": {
-		"prefix": "jqSlideToggleFull",
-		"body": [
-			"$(${selector}).slideToggle(${duration}, function (){",
-			"\t$0",
-			"});"
-		]
-	},
-	"jqSlideUp": {
-		"prefix": "jqSlideUp",
-		"body": "$(${selector}).slideUp();"
-	},
-	"jqSlideUpFull": {
-		"prefix": "jqSlideUpFull",
-		"body": [
-			"$(${selector}).slideUp(${duration}, function (){",
-			"\t$0",
-			"});"
-		]
-	},
-	"jqSubmit": {
-		"prefix": "jqSubmit",
-		"body": [
-			"$(${selector}).submit(function (e){ ",
-			"\te.preventDefault();",
-			"\t$0",
-			"});"
-		]
-	},
-	"jqSubmitTrigger": {
-		"prefix": "jqSubmitTrigger",
-		"body": "$(${selector}).submit();"
-	},
-	"jqTextGet": {
-		"prefix": "jqTextGet",
-		"body": "$(${selector}).text();"
-	},
-	"jqTextSet": {
-		"prefix": "jqTextSet",
-		"body": "$(${selector}).text(${textString});"
-	},
-	"jqToggle": {
-		"prefix": "jqToggle",
-		"body": "$(${selector}).toggle();"
-	},
-	"jqToggleFull": {
-		"prefix": "jqToggleFull",
-		"body": [
-			"$(${selector}).toggle(${duration}, function (){",
-			"\t$0",
-			"});"
-		]
-	},
-	"jqToggleSwitch": {
-		"prefix": "jqToggleSwitch",
-		"body": "$(${selector}).toggle(${showOrHide});"
-	},
-	"jqTrigger": {
-		"prefix": "jqTrigger",
-		"body": "$(${selector}).trigger(${eventType});"
-	},
-	"jqTriggerHandler": {
-		"prefix": "jqTriggerHandler",
-		"body": "$(${selector}).triggerHandler(${eventType});"
-	},
-	"jqTriggerHandlerWithData": {
-		"prefix": "jqTriggerHandlerWithData",
-		"body": "$(${selector}).triggerHandler(${eventType},{ ${name}: ${value} });"
-	},
-	"jqTriggerWithData": {
-		"prefix": "jqTriggerWithData",
-		"body": "$(${selector}).trigger(${eventType},{ ${name}: ${value} });"
-	},
-	"jqUnbind": {
-		"prefix": "jqUnbind",
-		"body": "$(${selector}).unbind(${eventType});"
-	},
-	"jqUnbindAll": {
-		"prefix": "jqUnbindAll",
-		"body": "$(${selector}).unbind();"
-	},
-	"jqUnload": {
-		"prefix": "jqUnload",
-		"body": [
-			"$(${selector}).unload(function (){ ",
-			"\t$0",
-			"});"
-		]
-	},
-	"jqValGet": {
-		"prefix": "jqValGet",
-		"body": "$(${selector}).val();"
-	},
-	"jqValSet": {
-		"prefix": "jqValSet",
-		"body": "$(${selector}).val(${value});"
-	},
-	"jqWidthGet": {
-		"prefix": "jqWidthGet",
-		"body": "$(${selector}).width();"
-	},
-	"jqWidthSet": {
-		"prefix": "jqWidthSet",
-		"body": "$(${selector}).width(${value});"
-	},
-	"jqWrap": {
-		"prefix": "jqWrap",
-		"body": "$(${selector}).wrap(\"\u003c${wrappingElement}\u003e\u003c/${wrappingElement}\u003e\");"
-	},
-	"jqWrapAll": {
-		"prefix": "jqWrapAll",
-		"body": "$(${selector}).wrapAll(\"\u003c${wrappingElement}\u003e\u003c/${wrappingElement}\u003e\");"
-	},
-	"jqWrapInner": {
-		"prefix": "jqWrapInner",
-		"body": "$(${selector}).wrapInner(\"\u003c${wrappingElement}\u003e\u003c/${wrappingElement}\u003e\");"
-	}
+  "import": {
+    "prefix": "imp",
+    "body": "import ${2:moduleName} from '${1:module}';$0"
+  },
+  "importNoModuleName": {
+    "prefix": "imn",
+    "body": "import '${1:module}';$0"
+  },
+  "importDestructing": {
+    "prefix": "imd",
+    "body": "import{ $2 } from '${1:module}';$0"
+  },
+  "importEverything": {
+    "prefix": "ime",
+    "body": "import * as ${2:alias} from '${1:module}';$0"
+  },
+  "importAs": {
+    "prefix": "ima",
+    "body": "import{ ${2:originalName} as ${3:alias} } from '${1:module}';$0"
+  },
+  "require": {
+    "prefix": "rqr",
+    "body": "require('${1:package}');"
+  },
+  "requireToConst": {
+    "prefix": "req",
+    "body": "const ${1:packageName} = require('${1:package}');$0"
+  },
+  "moduleExports": {
+    "prefix": "mde",
+    "body": "module.exports ={\n\t$0\n};\n"
+  },
+  "exportNamedVariable": {
+    "prefix": "env",
+    "body": "export const ${1:exportVariable} = ${2:localVariable};\n"
+  },
+  "exportNamedFunction": {
+    "prefix": "enf",
+    "body": "export const ${1:functionName} = (${2:params}) =>{\n\t$0\n};\n"
+  },
+  "exportDefaultFunction": {
+    "prefix": "edf",
+    "body": "export default function ${1:${TM_FILENAME_BASE}}(${2:params}){\n\t$0\n};\n"
+  },
+  "exportClass": {
+    "prefix": "ecl",
+    "body": "export default class ${1:className}{\n\t$0\n};\n"
+  },
+  "exportClassExtends": {
+    "prefix": "ece",
+    "body": "export default class ${1:className} extends ${2:baseclassName}{\n\t$0\n};\n"
+  },
+  "constructor": {
+    "prefix": "con",
+    "body": "constructor(${1:params}){\n\t${0}\n}"
+  },
+  "method": {
+    "prefix": "met",
+    "body": "${1:methodName}(${2:params}){\n\t${0}\n}"
+  },
+  "propertyGet": {
+    "prefix": "pge",
+    "body": "get ${1:propertyName}(){\n\treturn this.${0};\n}"
+  },
+  "propertyset": {
+    "prefix": "pse",
+    "body": "set ${1:propertyName}(${2:value}){\n\t${0};\n}"
+  },
+  "forEach": {
+    "prefix": "fre",
+    "body": "${1:array}.forEach(${2:currentItem} =>{\n\t${0}\n});"
+  },
+  "forOf": {
+    "prefix": "fof",
+    "body": "for (const ${1:item} of ${2:object}){\n\t${0}\n}"
+  },
+  "forIn": {
+    "prefix": "fin",
+    "body": "for (const ${1:item} in ${2:object}){\n\t${0}\n}"
+  },
+  "anonymousFunction": {
+    "prefix": "anfn",
+    "body": "(${1:params}) =>{\n\t${2}\n}"
+  },
+  "namedFunction": {
+    "prefix": "nfn",
+    "body": "const ${1:name} = (${2:params}) =>{\n\t${3}\n}"
+  },
+  "destructingObject": {
+    "prefix": "dob",
+    "body": "const{${2:propertyName}} = ${1:objectToDestruct};"
+  },
+  "destructingArray": {
+    "prefix": "dar",
+    "body": "const[${2:propertyName}] = ${1:arrayToDestruct};"
+  },
+  "setInterval": {
+    "prefix": "sti",
+    "body": "setInterval(() =>{\n\t${2}\n}, ${0:intervalInms});"
+  },
+  "setTimeOut": {
+    "prefix": "sto",
+    "body": "setTimeout(() =>{\n\t${2}\n}, ${1:delayInms});"
+  },
+  "promise": {
+    "prefix": "prom",
+    "body": "return new Promise((resolve, reject) =>{\n\t${1}\n});"
+  },
+  "thenCatch": {
+    "prefix": "thenc",
+    "body": ".then((${1:result}) =>{\n\t${2}\n}).catch((${3:err}) =>{\n\t${4}\n});"
+  },
+  "consoleAssert": {
+    "prefix": "cas",
+    "body": "console.assert(${1:expression}, ${2:object});"
+  },
+  "consoleClear": {
+    "prefix": "ccl",
+    "body": "console.clear();"
+  },
+  "consoleCount": {
+    "prefix": "cco",
+    "body": "console.count(${1:label});"
+  },
+  "consoleDebug": {
+    "prefix": "cdb",
+    "body": "console.debug(${1:object});"
+  },
+  "consoleDir": {
+    "prefix": "cdi",
+    "body": "console.dir(${1:object});"
+  },
+  "consoleError": {
+    "prefix": "cer",
+    "body": "console.error(${1:object});"
+  },
+  "consoleGroup": {
+    "prefix": "cgr",
+    "body": "console.group('${1:label}');"
+  },
+  "consoleGroupEnd": {
+    "prefix": "cge",
+    "body": "console.groupEnd();"
+  },
+  "consoleLog": {
+    "prefix": "clg",
+    "body": "console.log(${1:object});"
+  },
+  "consoleLogObject": {
+    "prefix": "clo",
+    "body": "console.log('${1:object} :>> ', ${1:object});"
+  },
+  "consoleTrace": {
+    "prefix": "ctr",
+    "body": "console.trace(${1:object});"
+  },
+  "consoleWarn": {
+    "prefix": "cwa",
+    "body": "console.warn(${1:object});"
+  },
+  "consoleInfo": {
+    "prefix": "cin",
+    "body": "console.info(${1:object});"
+  },
+  "consoleTable": {
+    "prefix": "clt",
+    "body": "console.table(${1:object});"
+  },
+  "consoleTime": {
+    "prefix": "cti",
+    "body": "console.time(${1:object});"
+  },
+  "consoleTimeEnd": {
+    "prefix": "cte",
+    "body": "console.timeEnd(${1:object});"
+  },
+  // Jquery Snippets
+  "jqAfter": {
+    "prefix": "jqAfter",
+    "body": "$(${selector}).after(${content});"
+  },
+  "jqAjax": {
+    "prefix": "jqAjax",
+    "body": [
+      "$.ajax({",
+      "\ttype: \"${method}\",",
+      "\turl: \"${url}\",",
+      "\tdata: \"${data}\",",
+      "\tdataType: \"${dataType}\",",
+      "\tsuccess: function (response){",
+      "\t\t$0",
+      "\t}",
+      "});"
+    ]
+  },
+  "jqAjaxAspNetWebService": {
+    "prefix": "jqAjaxAspNetWebService",
+    "body": [
+      "$.ajax({",
+      "\ttype: \"POST\",",
+      "\tcontentType: \"application/json; charset=utf-8\",",
+      "\tdataType: \"${dataType}\",",
+      "\turl: \"${url}\",",
+      "\tdata: \"${data}\",",
+      "\tsuccess: function (response){",
+      "\t\t$0",
+      "\t}",
+      "});"
+    ]
+  },
+  "jqAppend": {
+    "prefix": "jqAppend",
+    "body": "$(${selector}).append(${content});"
+  },
+  "jqAppendTo": {
+    "prefix": "jqAppendTo",
+    "body": "$(${content}).appendTo(${selector});"
+  },
+  "jqAttrGet": {
+    "prefix": "jqAttrGet",
+    "body": "$(${selector}).attr(${attributeName});"
+  },
+  "jqAttrRemove": {
+    "prefix": "jqAttrRemove",
+    "body": "$(${selector}).removeAttr(${attributeName});"
+  },
+  "jqAttrSet": {
+    "prefix": "jqAttrSet",
+    "body": "$(${selector}).attr(${attributeName}, ${value});"
+  },
+  "jqAttrSetFn": {
+    "prefix": "jqAttrSetFn",
+    "body": [
+      "$(${selector}).attr(${attributeName}, function (index, attr){ ",
+      "\t$0 ",
+      "});"
+    ]
+  },
+  "jqAttrSetObj": {
+    "prefix": "jqAttrSetObj",
+    "body": [
+      "$(${selector}).attr({",
+      "\t${name}: ${value}",
+      "\t$0",
+      "});"
+    ]
+  },
+  "jqBefore": {
+    "prefix": "jqBefore",
+    "body": "$(${selector}).before(${content});"
+  },
+  "jqBind": {
+    "prefix": "jqBind",
+    "body": [
+      "$(${selector}).bind(${eventType}, function (e){",
+      "\t$0",
+      "});"
+    ]
+  },
+  "jqBindWithData": {
+    "prefix": "jqBindWithData",
+    "body": [
+      "$(${selector}).bind(${eventType}, ${eventData}, function (e){",
+      "\t$0",
+      "});"
+    ]
+  },
+  "jqBlur": {
+    "prefix": "jqBlur",
+    "body": [
+      "$(${selector}).blur(function (e){ ",
+      "\te.preventDefault();",
+      "\t$0",
+      "});"
+    ]
+  },
+  "jqChange": {
+    "prefix": "jqChange",
+    "body": [
+      "$(${selector}).change(function (e){ ",
+      "\te.preventDefault();",
+      "\t$0",
+      "});"
+    ]
+  },
+  "jqClassAdd": {
+    "prefix": "jqClassAdd",
+    "body": "$(${selector}).addClass(${className});"
+  },
+  "jqClassRemove": {
+    "prefix": "jqClassRemove",
+    "body": "$(${selector}).removeClass(${className});"
+  },
+  "jqClassToggle": {
+    "prefix": "jqClassToggle",
+    "body": "$(${selector}).toggleClass(${className});"
+  },
+  "jqClassToggleSwitch": {
+    "prefix": "jqClassToggleSwitch",
+    "body": "$(${selector}).toggleClass(${className}, ${switch});"
+  },
+  "jqClick": {
+    "prefix": "jqClick",
+    "body": [
+      "$(${selector}).click(function (e){ ",
+      "\te.preventDefault();",
+      "\t$0",
+      "});"
+    ]
+  },
+  "jqClone": {
+    "prefix": "jqClone",
+    "body": "$(${selector}).clone();"
+  },
+  "jqCloneWithEvents": {
+    "prefix": "jqCloneWithEvents",
+    "body": "$(${selector}).clone(true);"
+  },
+  "jqCssGet": {
+    "prefix": "jqCssGet",
+    "body": "$(${selector}).css(${propertyName});"
+  },
+  "jqCssSet": {
+    "prefix": "jqCssSet",
+    "body": "$(${selector}).css(${propertyName}, ${value});"
+  },
+  "jqCssSetObj": {
+    "prefix": "jqCssSetObj",
+    "body": [
+      "$(${selector}).css({",
+      "\t${propertyName}: ${value}",
+      "\t$0",
+      "});"
+    ]
+  },
+  "jqDataGet": {
+    "prefix": "jqDataGet",
+    "body": "$(${selector}).data(${key});"
+  },
+  "jqDataRemove": {
+    "prefix": "jqDataRemove",
+    "body": "$(${selector}).removeData(${element});"
+  },
+  "jqDataSet": {
+    "prefix": "jqDataSet",
+    "body": "$(${selector}).data(${key}, ${value});"
+  },
+  "jqDataSetObj": {
+    "prefix": "jqDataSetObj",
+    "body": [
+      "$(${selector}).data({",
+      "\t${key}: ${value}",
+      "\t$0",
+      "});"
+    ]
+  },
+  "jqDie": {
+    "prefix": "jqDie",
+    "body": "$(${selector}).die(${eventType});"
+  },
+  "jqDieAll": {
+    "prefix": "jqDieAll",
+    "body": "$(${selector}).die();"
+  },
+  "jqDieFn": {
+    "prefix": "jqDieFn",
+    "body": "$(${selector}).die(${eventType}, ${handler});"
+  },
+  "jqDocReady": {
+    "prefix": "jqDocReady",
+    "body": [
+      "$(document).ready(function (){",
+      "\t$0",
+      "});"
+    ]
+  },
+  "jqDocReadyShort": {
+    "prefix": "jqDocReadyShort",
+    "body": [
+      "$(function (){",
+      "\t$0",
+      "});"
+    ]
+  },
+  "jqEach": {
+    "prefix": "jqEach",
+    "body": [
+      "$.each(${collection}, function (indexInArray, valueOfElement){ ",
+      "\t$0 ",
+      "});"
+    ]
+  },
+  "jqEachElement": {
+    "prefix": "jqEachElement",
+    "body": [
+      "$(${selector}).each(function (index, element){",
+      "\t// element == this",
+      "\t$0",
+      "});"
+    ]
+  },
+  "jqEmpty": {
+    "prefix": "jqEmpty",
+    "body": "$(${selector}).empty();"
+  },
+  "jqFadeIn": {
+    "prefix": "jqFadeIn",
+    "body": "$(${selector}).fadeIn();"
+  },
+  "jqFadeInFull": {
+    "prefix": "jqFadeInFull",
+    "body": [
+      "$(${selector}).fadeIn(${duration}, function (){",
+      "\t$0",
+      "});"
+    ]
+  },
+  "jqFadeOut": {
+    "prefix": "jqFadeOut",
+    "body": "$(${selector}).fadeOut();"
+  },
+  "jqFadeOutFull": {
+    "prefix": "jqFadeOutFull",
+    "body": [
+      "$(${selector}).fadeOut(${duration}, function (){",
+      "\t$0",
+      "});"
+    ]
+  },
+  "jqFadeTo": {
+    "prefix": "jqFadeTo",
+    "body": "$(${selector}).fadeTo(${duration}, ${opacity});"
+  },
+  "jqFadeToFull": {
+    "prefix": "jqFadeToFull",
+    "body": [
+      "$(${selector}).fadeTo(${duration}, ${opacity}, function (){",
+      "\t$0",
+      "});"
+    ]
+  },
+  "jqFind": {
+    "prefix": "jqFind",
+    "body": "$(${selector}).find(${selector2});"
+  },
+  "jqFocus": {
+    "prefix": "jqFocus",
+    "body": [
+      "$(${selector}).focus(function (e){ ",
+      "\te.preventDefault();",
+      "\t$0",
+      "});"
+    ]
+  },
+  "jqGet": {
+    "prefix": "jqGet",
+    "body": [
+      "$.get(\"${url}\", ${data},",
+      "\tfunction (data, textStatus, jqXHR){",
+      "\t\t$0",
+      "\t},",
+      "\t\"${dataType}\"",
+      ");"
+    ]
+  },
+  "jqGetJson": {
+    "prefix": "jqGetJson",
+    "body": [
+      "$.getJSON(\"${url}\", ${data},",
+      "\tfunction (data, textStatus, jqXHR){",
+      "\t\t$0",
+      "\t}",
+      ");"
+    ]
+  },
+  "jqGetScript": {
+    "prefix": "jqGetScript",
+    "body": [
+      "$.getScript(\"${url}\", function (script, textStatus, jqXHR){",
+      "\t$0",
+      "});"
+    ]
+  },
+  "jqHasClass": {
+    "prefix": "jqHasClass",
+    "body": "$(${selector}).hasClass(${className});"
+  },
+  "jqHeightGet": {
+    "prefix": "jqHeightGet",
+    "body": "$(${selector}).height();"
+  },
+  "jqHeightSet": {
+    "prefix": "jqHeightSet",
+    "body": "$(${selector}).height(${value});"
+  },
+  "jqHide": {
+    "prefix": "jqHide",
+    "body": "$(${selector}).hide();"
+  },
+  "jqHideFull": {
+    "prefix": "jqHideFull",
+    "body": [
+      "$(${selector}).hide(${duration}, function (){",
+      "\t$0",
+      "});"
+    ]
+  },
+  "jqHover": {
+    "prefix": "jqHover",
+    "body": [
+      "$(${selector}).hover(function (){",
+      "\t\t// over",
+      "\t\t$0",
+      "\t}, function (){",
+      "\t\t// out",
+      "\t}",
+      ");"
+    ]
+  },
+  "jqHtmlGet": {
+    "prefix": "jqHtmlGet",
+    "body": "$(${selector}).html();"
+  },
+  "jqHtmlSet": {
+    "prefix": "jqHtmlSet",
+    "body": "$(${selector}).html(${htmlString});"
+  },
+  "jqInnerHeight": {
+    "prefix": "jqInnerHeight",
+    "body": "$(${selector}).innerHeight();"
+  },
+  "jqInnerWidth": {
+    "prefix": "jqInnerWidth",
+    "body": "$(${selector}).innerWidth();"
+  },
+  "jqInsertAfter": {
+    "prefix": "jqInsertAfter",
+    "body": "$(${target}).insertAfter(${selector});"
+  },
+  "jqInsertBefore": {
+    "prefix": "jqInsertBefore",
+    "body": "$(${target}).insertBefore(${selector});"
+  },
+  "jqKeyDown": {
+    "prefix": "jqKeyDown",
+    "body": [
+      "$(${selector}).keydown(function (e){ ",
+      "\t$0",
+      "});"
+    ]
+  },
+  "jqKeyPress": {
+    "prefix": "jqKeyPress",
+    "body": [
+      "$(${selector}).keypress(function (e){ ",
+      "\t$0",
+      "});"
+    ]
+  },
+  "jqKeyUp": {
+    "prefix": "jqKeyUp",
+    "body": [
+      "$(${selector}).keyup(function (e){ ",
+      "\t$0",
+      "});"
+    ]
+  },
+  "jqLoadGet": {
+    "prefix": "jqLoadGet",
+    "body": [
+      "$(${selector}).load(\"${url}\", \"${data}\", function (response, status, request){",
+      "\tthis; // dom element",
+      "\t$0",
+      "});"
+    ]
+  },
+  "jqLoadPost": {
+    "prefix": "jqLoadPost",
+    "body": [
+      "$(${selector}).load(\"${url}\", \"${data}\", function (response, status, request){",
+      "\tthis; // dom element",
+      "\t$0",
+      "});"
+    ]
+  },
+  "jqMap": {
+    "prefix": "jqMap",
+    "body": [
+      "$.map(${arrayOrObject}, function (elementOrValue, indexOrKey){",
+      "\t$0",
+      "});"
+    ]
+  },
+  "jqMouseDown": {
+    "prefix": "jqMouseDown",
+    "body": [
+      "$(${selector}).mousedown(function (){ ",
+      "\t$0",
+      "});"
+    ]
+  },
+  "jqMouseEnter": {
+    "prefix": "jqMouseEnter",
+    "body": [
+      "$(${selector}).mouseenter(function (){ ",
+      "\t$0",
+      "});"
+    ]
+  },
+  "jqMouseLeave": {
+    "prefix": "jqMouseLeave",
+    "body": [
+      "$(${selector}).mouseleave(function (){ ",
+      "\t$0",
+      "});"
+    ]
+  },
+  "jqMouseMove": {
+    "prefix": "jqMouseMove",
+    "body": [
+      "$(${selector}).mousemove(function (e){ ",
+      "\t// values: e.clientX, e.clientY, e.pageX, e.pageY",
+      "\t$0",
+      "});"
+    ]
+  },
+  "jqMouseOut": {
+    "prefix": "jqMouseOut",
+    "body": [
+      "$(${selector}).mouseout(function (){ ",
+      "\t$0",
+      "});"
+    ]
+  },
+  "jqMouseOver": {
+    "prefix": "jqMouseOver",
+    "body": [
+      "$(${selector}).mouseover(function (){ ",
+      "\t$0",
+      "});"
+    ]
+  },
+  "jqMouseUp": {
+    "prefix": "jqMouseUp",
+    "body": [
+      "$(${selector}).mouseup(function (){ ",
+      "\t$0",
+      "});"
+    ]
+  },
+  "jqNamespace": {
+    "prefix": "jqNamespace",
+    "body": [
+      "(function ( ${name}, $, undefined ){",
+      "\t// Private Property",
+      "\tmyPrivateProperty = \"Private Property\";",
+      "\t\t",
+      "\t// Public Property",
+      "\t${name}.myPublicProperty = \"Publically Accessible Property\";",
+      "\t\t",
+      "\t// Private Method",
+      "\tfunction myPrivateMethod (){",
+      "\t\t",
+      "\t}",
+      "\t\t",
+      "\t// Public Method",
+      "\t${name}.myPublicMethod = function (){",
+      "\t\t",
+      "\t};  ",
+      "}(window.${name} = window.${name} ||{}, jQuery ));"
+    ]
+  },
+  "jqOffsetGet": {
+    "prefix": "jqOffsetGet",
+    "body": [
+      "var offset = $(${selector}).offset();",
+      "var top = offset.top;",
+      "var left = offset.left;",
+      "$0"
+    ]
+  },
+  "jqOffsetParent": {
+    "prefix": "jqOffsetParent",
+    "body": [
+      "var offset = $(${selector}).offsetParent();",
+      "var top = offset.top;",
+      "var left = offset.left;",
+      "$0"
+    ]
+  },
+  "jqOn": {
+    "prefix": "jqOn",
+    "body": [
+      "$(${selector}).on(${events}, function (){",
+      "\t$0",
+      "});"
+    ]
+  },
+  "jqOne": {
+    "prefix": "jqOne",
+    "body": [
+      "$(${selector}).one(${events}, function (e){",
+      "\t$0",
+      "});"
+    ]
+  },
+  "jqOneWithData": {
+    "prefix": "jqOneWithData",
+    "body": [
+      "$(${selector}).one(${events}, ${data}, function (e){",
+      "\t$0",
+      "});"
+    ]
+  },
+  "jqOuterHeight": {
+    "prefix": "jqOuterHeight",
+    "body": "$(${selector}).outerHeight(${includeMargin});"
+  },
+  "jqOuterWidth": {
+    "prefix": "jqOuterWidth",
+    "body": "$(${selector}).outerWidth(${includeMargin});"
+  },
+  "jqPlugin": {
+    "prefix": "jqPlugin",
+    "body": [
+      "(function ($){",
+      "\tjQuery.fn.${pluginName} = function (settings){",
+      "\t\tvar config ={\u0027foo\u0027: \u0027bar\u0027};",
+      " ",
+      "\t\tif (settings) jQuery.extend(config, settings);",
+      " ",
+      "\t\tthis.each(function (){",
+      "\t\t\t// element-specific code here",
+      "\t\t\t$0",
+      "\t\t});",
+      " ",
+      "\t\treturn this;",
+      "\t};",
+      "})(jQuery);"
+    ]
+  },
+  "jqPosition": {
+    "prefix": "jqPosition",
+    "body": [
+      "var position = $(${selector}).position();",
+      "var top = position.top;",
+      "var left = position.left;",
+      "$0"
+    ]
+  },
+  "jqPost": {
+    "prefix": "jqPost",
+    "body": [
+      "$.post(\"${url}\", ${data},",
+      "\tfunction (data, textStatus, jqXHR){",
+      "\t\t$0",
+      "\t},",
+      "\t\"${dataType}\"",
+      ");"
+    ]
+  },
+  "jqPrepend": {
+    "prefix": "jqPrepend",
+    "body": "$(${selector}).prepend(${content});"
+  },
+  "jqPrependTo": {
+    "prefix": "jqPrependTo",
+    "body": "$(${content}).prependTo(${selector});"
+  },
+  "jqRemove": {
+    "prefix": "jqRemove",
+    "body": "$(${selector}).remove();"
+  },
+  "jqRemoveExp": {
+    "prefix": "jqRemoveExp",
+    "body": "$(${selector}).remove(${expression});"
+  },
+  "jqReplaceAll": {
+    "prefix": "jqReplaceAll",
+    "body": "$(${selector}).replaceAll(${target});"
+  },
+  "jqReplaceWith": {
+    "prefix": "jqReplaceWith",
+    "body": "$(${selector}).replaceWith(${newContent});"
+  },
+  "jqResize": {
+    "prefix": "jqResize",
+    "body": [
+      "$(${selector}).resize(function (){ ",
+      "\t$0",
+      "});"
+    ]
+  },
+  "jqScroll": {
+    "prefix": "jqScroll",
+    "body": [
+      "$(${selector}).scroll(function (){ ",
+      "\t$0",
+      "});"
+    ]
+  },
+  "jqScrollLeftGet": {
+    "prefix": "jqScrollLeftGet",
+    "body": "$(${selector}).scrollLeft();"
+  },
+  "jqScrollLeftSet": {
+    "prefix": "jqScrollLeftSet",
+    "body": "$(${selector}).scrollLeft(${value});"
+  },
+  "jqScrollTopGet": {
+    "prefix": "jqScrollTopGet",
+    "body": "$(${selector}).scrollTop();"
+  },
+  "jqScrollTopSet": {
+    "prefix": "jqScrollTopSet",
+    "body": "$(${selector}).scrollTop(${value});"
+  },
+  "jqSelect": {
+    "prefix": "jqSelect",
+    "body": [
+      "$(${selector}).select(function (){ ",
+      "\t$0",
+      "});"
+    ]
+  },
+  "jqSelectTrigger": {
+    "prefix": "jqSelectTrigger",
+    "body": "$(${selector}).select();"
+  },
+  "jqShow": {
+    "prefix": "jqShow",
+    "body": "$(${selector}).show();"
+  },
+  "jqShowFull": {
+    "prefix": "jqShowFull",
+    "body": [
+      "$(${selector}).show(${duration}, function (){",
+      "\t$0",
+      "});"
+    ]
+  },
+  "jqSlideDown": {
+    "prefix": "jqSlideDown",
+    "body": "$(${selector}).slideDown();"
+  },
+  "jqSlideDownFull": {
+    "prefix": "jqSlideDownFull",
+    "body": [
+      "$(${selector}).slideDown(${duration}, function (){",
+      "\t$0",
+      "});"
+    ]
+  },
+  "jqSlideToggle": {
+    "prefix": "jqSlideToggle",
+    "body": "$(${selector}).slideToggle();"
+  },
+  "jqSlideToggleFull": {
+    "prefix": "jqSlideToggleFull",
+    "body": [
+      "$(${selector}).slideToggle(${duration}, function (){",
+      "\t$0",
+      "});"
+    ]
+  },
+  "jqSlideUp": {
+    "prefix": "jqSlideUp",
+    "body": "$(${selector}).slideUp();"
+  },
+  "jqSlideUpFull": {
+    "prefix": "jqSlideUpFull",
+    "body": [
+      "$(${selector}).slideUp(${duration}, function (){",
+      "\t$0",
+      "});"
+    ]
+  },
+  "jqSubmit": {
+    "prefix": "jqSubmit",
+    "body": [
+      "$(${selector}).submit(function (e){ ",
+      "\te.preventDefault();",
+      "\t$0",
+      "});"
+    ]
+  },
+  "jqSubmitTrigger": {
+    "prefix": "jqSubmitTrigger",
+    "body": "$(${selector}).submit();"
+  },
+  "jqTextGet": {
+    "prefix": "jqTextGet",
+    "body": "$(${selector}).text();"
+  },
+  "jqTextSet": {
+    "prefix": "jqTextSet",
+    "body": "$(${selector}).text(${textString});"
+  },
+  "jqToggle": {
+    "prefix": "jqToggle",
+    "body": "$(${selector}).toggle();"
+  },
+  "jqToggleFull": {
+    "prefix": "jqToggleFull",
+    "body": [
+      "$(${selector}).toggle(${duration}, function (){",
+      "\t$0",
+      "});"
+    ]
+  },
+  "jqToggleSwitch": {
+    "prefix": "jqToggleSwitch",
+    "body": "$(${selector}).toggle(${showOrHide});"
+  },
+  "jqTrigger": {
+    "prefix": "jqTrigger",
+    "body": "$(${selector}).trigger(${eventType});"
+  },
+  "jqTriggerHandler": {
+    "prefix": "jqTriggerHandler",
+    "body": "$(${selector}).triggerHandler(${eventType});"
+  },
+  "jqTriggerHandlerWithData": {
+    "prefix": "jqTriggerHandlerWithData",
+    "body": "$(${selector}).triggerHandler(${eventType},{ ${name}: ${value} });"
+  },
+  "jqTriggerWithData": {
+    "prefix": "jqTriggerWithData",
+    "body": "$(${selector}).trigger(${eventType},{ ${name}: ${value} });"
+  },
+  "jqUnbind": {
+    "prefix": "jqUnbind",
+    "body": "$(${selector}).unbind(${eventType});"
+  },
+  "jqUnbindAll": {
+    "prefix": "jqUnbindAll",
+    "body": "$(${selector}).unbind();"
+  },
+  "jqUnload": {
+    "prefix": "jqUnload",
+    "body": [
+      "$(${selector}).unload(function (){ ",
+      "\t$0",
+      "});"
+    ]
+  },
+  "jqValGet": {
+    "prefix": "jqValGet",
+    "body": "$(${selector}).val();"
+  },
+  "jqValSet": {
+    "prefix": "jqValSet",
+    "body": "$(${selector}).val(${value});"
+  },
+  "jqWidthGet": {
+    "prefix": "jqWidthGet",
+    "body": "$(${selector}).width();"
+  },
+  "jqWidthSet": {
+    "prefix": "jqWidthSet",
+    "body": "$(${selector}).width(${value});"
+  },
+  "jqWrap": {
+    "prefix": "jqWrap",
+    "body": "$(${selector}).wrap(\"\u003c${wrappingElement}\u003e\u003c/${wrappingElement}\u003e\");"
+  },
+  "jqWrapAll": {
+    "prefix": "jqWrapAll",
+    "body": "$(${selector}).wrapAll(\"\u003c${wrappingElement}\u003e\u003c/${wrappingElement}\u003e\");"
+  },
+  "jqWrapInner": {
+    "prefix": "jqWrapInner",
+    "body": "$(${selector}).wrapInner(\"\u003c${wrappingElement}\u003e\u003c/${wrappingElement}\u003e\");"
+  }
 }

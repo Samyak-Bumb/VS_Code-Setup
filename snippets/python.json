@@ -1,62 +1,161 @@
 // Created/Written By Samyak Bumb
 {
-	"if else elif": {
-		"prefix": "if",
-		"body": [
-			"if ${1:condition}:",
-			"\t${2:pass}",
-			"else:",
-			"\t${0:pass}",
-		]
-	},
-	"Print": {
-		"prefix": "pr",
-		"body": "print(${0:})"
-	},
-	"Len": {
-		"prefix": "l",
-		"body": "len(${0:})"
-	},
-	"Range": {
-		"prefix": "ra",
-		"body": "range(${1:})"
-	},
-	"Input": {
-		"prefix": "ip",
-		"body": "input(\"${0:}\")"
-	},
-	"String": {
-		"prefix": "str",
-		"body": "str(${0:})"
-	},
-	"Integer": {
-		"prefix": "it",
-		"body": "int(${0:})"
-	},
-	"Sum": {
-		"prefix": "su",
-		"body": "sum(${0:})"
-	},
-	"else": {
-		"prefix": "els",
-		"body": [
-			"else:",
-			"\tprint(\"${0:}\")"
-		]
-	},
-	"def": {
-		"prefix": "df",
-		"body": [
-			"def ${1:function}(${2:parameter}):",
-			"\t${0:}"
-		]
-	},
-	"Tk Import": {
-		"prefix": "tki",
-		"body": "from tkinter import *"
-	},
-	"Tk Import tk": {
-		"prefix": "attki",
-		"body": "import tkinter as tk"
-	},
+  "if else elif": {
+    "prefix": "if",
+    "body": [
+      "if ${1:condition}:",
+      "\t${2:pass}",
+      "else:",
+      "\t${0:pass}",
+    ]
+  },
+  "Print": {
+    "prefix": "pr",
+    "body": "print(${0:})"
+  },
+  "Len": {
+    "prefix": "l",
+    "body": "len(${0:})"
+  },
+  "Range": {
+    "prefix": "ra",
+    "body": "range(${1:})"
+  },
+  "Input": {
+    "prefix": "ip",
+    "body": "input(\"${0:}\")"
+  },
+  "String": {
+    "prefix": "str",
+    "body": "str(${0:})"
+  },
+  "Integer": {
+    "prefix": "it",
+    "body": "int(${0:})"
+  },
+  "Sum": {
+    "prefix": "su",
+    "body": "sum(${0:})"
+  },
+  "else": {
+    "prefix": "els",
+    "body": [
+      "else:",
+      "\tprint(\"${0:}\")"
+    ]
+  },
+  "def": {
+    "prefix": "df",
+    "body": [
+      "def ${1:function}(${2:parameter}):",
+      "\t${0:}"
+    ]
+  },
+  "Tk Import": {
+    "prefix": "tki",
+    "body": "from tkinter import *"
+  },
+  "Tk Import tk": {
+    "prefix": "attki",
+    "body": "import tkinter as tk"
+  },
+  "Model": {
+    "prefix": "class Django Model",
+    "body": [
+      "class ${Name}(models.Model):",
+      "    $1",
+      "",
+      "    def __str__(self):",
+      "        return $2",
+      "",
+      "    def __unicode__(self):",
+      "        return $2",
+      ""
+    ]
+  },
+  "Model Admin": {
+    "prefix": "class Django ModelAdmin",
+    "body": [
+      "class ${Name}Admin(admin.ModelAdmin):",
+      "    list_display = ('$1',)",
+      "",
+      "admin.site.register(${Name}, ${Name}Admin)",
+      ""
+    ]
+  },
+  "Blank and Null Field Properties": {
+    "prefix": "blank and null Djngo Field",
+    "body": "blank=True, null=True"
+  },
+  "CharField": {
+    "prefix": "CharField",
+    "body": "${name} = models.CharField(max_length=${length}, ${blank=True, null=True})"
+  },
+  "Foreign Key": {
+    "prefix": "ForeignKeyField",
+    "body": "${name} = models.ForeignKey('${TargetModel}', related_name='$1', on_delete=models.CASCADE)"
+  },
+  "Override Save Method": {
+    "prefix": "save method Django Override",
+    "body": [
+      "def save(self, *args, **kwargs):",
+      "   $1",
+      "   super(${ModelName}, self).save(*args, **kwargs) # Call the real save() method"
+    ]
+  },
+  "View": {
+    "prefix": "View",
+    "body": [
+      "class ${Name}View(View):",
+      "    def get(self, request, *args, **kwargs):",
+      "        return HttpResponse('GET request!')",
+      "",
+      "    def post(self, request, *args, **kwargs):",
+      "        return HttpResponse('POST request!')"
+    ]
+  },
+  "ListView": {
+    "prefix": "ListView",
+    "body": [
+      "class ${ModelName}List(ListView):",
+      "    model = ${ModelName}",
+      "    context_object_name = '$1'",
+      "    template_name='$2'"
+    ]
+  },
+  "DetailView": {
+    "prefix": "DetailView",
+    "body": [
+      "class ${ModelName}Detail(DetailView):",
+      "    model = ${ModelName}",
+      "    template_name='$2'"
+    ]
+  },
+  "get_context_data": {
+    "prefix": "get_context_data",
+    "body": [
+      "def get_context_data(self, **kwargs):",
+      "    context = super(${ViewName}, self).get_context_data(**kwargs)",
+      "    return context"
+    ]
+  },
+  "__init__": {
+    "prefix": "__init__",
+    "body": [
+      "__init__(self, *args, **kwargs):",
+      "$1"
+    ]
+  },
+  "traceback": {
+    "prefix": "Traceback",
+    "body": "import traceback; traceback.print_exc();"
+  },
+  "pdb": {
+    "prefix": "pdb",
+    "body": "import pdb ; pdb.set_trace()"
+  },
+  "ipdb": {
+    "prefix": "ipdb",
+    "body": "import ipdb ; ipdb.set_trace()"
+  }
 }

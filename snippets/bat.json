@@ -1,159 +1,159 @@
 // Created/Written By Samyak Bumb
 {
-	"echo off": {
-	"prefix": "echooff",
-	"body": [
-		"@echo off",
-		""
-	]
-},
-"goto EOF": {
-	"prefix": "eof",
-	"body": [
-		"goto :EOF"
-	]
-},
-"set prompt": {
-	"prefix": "setp",
-	"body": [
-		"set /P ${1:variable}=${2:promptString}"
-	]
-},
-"pushd":{
-	"prefix": "pushd",
-	"body": [
-		"pushd ${1:path}",
-		"\t${2}",
-		"popd"
-	]
-},
-"enable delay expansion":{
-	"prefix": "enable-delay-expansion",
-	"body": [
-		"setlocal ENABLEDELAYEDEXPANSION",
-		"$1",
-		"endlocal"
-	]
-},
-"if errorlevel": {
-	"prefix": "iferr",
-	"body": [
-		"IF ERRORLEVEL ${1:number} (",
-		"\t$2",
-		")$3"
-	]
-},
-"if exist": {
-	"prefix": "ifexist",
-	"body": [
-		"IF EXIST ${1:filename} (",
-		"\t$2",
-		")$3"
-	]
-},
-"if equ": {
-	"prefix": "ifequ",
-	"body": [
-		"IF ${1:string1} EQU ${2:string2} (",
-		"\t$3",
-		")$4"
-	]
-},
-"if neq": {
-	"prefix": "ifneq",
-	"body": [
-		"IF ${1:string1} NEQ ${2:string2} (",
-		"\t$3",
-		")$4"
-	]
-},
-"if lss": {
-	"prefix": "iflss",
-	"body": [
-		"IF ${1:string1} LSS ${2:string2} (",
-		"\t$3",
-		")$4"
-	]
-},
-"if LEQ": {
-	"prefix": "ifleq",
-	"body": [
-		"IF ${1:string1} LEQ ${2:string2} (",
-		"\t$3",
-		")$4"
-	]
-},
-"if GTR": {
-	"prefix": "ifgtr",
-	"body": [
-		"IF ${1:string1} GTR ${2:string2} (",
-		"\t$3",
-		")$4"
-	]
-},
-"if GEQ": {
-	"prefix": "ifgeq",
-	"body": [
-		"IF ${1:string1} GEQ ${2:string2} (",
-		"\t$3",
-		")$4"
-	]
-},
-"if defined": {
-	"prefix": "ifdef",
-	"body": [
-		"IF DEFINED ${1:variable} (",
-		"\t$2",
-		")$3"
-	]
-},
-"else statement": {
-	"prefix": "else",
-	"body": [
-		"ELSE (",
-		"\t${1}",
-		")",
-		""
-	]
-},
-	"for loop": {
-	"prefix": "forl",
-	"body": [
-		"FOR /L %%${1:i} IN (${2:start}, ${3:step}, ${4:end}) DO (",
-		"\t$5",
-		")"
-	]
-},
-"for direcotry":{
-	"prefix": "ford",
-	"body": [
-		"FOR /D %%${i} IN (${set}) DO (",
-		"\t${command}",
-		")"
-	]
-},
-"for r":{
-	"prefix": "forr",
-	"body": [
-		"FOR /R ${directory} %%${i} IN (${set}) DO (",
-		"\t${command}",
-		")"
-	]
-},
-"for f":{
-	"prefix": "forf",
-	"body": [
-		"FOR /F \"eol=${1:end_of_line}, skip=${2:num_of_lines}, delims=${3:delimiter}, tokens=${4:tokens} \" %%${5:i} IN (${6:set}) DO (",
-		"\t${7}",
-		")"
-	]
-},
-"function": {
-	"prefix": "func",
-	"body": [
-		":${Function Name}",
-		"\t${1}",
-		"goto :EOF"
-	]
-}
+  "echo off": {
+    "prefix": "echooff",
+    "body": [
+      "@echo off",
+      ""
+    ]
+  },
+  "goto EOF": {
+    "prefix": "eof",
+    "body": [
+      "goto :EOF"
+    ]
+  },
+  "set prompt": {
+    "prefix": "setp",
+    "body": [
+      "set /P ${1:variable}=${2:promptString}"
+    ]
+  },
+  "pushd": {
+    "prefix": "pushd",
+    "body": [
+      "pushd ${1:path}",
+      "\t${2}",
+      "popd"
+    ]
+  },
+  "enable delay expansion": {
+    "prefix": "enable-delay-expansion",
+    "body": [
+      "setlocal ENABLEDELAYEDEXPANSION",
+      "$1",
+      "endlocal"
+    ]
+  },
+  "if errorlevel": {
+    "prefix": "iferr",
+    "body": [
+      "IF ERRORLEVEL ${1:number} (",
+      "\t$2",
+      ")$3"
+    ]
+  },
+  "if exist": {
+    "prefix": "ifexist",
+    "body": [
+      "IF EXIST ${1:filename} (",
+      "\t$2",
+      ")$3"
+    ]
+  },
+  "if equ": {
+    "prefix": "ifequ",
+    "body": [
+      "IF ${1:string1} EQU ${2:string2} (",
+      "\t$3",
+      ")$4"
+    ]
+  },
+  "if neq": {
+    "prefix": "ifneq",
+    "body": [
+      "IF ${1:string1} NEQ ${2:string2} (",
+      "\t$3",
+      ")$4"
+    ]
+  },
+  "if lss": {
+    "prefix": "iflss",
+    "body": [
+      "IF ${1:string1} LSS ${2:string2} (",
+      "\t$3",
+      ")$4"
+    ]
+  },
+  "if LEQ": {
+    "prefix": "ifleq",
+    "body": [
+      "IF ${1:string1} LEQ ${2:string2} (",
+      "\t$3",
+      ")$4"
+    ]
+  },
+  "if GTR": {
+    "prefix": "ifgtr",
+    "body": [
+      "IF ${1:string1} GTR ${2:string2} (",
+      "\t$3",
+      ")$4"
+    ]
+  },
+  "if GEQ": {
+    "prefix": "ifgeq",
+    "body": [
+      "IF ${1:string1} GEQ ${2:string2} (",
+      "\t$3",
+      ")$4"
+    ]
+  },
+  "if defined": {
+    "prefix": "ifdef",
+    "body": [
+      "IF DEFINED ${1:variable} (",
+      "\t$2",
+      ")$3"
+    ]
+  },
+  "else statement": {
+    "prefix": "else",
+    "body": [
+      "ELSE (",
+      "\t${1}",
+      ")",
+      ""
+    ]
+  },
+  "for loop": {
+    "prefix": "forl",
+    "body": [
+      "FOR /L %%${1:i} IN (${2:start}, ${3:step}, ${4:end}) DO (",
+      "\t$5",
+      ")"
+    ]
+  },
+  "for direcotry": {
+    "prefix": "ford",
+    "body": [
+      "FOR /D %%${i} IN (${set}) DO (",
+      "\t${command}",
+      ")"
+    ]
+  },
+  "for r": {
+    "prefix": "forr",
+    "body": [
+      "FOR /R ${directory} %%${i} IN (${set}) DO (",
+      "\t${command}",
+      ")"
+    ]
+  },
+  "for f": {
+    "prefix": "forf",
+    "body": [
+      "FOR /F \"eol=${1:end_of_line}, skip=${2:num_of_lines}, delims=${3:delimiter}, tokens=${4:tokens} \" %%${5:i} IN (${6:set}) DO (",
+      "\t${7}",
+      ")"
+    ]
+  },
+  "function": {
+    "prefix": "func",
+    "body": [
+      ":${Function Name}",
+      "\t${1}",
+      "goto :EOF"
+    ]
+  }
 }
