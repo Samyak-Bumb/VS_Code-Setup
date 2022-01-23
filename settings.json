@@ -347,6 +347,8 @@
       "comments": false,
       "strings": true
     },
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
     "editor.defaultFormatter": "vscode.json-language-features"
   },
   "[jsonc]": {
@@ -378,7 +380,6 @@
   "workbench.hover.delay": 500,
   "editor.inlineSuggest.enabled": true,
   "editor.formatOnPaste": true,
-  "editor.formatOnSave": true,
   "css.lint.vendorPrefix": "ignore",
   "explorer.autoReveal": false,
   "editor.hover.sticky": false,
@@ -386,9 +387,9 @@
   "npm.fetchOnlinePackageInfo": false,
   "workbench.colorTheme": "Samyak Bumb",
   "testing.automaticallyOpenPeekView": "never",
-  "prettier.withNodeModules": true,
-  "workbench.activityBar.visible": false,
-  "extensions.autoUpdate": false,
   "timeline.pageOnScroll": true,
-  "editor.tabCompletion": "on"
+  "editor.tabCompletion": "on",
+  "extensions.autoUpdate": false,
+  "workbench.statusBar.visible": false,
+  "workbench.activityBar.visible": false
 }

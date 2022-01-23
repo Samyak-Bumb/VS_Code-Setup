@@ -23,8 +23,16 @@
     "prefix": "cd",
     "body": "<!-- Created/Designed By Samyak Bumb -->"
   },
+  "Link Src": {
+    "prefix": "li",
+    "body": "<link rel=\"stylesheet\" href=\"./${0:style}.css\">"
+  },
   "Script Src": {
     "prefix": "sc",
     "body": "<script src=\"./${0:script}.js\"></script>"
+  },
+  "Clean Comment":{
+    "prefix": "comment",
+    "body": "\n<!--=============== ${0:Name} ===============-->\n"
   }
 }

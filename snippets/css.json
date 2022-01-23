@@ -16,7 +16,7 @@
       "\tmin-height: 100vh;",
       "\tcolor: #eee;",
       "\tbackground: #000",
-      "}\n${0:}",
+      "}\n${0:}"
     ]
   },
   "RGBA": {
@@ -137,7 +137,7 @@
     "prefix": "mh",
     "body": "min-height: ${0:100vh};"
   },
-  //
+  // Comment Start
   "Comment": {
     "prefix": "comment",
     "body": "\n/* ${0:Comment} */\n"
@@ -146,30 +146,33 @@
     "prefix": "comment-block",
     "body": "\n\n/**\n *\n * ${0:Block comment}\n *\n **/\n"
   },
-  "Comment Section Header": {
+  "Comment Section": {
+    "prefix": "comment-section",
+    "body": "\n/*=============================================\n=         Start of ${1:Section comment block}      =\n=============================================*/\n\n${0:}\n\n/*======  End of ${1:Section comment block}  ======*/\n"
+  },
+  "Comment Section End": {
     "prefix": "comment-section-header",
     "body": "\n/*=============================================\n=         Start of ${0:Section comment block}      =\n=============================================*/\n"
   },
-  "Comment Section Footer": {
+  "Comment Section Begin": {
     "prefix": "comment-section-footer",
     "body": "\n/*=====  End of ${1:Section comment block}  ======*/\n"
   },
-  "Comment Section": {
-    "prefix": "comment-section",
-    "body": "\n/*=============================================\n=         Start of ${0:Section comment block}      =\n=============================================*/\n\n\n/*======  End of ${0:Section comment block}  ======*/\n"
+  "Comment Line Dash": {
+    "prefix": "comment-line-dash",
+    "body": "\n/*----------  ${0:Line comment block}  ----------*/\n"
   },
-  "Comment Subsection": {
-    "prefix": "comment-subsection",
-    "body": "\n/*----------  ${0:Subsection comment block}  ----------*/\n"
+  "Comment Line Star": {
+    "prefix": "comment-line-star",
+    "body": "\n/***********  ${0:Star comment line}  ***********/\n"
   },
-  //
-  "Claymorphism": {
-    "prefix": "clay",
-    "body": [
-      "backdrop-filter: blur(5px);",
-      "border-radius: 26px;",
-      "box-shadow: 35px 35px 68px 0 rgba(145,192,255,0.5),\ninset -8px -8px 16px 0 rgba(145,192, 55,0.6),\ninset 0 11px 28px 0 #fff;",
-      "background: #fff;"
-    ]
+  "Comment Line Equal": {
+    "prefix": "comment-line-equal",
+    "body": "\n/*==========  ${0:Equal comment line}  ==========*/\n"
+  },
+  "Comment TO-DO": {
+    "prefix": "comment-todo",
+    "body": "/**\n\n\tTODO:\n\t\t- ${1:First todo}\n\t\t- ${0:Second todo}\n\n */\n\n"
   }
+  // Comment End
 }
