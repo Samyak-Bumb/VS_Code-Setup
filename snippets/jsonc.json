@@ -1,6 +1,6 @@
 // Created/Written By Samyak Bumb
 {
-  "Tab": {
+  "Tab Click": {
     "prefix": "$",
     "body": "${${1:0}:${2:}}"
   }

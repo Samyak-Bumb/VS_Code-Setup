@@ -4,18 +4,18 @@
     "prefix": "q",
     "body": [
       "<!DOCTYPE html>",
-      "<html lang=\"en\">",
-      "<!-- Created/Designed By Samyak Bumb -->",
-      "<head>",
-      "\t<meta charset=\"UTF-8\">",
-      "\t<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">",
-      "\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">",
-      "\t<title>${1:} By Samyak</title>",
-      "\t<link rel=\"stylesheet\" href=\"./style.css\">",
-      "</head>",
-      "<body>\n",
-      "\t.${0:}\n",
-      "</body>",
+      "<html lang=\"en\">\n",
+      "\t<!-- Created/Designed By Samyak Bumb -->\n",
+      "\t<head>\n",
+      "\t\t<meta charset=\"UTF-8\">",
+      "\t\t<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">",
+      "\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">",
+      "\t\t<title>${1:} By Samyak</title>",
+      "\t\t<link rel=\"stylesheet\" href=\"./style.css\">\n",
+      "\t</head>\n",
+      "\t<body>\n",
+      "\t\t.${0:}\n",
+      "\t</body>\n",
       "</html>\n"
     ]
   },
@@ -31,8 +31,45 @@
     "prefix": "sc",
     "body": "<script src=\"./${0:script}.js\"></script>"
   },
-  "Clean Comment":{
+  "Clean Comment": {
     "prefix": "comment",
     "body": "\n<!--=============== ${0:Name} ===============-->\n"
+  },
+  // CDN's
+  "Import Ion-icons": {
+    "prefix": "cdn-ionicons",
+    "body": [
+      "<script type=\"module\" src=\"https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js\"></script>",
+      "<script nomodule src=\"https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js\"></script>"
+    ]
+  },
+  "Import Slick Slider": {
+    "prefix": "cdn-slick-js",
+    "body": [
+      "<script src=\"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js\"</script>",
+      "<script src=\"https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.3.2/jquery-migrate.min.js\"</script>",
+      "<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css\">"
+    ]
+  },
+  "Import Font Awesome": {
+    "prefix": "cdn-fontawesome",
+    "body": "<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/fontawesome.min.css\">\n"
+  },
+  "Slick CSS import": {
+    "prefix": "cdn-slick-css",
+    "body": "<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css\">"
+  },
+  "Swiper Slider CDN": {
+    "prefix": "cdn-swiper",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://unpkg.com/swiper@7/swiper-bundle.min.css\">\n",
+      "<script src=\"https://unpkg.com/swiper@7/swiper-bundle.min.js\"></script>"
+    ]
+  },
+  "Box Icon CSS CDN": {
+    "prefix": "cdn-boxicons",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css\">"
+    ]
   }
 }

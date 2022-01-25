@@ -3,7 +3,7 @@
   "CSS Boilerplate with Loader By Samyak": {
     "prefix": "q",
     "body": [
-      "@import url(\"https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap\");\n",
+      "@import url(\"https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap\");\n",
       "*{",
       "\tmargin: 0;",
       "\tpadding: 0;",
@@ -16,7 +16,7 @@
       "\tmin-height: 100vh;",
       "\tcolor: #eee;",
       "\tbackground: #000",
-      "}\n${0:}"
+      "}\n\n.${0:}{"
     ]
   },
   "RGBA": {
@@ -25,7 +25,7 @@
   },
   "Display: Flex + Center": {
     "prefix": "df",
-    "body": "display: flex;\njustify-content: center;\nalign-items: ${0:center};"
+    "body": "display: flex;\njustify-content: ${1:center};\nalign-items: ${0:center};"
   },
   "Display: Grid + Center": {
     "prefix": "dg",
@@ -54,16 +54,6 @@
   "Width & Height: 100%": {
     "prefix": "wh",
     "body": "width: ${1:100%};\nheight: ${0:100%};"
-  },
-  "Box Model": {
-    "prefix": "bxm",
-    "body": [
-      "display: ${1:block};",
-      "position: ${2:absolute};",
-      "width: ${3:100px};",
-      "height: ${4:100px};",
-      "background : #${0:000}"
-    ]
   },
   "Border": {
     "prefix": "bd",
@@ -136,6 +126,25 @@
   "Minimum Height": {
     "prefix": "mh",
     "body": "min-height: ${0:100vh};"
+  },
+  "CSS Reset": {
+    "prefix": "css_Reset",
+    "body": [
+      "html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6{\n\tmargin: 0;\n\tpadding: 0\n}",
+      "h1, h2, h3, h4, h5, h6{\n\tfont-size: 100%;\n\tfont-weight: normal\n}",
+      "ul{\n\tlist-style: none\n}",
+      "button, input, select{\n\tmargin: 0\n}",
+      "html{\n\tbox-sizing: border-box;\n}",
+      "*, *::before, *::after{\n\tbox-sizing: inherit;\n}",
+      "img, video{\n\theight: auto;\n\tmax-width: 100%;\n}",
+      "iframe{\n\tborder: 0\n}",
+      "table{\n\tborder-collapse: collapse;\n\tborder-spacing: 0\n}",
+      "td, th{\n\tpadding: 0;\n}\n"
+    ]
+  },
+  "CSS Reset Minify": {
+    "prefix": "css_Reset_min",
+    "body": "html,body,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,iframe,hr,h1,h2,h3,h4,h5,h6{margin:0;padding:0}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}ul{list-style:none}button,input,select{margin:0}html{box-sizing:border-box}*,*::before,*::after{box-sizing:inherit}img,video{height:auto;max-width:100%}iframe{border:0}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}"
   },
   // Comment Start
   "Comment": {
