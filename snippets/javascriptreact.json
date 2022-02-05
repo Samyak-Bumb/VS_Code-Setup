@@ -64,8 +64,7 @@
     "body": [
       "get ${1:propertyName}() {",
       "\treturn this.${0}",
-      "}",
-      ""
+      "}\n"
     ]
   },
   "propertySet": {
@@ -73,8 +72,7 @@
     "body": [
       "set ${1:propertyName}(${2:value}) {",
       "\t${0}",
-      "}",
-      ""
+      "}\n"
     ]
   },
   "forEach": {
@@ -82,8 +80,7 @@
     "body": [
       "${1:array}.forEach(${2:currentItem} => {",
       "\t${0}",
-      "})",
-      ""
+      "})\n"
     ]
   },
   "forOf": {
@@ -91,8 +88,7 @@
     "body": [
       "for(let ${1:item} of ${2:object}) {",
       "\t${0}",
-      "}",
-      ""
+      "}\n"
     ]
   },
   "forIn": {
@@ -100,8 +96,7 @@
     "body": [
       "for(let ${1:item} in ${2:object}) {",
       "\t${0}",
-      "}",
-      ""
+      "}\n"
     ]
   },
   "anonymousFunction": {
@@ -117,8 +112,7 @@
     "body": [
       "const ${1:name} = (${2:params}) => {",
       "\t${3}",
-      "}",
-      ""
+      "}\n"
     ]
   },
   "destructingObject": {
@@ -134,8 +128,7 @@
     "body": [
       "setInterval(() => {",
       "\t${2}",
-      "}, ${0:intervalInms})",
-      ""
+      "}, ${0:intervalInms})\n",
     ]
   },
   "setTimeOut": {
@@ -143,8 +136,7 @@
     "body": [
       "setTimeout(() => {",
       "\t${2}",
-      "}, ${1:delayInms})",
-      ""
+      "}, ${1:delayInms})\n",
     ]
   },
   "promise": {
@@ -152,8 +144,7 @@
     "body": [
       "return new Promise((resolve, reject) => {",
       "\t${1}",
-      "})",
-      ""
+      "})\n",
     ]
   },
   "consoleAssert": {
@@ -226,24 +217,15 @@
   },
   "import React": {
     "prefix": "imr",
-    "body": [
-      "import React from 'react'",
-      ""
-    ]
+    "body": "import React from 'react'\n",
   },
   "import ReactDOM": {
     "prefix": "imrd",
-    "body": [
-      "import ReactDOM from 'react-dom'",
-      ""
-    ]
+    "body": "import ReactDOM from 'react-dom'\n",
   },
   "import React, { Component }": {
     "prefix": "imrc",
-    "body": [
-      "import React, { Component } from 'react'",
-      ""
-    ]
+    "body": "import React, { Component } from 'react'\n"
   },
   "import React, { Component } & PropTypes": {
     "prefix": "imrcp",
@@ -255,130 +237,82 @@
   },
   "import React, { PureComponent }": {
     "prefix": "imrpc",
-    "body": [
-      "import React, { PureComponent } from 'react'",
-      ""
-    ]
+    "body": "import React, { PureComponent } from 'react'\n"
   },
   "import React, { PureComponent } & PropTypes": {
     "prefix": "imrpcp",
     "body": [
       "import React, { PureComponent } from 'react'",
-      "import PropTypes from 'prop-types'",
-      ""
+      "import PropTypes from 'prop-types'\n"
     ]
   },
   "import React, { memo }": {
     "prefix": "imrm",
-    "body": [
-      "import React, { memo } from 'react'",
-      ""
-    ]
+    "body": "import React, { memo } from 'react'\n"
   },
   "import React, { memo } & PropTypes": {
     "prefix": "imrmp",
     "body": [
       "import React, { memo } from 'react'",
-      "import PropTypes from 'prop-types'",
-      ""
+      "import PropTypes from 'prop-types'\n",
     ]
   },
   "import React, {useState}": {
     "prefix": "imrs",
-    "body": [
-      "import React, { useState } from 'react'",
-      ""
-    ]
+    "body": "import React, { useState } from 'react'\n"
   },
   "import React, {useEffect}": {
     "prefix": "imre",
-    "body": [
-      "import React, { useEffect } from 'react'",
-      ""
-    ]
+    "body": "import React, { useEffect } from 'react'\n"
   },
   "import React, {useRef}": {
     "prefix": "imrr",
-    "body": [
-      "import React, { useRef } from 'react'",
-      ""
-    ]
+    "body": "import React, { useRef } from 'react'\n"
   },
   "import React, {useState, useEffect}": {
     "prefix": "imrse",
-    "body": [
-      "import React, { useState, useEffect } from 'react'",
-      ""
-    ]
+    "body": "import React, { useState, useEffect } from 'react'\n"
   },
   "import PropTypes": {
     "prefix": "impt",
-    "body": [
-      "import PropTypes from 'prop-types'",
-      ""
-    ]
+    "body": "import PropTypes from 'prop-types'\n"
   },
   "import React Router": {
     "prefix": "imrr",
-    "body": [
-      "import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom'",
-      ""
-    ]
+    "body": "import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom'\n"
   },
   "import React Browser Router": {
     "prefix": "imbr",
-    "body": [
-      "import { BrowserRouter as Router } from 'react-router-dom'",
-      ""
-    ]
+    "body": "import { BrowserRouter as Router } from 'react-router-dom'\n"
   },
   "import React Browser Router - Route": {
     "prefix": "imbrr",
-    "body": [
-      "import { Route } from 'react-router-dom'",
-      ""
-    ]
+    "body": "import { Route } from 'react-router-dom'\n"
   },
   "import React Browser Router - Route Combo": {
     "prefix": "imbrc",
-    "body": [
-      "import { Route, Switch, NavLink, Link } from 'react-router-dom'",
-      ""
-    ]
+    "body": "import { Route, Switch, NavLink, Link } from 'react-router-dom'\n"
   },
   "import React Browser Router - Switch": {
     "prefix": "imbrs",
-    "body": [
-      "import { Switch } from 'react-router-dom'",
-      ""
-    ]
+    "body": "import { Switch } from 'react-router-dom'\n"
   },
   "import React Browser Router - Link": {
     "prefix": "imbrl",
-    "body": [
-      "import { Link } from 'react-router-dom'",
-      ""
-    ]
+    "body": "import { Link } from 'react-router-dom'\n"
   },
   "import React Browser Router - NavLink": {
     "prefix": "imbrnl",
-    "body": [
-      "import { NavLink } from 'react-router-dom'",
-      ""
-    ]
+    "body": "import { NavLink } from 'react-router-dom'\n"
   },
   "import redux statement": {
     "prefix": "redux",
-    "body": [
-      "import { connect } from 'react-redux'",
-      ""
-    ]
+    "body": "import { connect } from 'react-redux'\n"
   },
   "reactClassCompoment": {
     "prefix": "rcc",
     "body": [
-      "import React, { Component } from 'react'",
-      "",
+      "import React, { Component } from 'react'\n",
       "export default class ${1:${TM_FILENAME_BASE}} extends Component {",
       "\trender() {",
       "\t\treturn (",
@@ -387,15 +321,13 @@
       "\t\t\t</div>",
       "\t\t)",
       "\t}",
-      "}",
-      ""
+      "}\n"
     ]
   },
   "reactClassExportComponent": {
     "prefix": "rce",
     "body": [
-      "import React, { Component } from 'react'",
-      "",
+      "import React, { Component } from 'react'\n",
       "export class ${1:${TM_FILENAME_BASE}} extends Component {",
       "\trender() {",
       "\t\treturn (",
@@ -404,10 +336,8 @@
       "\t\t\t</div>",
       "\t\t)",
       "\t}",
-      "}",
-      "",
-      "export default ${1:${TM_FILENAME_BASE}}",
-      ""
+      "}\n",
+      "export default ${1:${TM_FILENAME_BASE}}\n"
     ]
   },
   "reactFunctionalExportComponent": {

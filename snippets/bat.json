@@ -2,143 +2,75 @@
 {
   "echo off": {
     "prefix": "echooff",
-    "body": [
-      "@echo off",
-      ""
-    ]
+    "body": "@echo off\n\n"
   },
   "goto EOF": {
     "prefix": "eof",
-    "body": [
-      "goto :EOF"
-    ]
+    "body": "goto :EOF"
   },
   "set prompt": {
     "prefix": "setp",
-    "body": [
-      "set /P ${1:variable}=${2:promptString}"
-    ]
+    "body": "set /P ${1:variable}=${2:promptString}"
   },
   "pushd": {
     "prefix": "pushd",
-    "body": [
-      "pushd ${1:path}",
-      "\t${2}",
-      "popd"
-    ]
+    "body": "pushd ${1:path}\n\t${2}\npopd"
   },
   "enable delay expansion": {
     "prefix": "enable-delay-expansion",
-    "body": [
-      "setlocal ENABLEDELAYEDEXPANSION",
-      "$1",
-      "endlocal"
-    ]
+    "body": "setlocal ENABLEDELAYEDEXPANSION\n$0\nendlocal"
   },
   "if errorlevel": {
     "prefix": "iferr",
-    "body": [
-      "IF ERRORLEVEL ${1:number} (",
-      "\t$2",
-      ")$3"
-    ]
+    "body": "IF ERRORLEVEL ${1:number} (\n\t$2\n)$3"
   },
   "if exist": {
     "prefix": "ifexist",
-    "body": [
-      "IF EXIST ${1:filename} (",
-      "\t$2",
-      ")$3"
-    ]
+    "body": "IF EXIST ${1:filename} (\n\t$2\n)$3"
   },
   "if equ": {
     "prefix": "ifequ",
-    "body": [
-      "IF ${1:string1} EQU ${2:string2} (",
-      "\t$3",
-      ")$4"
-    ]
+    "body": "IF ${1:string1} EQU ${2:string2} (\n\t$3\n)$4"
   },
   "if neq": {
     "prefix": "ifneq",
-    "body": [
-      "IF ${1:string1} NEQ ${2:string2} (",
-      "\t$3",
-      ")$4"
-    ]
+    "body": "IF ${1:string1} NEQ ${2:string2} (\n\t$3\n)$4"
   },
   "if lss": {
     "prefix": "iflss",
-    "body": [
-      "IF ${1:string1} LSS ${2:string2} (",
-      "\t$3",
-      ")$4"
-    ]
+    "body": "IF ${1:string1} LSS ${2:string2} (\n\t$3\n)$4"
   },
   "if LEQ": {
     "prefix": "ifleq",
-    "body": [
-      "IF ${1:string1} LEQ ${2:string2} (",
-      "\t$3",
-      ")$4"
-    ]
+    "body": "IF ${1:string1} LEQ ${2:string2} (\n\t$3\n)$4"
   },
   "if GTR": {
     "prefix": "ifgtr",
-    "body": [
-      "IF ${1:string1} GTR ${2:string2} (",
-      "\t$3",
-      ")$4"
-    ]
+    "body": "IF ${1:string1} GTR ${2:string2} (\n\t$3\n)$4"
   },
   "if GEQ": {
     "prefix": "ifgeq",
-    "body": [
-      "IF ${1:string1} GEQ ${2:string2} (",
-      "\t$3",
-      ")$4"
-    ]
+    "body": "IF ${1:string1} GEQ ${2:string2} (\n\t$3\n)$4"
   },
   "if defined": {
     "prefix": "ifdef",
-    "body": [
-      "IF DEFINED ${1:variable} (",
-      "\t$2",
-      ")$3"
-    ]
+    "body": "IF DEFINED ${1:variable} (\n\t$2\n)$3"
   },
   "else statement": {
     "prefix": "else",
-    "body": [
-      "ELSE (",
-      "\t${1}",
-      ")",
-      ""
-    ]
+    "body": "ELSE (\n\t${1}\n)\n"
   },
   "for loop": {
     "prefix": "forl",
-    "body": [
-      "FOR /L %%${1:i} IN (${2:start}, ${3:step}, ${4:end}) DO (",
-      "\t$5",
-      ")"
-    ]
+    "body": "FOR /L %%${1:i} IN (${2:start}, ${3:step}, ${4:end}) DO (\n\t$5\n)"
   },
   "for direcotry": {
     "prefix": "ford",
-    "body": [
-      "FOR /D %%${i} IN (${set}) DO (",
-      "\t${command}",
-      ")"
-    ]
+    "body": "FOR /D %%${i} IN (${set}) DO (\n\t${command}\n)"
   },
   "for r": {
     "prefix": "forr",
-    "body": [
-      "FOR /R ${directory} %%${i} IN (${set}) DO (",
-      "\t${command}",
-      ")"
-    ]
+    "body": "FOR /R ${directory} %%${i} IN (${set}) DO (\n\t${command}\n)"
   },
   "for f": {
     "prefix": "forf",
@@ -150,10 +82,6 @@
   },
   "function": {
     "prefix": "func",
-    "body": [
-      ":${Function Name}",
-      "\t${1}",
-      "goto :EOF"
-    ]
+    "body": ":${Function Name}\n\t${0}\ngoto :EOF"
   }
 }

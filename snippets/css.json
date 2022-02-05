@@ -16,7 +16,7 @@
       "\tmin-height: 100vh;",
       "\tcolor: #eee;",
       "\tbackground: #000",
-      "}\n\n.${0:}{"
+      "}\n\n$0"
     ]
   },
   "RGBA": {
@@ -119,9 +119,17 @@
     "prefix": "fr",
     "body": "filter: blur(${0:1}px);"
   },
+  "Root Variable": {
+    "prefix": "var_root",
+    "body": "--${1:variableName}: $0;"
+  },
+  "Variable": {
+    "prefix": "var",
+    "body": "var(--$0)"
+  },
   "Transition": {
     "prefix": "tra",
-    "body": "transition: all ${1:300}ms ${0:};"
+    "body": "transition: all ${1:300}ms;"
   },
   "Minimum Height": {
     "prefix": "mh",
@@ -146,7 +154,6 @@
     "prefix": "css_Reset_min",
     "body": "html,body,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,iframe,hr,h1,h2,h3,h4,h5,h6{margin:0;padding:0}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}ul{list-style:none}button,input,select{margin:0}html{box-sizing:border-box}*,*::before,*::after{box-sizing:inherit}img,video{height:auto;max-width:100%}iframe{border:0}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}"
   },
-  // Comment Start
   "Comment": {
     "prefix": "comment",
     "body": "\n/* ${0:Comment} */\n"
@@ -183,5 +190,4 @@
     "prefix": "comment-todo",
     "body": "/**\n\n\tTODO:\n\t\t- ${1:First todo}\n\t\t- ${0:Second todo}\n\n */\n\n"
   }
-  // Comment End
 }

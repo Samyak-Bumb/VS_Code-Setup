@@ -3,5 +3,9 @@
   "Tab Click": {
     "prefix": "$",
     "body": "${${1:0}:${2:}}"
+  },
+  "Comment": {
+    "prefix": "comment",
+    "body": "//========== ${0:Name} =========="
   }
 }

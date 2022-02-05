@@ -182,33 +182,24 @@
   "switch": {
     "prefix": "switch",
     "body": [
-      "switch (${switch_on})",
-      "{",
+      "switch (${switch_on})\n{",
       "default:",
-      "\tbreak;$1",
-      "}"
+      "\tbreak;$1\n}",
     ]
   },
   "try": {
     "prefix": "try",
     "body": [
-      "try",
-      "{",
-      "",
-      "}",
-      "catch (const std::exception&)",
-      "{",
-      "\t$1",
-      "}"
+      "try\n{\n}",
+      "catch (const std::exception&)\n{",
+      "\t$1\n}"
     ]
   },
   "union": {
     "prefix": "union",
     "body": [
-      "union ${MyUnion}",
-      "{",
-      "\t$1",
-      "};"
+      "union ${MyUnion}\n{",
+      "\t$1\n};"
     ]
   },
   "cout": {
