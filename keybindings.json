@@ -451,7 +451,8 @@
 	},
 	{
 		"key": "ctrl+r",
-		"command": "workbench.extensions.action.refreshExtension"
+		"command": "workbench.extensions.action.refreshExtension",
+		"when": "workbench.views.extensions.installed.visible || searchMarketplaceExtensions"
 	},
 	{
 		"key": "ctrl+f5",
@@ -499,7 +500,8 @@
 	},
 	{
 		"key": "ctrl+shift+a u",
-		"command": "update.checkForVSCodeUpdate"
+		"command": "update.checkForVSCodeUpdate",
+		"when": "searchMarketplaceExtensions"
 	},
 	{
 		"key": "ctrl+m",
@@ -548,10 +550,6 @@
 	{
 		"key": "ctrl+shift+w",
 		"command": "workbench.action.openSettingsJson"
-	},
-	{
-		"key": "alt+n",
-		"command": "notifications.showList"
 	},
 	{
 		"key": "ctrl+shift+h",
@@ -613,5 +611,27 @@
 	{
 		"key": "ctrl+shift+a c",
 		"command": "workbench.extensions.action.clearExtensionsSearchResults"
+	},
+	{
+		"key": "escape",
+		"command": "notifications.clearAll",
+		"when": "notificationFocus || notificationToastsVisible"
+	},
+	{
+		"key": "alt+x",
+		"command": "extension.cssrem.rem-switch-px"
+	},
+	{
+		"key": "alt+z",
+		"command": "-extension.cssrem.rem-switch-px"
+	},
+	{
+		"key": "ctrl+k e",
+		"command": "-workbench.files.action.focusOpenEditorsView",
+		"when": "workbench.explorer.openEditorsView.active"
+	},
+	{
+		"key": "ctrl+shift+a w",
+		"command": "workbench.action.customizeLayout"
 	}
 ]
