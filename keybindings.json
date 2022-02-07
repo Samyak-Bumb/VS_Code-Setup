@@ -499,9 +499,8 @@
 		"when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
 	},
 	{
-		"key": "ctrl+shift+a u",
-		"command": "update.checkForVSCodeUpdate",
-		"when": "searchMarketplaceExtensions"
+		"key": "shift+a u",
+		"command": "update.checkForVSCodeUpdate"
 	},
 	{
 		"key": "ctrl+m",
@@ -601,15 +600,15 @@
 		"when": "breadcrumbsPossible"
 	},
 	{
-		"key": "ctrl+shift+a a",
+		"key": "shift+a a",
 		"command": "workbench.action.toggleActivityBarVisibility"
 	},
 	{
-		"key": "ctrl+shift+a s",
+		"key": "shift+a s",
 		"command": "workbench.action.toggleStatusbarVisibility"
 	},
 	{
-		"key": "ctrl+shift+a c",
+		"key": "shift+a c",
 		"command": "workbench.extensions.action.clearExtensionsSearchResults"
 	},
 	{
@@ -631,7 +630,15 @@
 		"when": "workbench.explorer.openEditorsView.active"
 	},
 	{
-		"key": "ctrl+shift+a w",
+		"key": "shift+a w",
 		"command": "workbench.action.customizeLayout"
+	},
+	{
+		"key": "shift+s",
+		"command": "workbench.action.files.saveAs"
+	},
+	{
+		"key": "ctrl+shift+s",
+		"command": "-workbench.action.files.saveAs"
 	}
 ]
