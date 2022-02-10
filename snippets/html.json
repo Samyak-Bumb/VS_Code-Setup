@@ -14,7 +14,7 @@
       "\t\t<link rel=\"stylesheet\" href=\"./style.css\">\n",
       "\t</head>\n",
       "\t<body>\n",
-      "\t\t.${0:}\n",
+      "\t\t${0:.}\n",
       "\t</body>\n",
       "</html>\n"
     ]

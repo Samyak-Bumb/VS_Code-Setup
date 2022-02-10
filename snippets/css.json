@@ -3,7 +3,7 @@
   "CSS Boilerplate with Loader By Samyak": {
     "prefix": "q",
     "body": [
-      "@import url(\"https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap\");\n",
+      "@import url(\"https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap\");\n",
       "*{",
       "\tmargin: 0;",
       "\tpadding: 0;",
@@ -21,7 +21,7 @@
   },
   "RGBA": {
     "prefix": "ra",
-    "body": "rgba(${1:0},${2:0},${3:0},0.${4:1})"
+    "body": "rgba(${1:0},${2:0},${3:0},.${4:1})"
   },
   "Display: Flex + Center": {
     "prefix": "df",
@@ -33,7 +33,7 @@
   },
   "Box Shadow": {
     "prefix": "bxs",
-    "body": "box-shadow: ${1:0} ${2:10}px ${3:20}px rgba(${4:0},${5:0},${6:0},0.${7:1});"
+    "body": "box-shadow: ${1:0} ${2:10}px ${3:20}px rgba(${4:0},${5:0},${6:0},.${7:1});"
   },
   "Media Query": {
     "prefix": "@m",
@@ -189,5 +189,49 @@
   "Comment TO-DO": {
     "prefix": "comment-todo",
     "body": "/**\n\n\tTODO:\n\t\t- ${1:First todo}\n\t\t- ${0:Second todo}\n\n */\n\n"
+  },
+  "Small Devices and Larger": {
+    "prefix": "small-devices-and-up-media-query",
+    "body": "@media (min-width: 576px){\n$0\t${1:Rules}\n"
+  },
+  "Medium Devices and Larger": {
+    "prefix": "medium-devices-and-up-media-query",
+    "body": "@media (min-width: 768px){\n$0\t${1:Rules}\n}"
+  },
+  "Large Devices and Larger": {
+    "prefix": "large-devices-and-up-media-query",
+    "body": "@media (min-width: 992px){\n$0\t${1:Rules}\n}"
+  },
+  "Small devices devices and Smaller": {
+    "prefix": "small-devices-and-down-media-query",
+    "body": "@media (max-width: 767.98px){\n$0\t${1:Rules}\n}"
+  },
+  "Medium devices devices and Smaller": {
+    "prefix": "medium-devices-and-down-media-query",
+    "body": "@media (max-width: 991.98px){\n$0\t${1:Rules}\n}"
+  },
+  "Large devices devices and Smaller": {
+    "prefix": "large-devices-and-down-media-query",
+    "body": "@media (max-width: 1199.98px){\n$0\t${1:Rules}\n}"
+  },
+  "Extra Small devices only": {
+    "prefix": "extra-small-devices-only-media-query",
+    "body": "@media (max-width: 575.98px){\n$0\t${1:Rules}\n}"
+  },
+  "Small devices only": {
+    "prefix": "small-devices-only-media-query",
+    "body": "@media (min-width: 576px) and (max-width: 767.98px){\n$0\t${1:Rules}\n}"
+  },
+  "Medium devices only": {
+    "prefix": "medium-devices-only-media-query",
+    "body": "@media (min-width: 768px) and (max-width: 991.98px){\n$0\t${1:Rules}\n}"
+  },
+  "Large devices only": {
+    "prefix": "large-devices-only-media-query",
+    "body": "@media (min-width: 992px) and (max-width: 1199.98px){\n$0\t${1:Rules}\n}"
+  },
+  "Extra Large Devices Only": {
+    "prefix": "extra-large-devices-only-media-query",
+    "body": "@media (min-width: 1200px){\n$0\t${1:Rules}\n}"
   }
 }
