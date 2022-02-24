@@ -2,12 +2,7 @@
 {
   "if else elif": {
     "prefix": "if",
-    "body": [
-      "if ${1:condition}:",
-      "\t${2:pass}",
-      "else:",
-      "\t${0:pass}",
-    ]
+    "body": "if ${1:condition}:\n\t${2:pass}\nelse:\n\t${0:pass}"
   },
   "Print": {
     "prefix": "pr",
@@ -66,22 +61,16 @@
       "    $1",
       "",
       "    def __str__(self):",
-      "        return $2",
+      "\t\treturn $2",
       "",
       "    def __unicode__(self):",
-      "        return $2",
+      "\t\treturn $2",
       ""
     ]
   },
   "Model Admin": {
     "prefix": "class Django ModelAdmin",
-    "body": [
-      "class ${Name}Admin(admin.ModelAdmin):",
-      "    list_display = ('$1',)",
-      "",
-      "admin.site.register(${Name}, ${Name}Admin)",
-      ""
-    ]
+    "body": "class ${Name}Admin(admin.ModelAdmin):\n\tlist_display = ('$1',)\n\nadmin.site.register(${Name}, ${Name}Admin)"
   },
   "Blank and Null Field Properties": {
     "prefix": "blank and null Djngo Field",
@@ -108,10 +97,10 @@
     "body": [
       "class ${Name}View(View):",
       "    def get(self, request, *args, **kwargs):",
-      "        return HttpResponse('GET request!')",
+      "\t\treturn HttpResponse('GET request!')",
       "",
       "    def post(self, request, *args, **kwargs):",
-      "        return HttpResponse('POST request!')"
+      "\t\treturn HttpResponse('POST request!')"
     ]
   },
   "ListView": {

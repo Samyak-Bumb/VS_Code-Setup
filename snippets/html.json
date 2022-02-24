@@ -35,41 +35,40 @@
     "prefix": "comment",
     "body": "\n<!--=============== ${0:Name} ===============-->\n"
   },
-  // CDN's
-  "Import Ion-icons": {
-    "prefix": "cdn-ionicons",
-    "body": [
-      "<script type=\"module\" src=\"https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js\"></script>",
-      "<script nomodule src=\"https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js\"></script>"
-    ]
+  "address": {
+    "prefix": "address",
+    "body": "<address>\n\t$0\n</address>"
   },
-  "Import Slick Slider": {
-    "prefix": "cdn-slick-js",
-    "body": [
-      "<script src=\"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js\"</script>",
-      "<script src=\"https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.3.2/jquery-migrate.min.js\"</script>",
-      "<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css\">"
-    ]
+  "article": {
+    "prefix": "article",
+    "body": "<article>\n\t$1\n</article>"
   },
-  "Import Font Awesome": {
-    "prefix": "cdn-fontawesome",
-    "body": "<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/fontawesome.min.css\">\n"
+  "div": {
+    "prefix": "div",
+    "body": "<div>\n\t$0\n</div>"
   },
-  "Slick CSS import": {
-    "prefix": "cdn-slick-css",
-    "body": "<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css\">"
+  "header": {
+    "prefix": "header",
+    "body": "<header>\n\t$0\n</header>"
   },
-  "Swiper Slider CDN": {
-    "prefix": "cdn-swiper",
-    "body": [
-      "<link rel=\"stylesheet\" href=\"https://unpkg.com/swiper@7/swiper-bundle.min.css\">\n",
-      "<script src=\"https://unpkg.com/swiper@7/swiper-bundle.min.js\"></script>"
-    ]
+  "menu": {
+    "prefix": "menu",
+    "body": "<menu>\n\t$0\n</menu>"
   },
-  "Box Icon CSS CDN": {
-    "prefix": "cdn-boxicons",
-    "body": [
-      "<link rel=\"stylesheet\" href=\"https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css\">"
-    ]
+  "nav": {
+    "prefix": "nav",
+    "body": "<nav>\n\t$0\n</nav>"
+  },
+  "style": {
+    "prefix": "style",
+    "body": "<style>\n\t*{\n\t\tmargin: 0;\n\t\tpadding: 0;\n\t\tbox-sizing: border-box;\n\t}\n\t$0\n</style>"
+  },
+  "vdo": {
+    "prefix": "vdo",
+    "body": "<video controls height=\"220\" width=\"390\">\n\t<source src=\"./assets/media/video.mp4\" type=\"video/mp4\">\n</video>"
+  },
+  "Class": {
+    "prefix": "c",
+    "body": "class=\"$0\""
   }
 }

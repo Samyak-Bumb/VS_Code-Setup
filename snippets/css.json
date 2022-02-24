@@ -8,14 +8,24 @@
       "\tmargin: 0;",
       "\tpadding: 0;",
       "\tbox-sizing: border-box;",
-      "\tfont-family: \"Poppins\", sans-serif\n}",
+      "\tfont-family: \"Poppins\", sans-serif\n}\n:root{\n\t--white: #fff;\n\t--dark: #121212;\n\t--selection: #ea4c89;\n}",
       "::selection{",
-      "\ttext-shadow: none;",
-      "\tbackground: #ea4c89\n}", // "a8cefc", "fad00052"
+      "\tcolor: var(--white);",
+      "\tbackground: var(--selection)\n}",
+      /*
+      Light Crimson: "ea4c89"
+      Light Blue: "a8cefc"
+      Light Green: "00d1b2"
+      Light Green(White BG *REQUIRED*): "a7f5a9"
+      Light Cyan: "9bf0f0"
+      Light Purple: 5e72e4
+      Light Yellow (White BG *REQUIRED*): fad00052
+      Light Pink: f775C1
+*/
       "body{",
       "\tmin-height: 100vh;",
-      "\tcolor: #eee;",
-      "\tbackground: #000",
+      "\tcolor: var(--white);",
+      "\tbackground: var(--dark)",
       "}\n\n$0"
     ]
   },
@@ -33,7 +43,7 @@
   },
   "Box Shadow": {
     "prefix": "bxs",
-    "body": "box-shadow: ${1:0} ${2:10}px ${3:20}px rgba(${4:0},${5:0},${6:0},.${7:1});"
+    "body": "box-shadow: ${1:0} ${2:0} ${3:0} rgba(${4:0},${5:0},${6:0},.${7:1});"
   },
   "Media Query": {
     "prefix": "@m",
@@ -67,38 +77,64 @@
     "prefix": "bo",
     "body": "border: none;\noutline: none;"
   },
-  "Hover Psedu": {
+  // Psedu
+  "Hover": {
     "prefix": ":h",
     "body": ":hover{\n\t${0:}\n}"
   },
-  "Root Psedu": {
+  "Root": {
     "prefix": ":r",
     "body": ":root{\n\t${0:}\n}"
   },
-  "Before Psedu": {
+  "Before": {
     "prefix": ":b",
     "body": "::before{\n\tcontent: '';\n\t${0:}\n}"
   },
-  "After Psedu": {
+  "After": {
     "prefix": ":a",
     "body": "::after{\n\tcontent: '';\n\t${0:}\n}"
   },
-  "Last Psedu": {
+  "Last Child": {
     "prefix": ":l",
     "body": ":last-child{\n\t${0:}\n}"
+  },
+  "First Child": {
+    "prefix": ":fc",
+    "body": ":first-child{\n\t${0:}\n}"
   },
   "nth Child": {
     "prefix": ":n",
     "body": ":nth-child(${1:}){\n\t${0:}\n}"
   },
-  "Placeholder Psedu": {
+  "nth Child Even": {
+    "prefix": ":n-e",
+    "body": ":nth-child(${1:2n}){\n\t${0:}\n}"
+  },
+  "nth Child Odd": {
+    "prefix": ":n-o",
+    "body": ":nth-child(${1:odd}){\n\t${0:}\n}"
+  },
+  "Placeholder": {
     "prefix": ":p",
     "body": "::placeholder(${1:}){\n\t${0:}\n}"
   },
-  "Active Psedu": {
+  "Active": {
     "prefix": ":ac",
     "body": ":active{\n\t${0:}\n}"
   },
+  "Visited": {
+    "prefix": ":v",
+    "body": ":visited{\n\t${0:}\n}"
+  },
+  "Disabled": {
+    "prefix": ":d",
+    "body": ":disabled{\n\t${0:}\n}"
+  },
+  "Focus": {
+    "prefix": ":f",
+    "body": ":focus{\n\t${0:}\n}"
+  },
+  // Psedu
   "Background with Linear-Gradient": {
     "prefix": "bgl",
     "body": "background: linear-gradient(${1:90}deg,#${2:696969},#${3:696969});"
@@ -119,13 +155,24 @@
     "prefix": "fr",
     "body": "filter: blur(${0:1}px);"
   },
-  "Root Variable": {
-    "prefix": "var_root",
-    "body": "--${1:variableName}: $0;"
-  },
   "Variable": {
     "prefix": "var",
     "body": "var(--$0)"
+  },
+  "Root Variable": {
+    "prefix": [
+      "var_root",
+      "--"
+    ],
+    "body": "--${1:variableName}: $0;"
+  },
+  "Background with Variable": {
+    "prefix": "bgv",
+    "body": "background: var(--${0:name});"
+  },
+  "Color with Variable": {
+    "prefix": "cv",
+    "body": "color: var(--${0:name});"
   },
   "Transition": {
     "prefix": "tra",
@@ -134,25 +181,6 @@
   "Minimum Height": {
     "prefix": "mh",
     "body": "min-height: ${0:100vh};"
-  },
-  "CSS Reset": {
-    "prefix": "css_Reset",
-    "body": [
-      "html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6{\n\tmargin: 0;\n\tpadding: 0\n}",
-      "h1, h2, h3, h4, h5, h6{\n\tfont-size: 100%;\n\tfont-weight: normal\n}",
-      "ul{\n\tlist-style: none\n}",
-      "button, input, select{\n\tmargin: 0\n}",
-      "html{\n\tbox-sizing: border-box;\n}",
-      "*, *::before, *::after{\n\tbox-sizing: inherit;\n}",
-      "img, video{\n\theight: auto;\n\tmax-width: 100%;\n}",
-      "iframe{\n\tborder: 0\n}",
-      "table{\n\tborder-collapse: collapse;\n\tborder-spacing: 0\n}",
-      "td, th{\n\tpadding: 0;\n}\n"
-    ]
-  },
-  "CSS Reset Minify": {
-    "prefix": "css_Reset_min",
-    "body": "html,body,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,iframe,hr,h1,h2,h3,h4,h5,h6{margin:0;padding:0}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}ul{list-style:none}button,input,select{margin:0}html{box-sizing:border-box}*,*::before,*::after{box-sizing:inherit}img,video{height:auto;max-width:100%}iframe{border:0}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}"
   },
   "Comment": {
     "prefix": "comment",

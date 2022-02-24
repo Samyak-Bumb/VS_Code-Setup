@@ -581,15 +581,6 @@
 		"when": "viewContainer.workbench.view.debug.enabled"
 	},
 	{
-		"key": "shift+alt+r",
-		"command": "revealFileInOS"
-	},
-	{
-		"key": "shift+alt+r",
-		"command": "-revealFileInOS",
-		"when": "!editorFocus"
-	},
-	{
 		"key": "ctrl+shift+.",
 		"command": "-breadcrumbs.focusAndSelect",
 		"when": "breadcrumbsPossible"
@@ -630,15 +621,20 @@
 		"when": "workbench.explorer.openEditorsView.active"
 	},
 	{
-		"key": "ctrl+shift+a q",
-		"command": "workbench.action.customizeLayout"
-	},
-	{
 		"key": "ctrl+shift+s",
 		"command": "workbench.action.files.saveAs"
 	},
 	{
-		"key": "ctrl+shift+s",
-		"command": "-workbench.action.files.saveAs"
+		"key": "ctrl+shift+a q",
+		"command": "workbench.action.customizeLayout"
+	},
+	{
+		"key": "shift+alt+r",
+		"command": "revealFileInOS"
+	},
+	{
+		"key": "shift+alt+r",
+		"command": "-revealFileInOS",
+		"when": "!editorFocus"
 	}
 ]

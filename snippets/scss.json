@@ -41,18 +41,11 @@
 	},
 	"@each in {}": {
 		"prefix": "@ei_",
-		"body": [
-			"@each ${1:$item} in ${0:$items} {",
-			"\t\n}"
-		]
+		"body": "@each ${1:$item} in ${0:$items} {\n\t\n}"
 	},
 	"@while {}": {
 		"prefix": "@w_",
-		"body": [
-			"@while ${0:condition} {",
-			"\t",
-			"}"
-		]
+		"body": "@while ${0:condition} {\n\t\n}"
 	},
 	"@at-root {}": {
 		"prefix": "@ar_",
@@ -72,13 +65,7 @@
 	},
 	"@include {}": {
 		"prefix": "@i_",
-		"body": [
-			"@include ${1:name} {",
-			"\t",
-			"\t$0",
-			"\t",
-			"}"
-		]
+		"body": "@include ${1:name} {\n\t\n\t$0\n\t\n}"
 	},
 	"@include () {}": {
 		"prefix": "@i$_",
