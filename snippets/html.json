@@ -24,7 +24,7 @@
     "body": "<!-- Created/Designed By Samyak Bumb -->"
   },
   "Link Src": {
-    "prefix": "li",
+    "prefix": "lin",
     "body": "<link rel=\"stylesheet\" href=\"./${0:style}.css\">"
   },
   "Script Src": {

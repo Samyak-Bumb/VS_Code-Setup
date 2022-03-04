@@ -124,7 +124,7 @@
   "liveSassCompile.settings.showOutputWindow": false,
   "editor.fontLigatures": true,
   "editor.fontWeight": "330",
-  "editor.fontFamily": "\"Operator Mono\", Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontFamily": "\"Cascadia Code\", Menlo, Monaco, 'Courier New', monospace",
   "git.autofetch": true,
   "git.enableSmartCommit": true,
   "git.confirmSync": false,
@@ -355,9 +355,7 @@
   "workbench.welcomePage.experimental.videoTutorials": "on",
   "editor.foldingHighlight": false,
   "editor.letterSpacing": 0.1,
-  "editor.lineNumbers": "off",
   "editor.suggest.localityBonus": true,
-  "audioCues.enabled": "off",
   "editor.inlayHints.fontSize": 30,
   "editor.inlayHints.enabled": false,
   "editor.guides.indentation": false,
@@ -373,8 +371,11 @@
   "editor.autoIndent": "advanced",
   "html.format.indentHandlebars": true,
   "editor.stickyTabStops": true,
+  "extensions.autoUpdate": false,
   "workbench.colorTheme": "Samyak Bumb",
   "workbench.statusBar.visible": false,
-  "workbench.activityBar.visible": false,
-  "extensions.autoUpdate": false
+  "editor.lineNumbers": "off",
+  "audioCues.lineHasInlineSuggestion": "on",
+  "audioCues.onDebugBreak": "on",
+  "workbench.activityBar.visible": false
 }
