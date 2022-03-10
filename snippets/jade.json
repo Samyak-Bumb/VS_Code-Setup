@@ -167,10 +167,6 @@
     "prefix": "a",
     "body": "a(href=\"${2:#}\", title=\"${3:title}\")${1:.class} $0"
   },
-  // "anchor": {
-  // 	"prefix": "a",
-  // 	"body": "a(href=\"$1\") ${2:link}"
-  // },
   "figure": {
     "prefix": "figure",
     "body": [

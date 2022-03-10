@@ -13,14 +13,15 @@
       "\tcolor: var(--light);",
       "\tbackground: var(--selection)\n}",
       /*
+      Light Yellow (White Bg *REQUIRED*): fad00052
+      Light Green (White Bg *REQUIRED*): a7f5a9
       Light Crimson: ea4c89
       Light Blue: a8cefc
       Light Green: 00d1b2
-      Light Green (White Bg *REQUIRED*): a7f5a9
       Light Cyan: 9bf0f0
       Light Purple: 5e72e4
-      Light Yellow (White Bg *REQUIRED*): fad00052
       Light Pink: f775C1
+      5773ff
       */
       "body{",
       "\tmin-height: 100vh;",
@@ -44,6 +45,24 @@
   "Box Shadow": {
     "prefix": "bxs",
     "body": "box-shadow: ${1:0} ${2:0} ${3:0} rgba(${4:0},${5:0},${6:0},.${7:1});"
+  },
+  "Scrollbar": {
+    "prefix": "scrollbar",
+    "body": [
+      "::-webkit-scrollbar{",
+      "\twidth: 10px;",
+      "\tbackground: #c4c8d4",
+      "}",
+      "::-webkit-scrollbar-thumb{",
+      "\tborder-radius: 10px;",
+      "\tbackground: #9ca8b4;",
+      "\tborder: 2px solid #2b333b;",
+      "}",
+      "::-webkit-scrollbar-track{",
+      "\tborder-radius: 6px;",
+      "\tbackground: #0000;"
+      "}"
+    ],
   },
   "Media Query": {
     "prefix": "@m",
@@ -77,7 +96,7 @@
     "prefix": "bo",
     "body": "border: none;\noutline: none;"
   },
-  // Psedu
+  // S
   "Hover": {
     "prefix": ":h",
     "body": ":hover{\n\t${0:}\n}"
@@ -134,7 +153,7 @@
     "prefix": ":f",
     "body": ":focus{\n\t${0:}\n}"
   },
-  // Psedu
+  // E
   "Background with Linear-Gradient": {
     "prefix": "bgl",
     "body": "background: linear-gradient(${1:90}deg,#${2:696969},#${3:696969});"

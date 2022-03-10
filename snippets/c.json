@@ -1,125 +1,66 @@
 {
-  "for": {
-    "prefix": "for",
-    "body": [
-      "for (${size_t} ${i} = ${1:0}; ${i} < ${2:length}; ${i}++)\n{",
-      "\t$3\n}"
-    ]
-  },
-  "forr": {
-    "prefix": "forr",
-    "body": [
-      "for (int ${i} = ${1:length} - 1; ${i} >= ${2:0}; ${i}--)\n{",
-      "\t$3\n}"
-    ]
-  },
-  "while": {
-    "prefix": "while",
-    "body": [
-      "while ($1)\n{",
-      "\t$2\n}"
-    ]
-  },
-  "if": {
-    "prefix": "if",
-    "body": [
-      "if ($1)",
-      "{",
-      "\t$2",
-      "}"
-    ]
-  },
-  "else": {
-    "prefix": "else",
-    "body": [
-      "else",
-      "{",
-      "\t$1",
-      "}"
-    ]
-  },
-  "else if": {
-    "prefix": "else if",
-    "body": [
-      "else if ($1)",
-      "{",
-      "\t$2",
-      "}"
-    ]
-  },
-  "enum": {
-    "prefix": "enum",
-    "body": [
-      "enum ${MyEnum}",
-      "{",
-      "\t$1",
-      "};"
-    ]
-  },
-  "#ifdef": {
-    "prefix": "#ifdef",
-    "body": [
-      "#ifdef ${DEBUG}",
-      "$1",
-      "#endif // ${DEBUG}"
-    ]
-  },
-  "#ifndef": {
-    "prefix": "#ifndef",
-    "body": [
-      "#ifndef ${1:1}",
-      "$2",
-      "#endif // !$1"
-    ]
-  },
-  "#if": {
-    "prefix": "#if",
-    "body": [
-      "#ifdef ${1:0}",
-      "$2",
-      "#endif // $1"
-    ]
-  },
-  "struct": {
-    "prefix": "struct",
-    "body": [
-      "struct ${MyStruct}",
-      "{",
-      "\t$1",
-      "};"
-    ]
-  },
-  "switch": {
-    "prefix": "switch",
-    "body": [
-      "switch (${switch_on})",
-      "{",
-      "default:",
-      "\tbreak;$1",
-      "}"
-    ]
-  },
-  "union": {
-    "prefix": "union",
-    "body": [
-      "union ${MyUnion}",
-      "{",
-      "\t$1",
-      "};"
-    ]
-  },
-  "#inc": {
-    "prefix": "#inc",
-    "body": "#include \"$1\""
-  },
-  "#inc<": {
-    "prefix": "#inc<",
-    "body": "#include <$1>"
-  },
-  "#def": {
-    "prefix": "#def",
-    "body": [
-      "#define \"$1\" \"$2\" "
-    ]
-  }
+	"for": {
+		"prefix": "for",
+		"body": "for (${size_t} ${i} = ${1:0}; ${i} < ${2:length}; ${i}++)\n{\n\t$3\n}"
+	},
+	"forr": {
+		"prefix": "forr",
+		"body": "for (int ${i} = ${1:length} - 1; ${i} >= ${2:0}; ${i}--)\n{\n\t$3\n}"
+	},
+	"while": {
+		"prefix": "while",
+		"body": "while ($1)\n{\n\t$2\n}"
+	},
+	"if": {
+		"prefix": "if",
+		"body": "if ($1)\n{\n\t$2\n}"
+	},
+	"else": {
+		"prefix": "else",
+		"body": "else\n{\n\t$1\n}"
+	},
+	"else if": {
+		"prefix": "else if",
+		"body": "else if ($1)\n{\n\t$2\n}"
+	},
+	"enum": {
+		"prefix": "enum",
+		"body": "enum ${MyEnum}\n{\n\t$1\n};"
+	},
+	"#ifdef": {
+		"prefix": "#ifdef",
+		"body": "#ifdef ${DEBUG}\n$1\n#endif // ${DEBUG}"
+	},
+	"#ifndef": {
+		"prefix": "#ifndef",
+		"body": "#ifndef ${1:1}\n"
+	},
+	"#if": {
+		"prefix": "#if",
+		"body": "#ifdef ${1:0}\n$2\n#endif // $1"
+	},
+	"struct": {
+		"prefix": "struct",
+		"body": "struct ${MyStruct}\n{\n\t$1\n};"
+	},
+	"switch": {
+		"prefix": "switch",
+		"body": "switch (${switch_on})\n{\ndefault:\n\tbreak;$1\n}"
+	},
+	"union": {
+		"prefix": "union",
+		"body": "union ${MyUnion}\n{\n\t$1\n};"
+	},
+	"#inc": {
+		"prefix": "#inc",
+		"body": "#include \"$0\""
+	},
+	"#inc<": {
+		"prefix": "#inc<",
+		"body": "#include <$0>"
+	},
+	"#def": {
+		"prefix": "#def",
+		"body": "#define \"$1\" \"$2\" "
+	}
 }

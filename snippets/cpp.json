@@ -1,84 +1,39 @@
 {
   "for": {
     "prefix": "for",
-    "body": [
-      "for (${size_t} ${i} = ${1:0}; ${i} < ${2:length}; ${i}++)",
-      "{",
-      "\t$3",
-      "}"
-    ]
+    "body": "for (${size_t} ${i} = ${1:0}; ${i} < ${2:length}; ${i}++)\n{\n\t$3\n}"
   },
   "forr": {
     "prefix": "forr",
-    "body": [
-      "for (int ${i} = ${1:length} - 1; ${i} >= ${2:0}; ${i}--)",
-      "{",
-      "\t$3",
-      "}"
-    ]
+    "body": "for (int ${i} = ${1:length} - 1; ${i} >= ${2:0}; ${i}--)\n{\n\t$3\n}"
   },
   "do": {
     "prefix": "do",
-    "body": [
-      "do",
-      "{",
-      "\t$1",
-      "} while($2);"
-    ]
+    "body": "do\n{\n\t$1\n} while($2);"
   },
   "while": {
     "prefix": "while",
-    "body": [
-      "while ($1)",
-      "{",
-      "\t$2",
-      "}"
-    ]
+    "body": "while ($1)\n{\n\t$2\n}"
   },
   "foreach": {
     "prefix": "foreach",
-    "body": [
-      "for(auto ${var} : ${collection_to_loop})",
-      "{",
-      "\t$1",
-      "}"
-    ]
+    "body": "for(auto ${var} : ${collection_to_loop})\n{\n\t$1\n}"
   },
   "if": {
     "prefix": "if",
-    "body": [
-      "if ($1)",
-      "{",
-      "\t$2",
-      "}"
-    ]
+    "body": "if ($1)\n{\n\t$2\n}"
   },
   "else": {
     "prefix": "else",
-    "body": [
-      "else",
-      "{",
-      "\t$1",
-      "}"
-    ]
+    "body": "else\n{\n\t$1\n}"
   },
   "else if": {
     "prefix": "else if",
-    "body": [
-      "else if ($1)",
-      "{",
-      "\t$2",
-      "}"
-    ]
+    "body": "else if ($1)\n{\n\t$2\n}"
   },
   "enum": {
     "prefix": "enum",
-    "body": [
-      "enum ${MyEnum}",
-      "{",
-      "\t$1",
-      "};"
-    ]
+    "body": "enum ${MyEnum}\n{\n\t$1\n};"
   },
   "enum class": {
     "prefix": "enum class",
@@ -86,121 +41,47 @@
   },
   "class": {
     "prefix": "class",
-    "body": [
-      "class ${MyClass}",
-      "{",
-      "public:",
-      "\t${MyClass}();",
-      "\t${MyClass}(${MyClass} &&) = default;",
-      "\t${MyClass}(const ${MyClass} &) = default;",
-      "\t${MyClass} &operator=(${MyClass} &&) = default;",
-      "\t${MyClass} &operator=(const ${MyClass} &) = default;",
-      "\t~${MyClass}();",
-      "",
-      "private:",
-      "\t$1",
-      "};",
-      "",
-      "${MyClass}::${MyClass}()",
-      "{",
-      "}",
-      "",
-      "${MyClass}::~${MyClass}()",
-      "{",
-      "}"
-    ]
+    "body": "class ${MyClass}\n{\npublic:\n\t${MyClass}();\n\t${MyClass}(${MyClass} &&) = default;\n\t${MyClass}(const ${MyClass} &) = default;\n\t${MyClass} &operator=(${MyClass} &&) = default;\n\t${MyClass} &operator=(const ${MyClass} &) = default;\n\t~${MyClass}();\n\nprivate:\n\t$1\n};\n\n${MyClass}::${MyClass}()\n{\n}\n\n${MyClass}::~${MyClass}()\n{\n}"
   },
   "classi": {
     "prefix": "classi",
-    "body": [
-      "class ${MyClass}",
-      "{",
-      "public:",
-      "\t${MyClass}() = default;",
-      "\t${MyClass}(${MyClass} &&) = default;",
-      "\t${MyClass}(const ${MyClass} &) = default;",
-      "\t${MyClass} &operator=(${MyClass} &&) = default;",
-      "\t${MyClass} &operator=(const ${MyClass} &) = default;",
-      "\t~${MyClass}() = default;",
-      "",
-      "private:",
-      "\t$1",
-      "};"
-    ]
+    "body": "class ${MyClass}\n{\npublic:\n\t${MyClass}() = default;\n\t${MyClass}(${MyClass} &&) = default;\n\t${MyClass}(const ${MyClass} &) = default;\n\t${MyClass} &operator=(${MyClass} &&) = default;\n\t${MyClass} &operator=(const ${MyClass} &) = default;\n\t~${MyClass}() = default;\n\nprivate:\n\t$1\n};"
   },
   "interface": {
     "prefix": "interface",
-    "body": [
-      "__interface I${Interface}",
-      "{",
-      "\t$1",
-      "};"
-    ]
+    "body": "__interface I${Interface}\n{\n\t$1\n};",
   },
   "namespace": {
     "prefix": "namespace",
-    "body": [
-      "namespace ${MyNamespace}",
-      "{",
-      "\t$1",
-      "}"
-    ]
+    "body": "namespace ${MyNamespace}\n{\n\t$1\n}"
   },
   "#ifdef": {
     "prefix": "#ifdef",
-    "body": [
-      "#ifdef ${DEBUG}",
-      "$1",
-      "#endif // ${DEBUG}"
-    ]
+    "body": "#ifdef ${DEBUG}\n$1\n#endif // ${DEBUG}"
   },
   "#ifndef": {
     "prefix": "#ifndef",
-    "body": [
-      "#ifndef ${1:1}",
-      "$2",
-      "#endif // !$1"
-    ]
+    "body": "#ifndef ${1:1}\n$2\n#endif // !$1"
   },
   "#if": {
     "prefix": "#if",
-    "body": [
-      "#ifdef ${1:0}",
-      "$2",
-      "#endif // $1"
-    ]
+    "body": "#ifdef ${1:0}\n$2\n#endif // $1"
   },
   "struct": {
     "prefix": "struct",
-    "body": [
-      "struct ${MyStruct}",
-      "{",
-      "\t$1",
-      "};"
-    ]
+    "body": "struct ${MyStruct}\n{\n\t$1\n};"
   },
   "switch": {
     "prefix": "switch",
-    "body": [
-      "switch (${switch_on})\n{",
-      "default:",
-      "\tbreak;$1\n}",
-    ]
+    "body": "switch (${switch_on})\n{\ndefault:\n\tbreak;$1\n}"
   },
   "try": {
     "prefix": "try",
-    "body": [
-      "try\n{\n}",
-      "catch (const std::exception&)\n{",
-      "\t$1\n}"
-    ]
+    "body": "try\n{\n}\ncatch (const std::exception&)\n{\n\t$1\n}"
   },
   "union": {
     "prefix": "union",
-    "body": [
-      "union ${MyUnion}\n{",
-      "\t$1\n};"
-    ]
+    "body": "union ${MyUnion}\n{\n\t$1\n};"
   },
   "cout": {
     "prefix": "cout",
@@ -216,14 +97,10 @@
   },
   "#def": {
     "prefix": "#def",
-    "body": "#define \"$1\" \"$2\" "
+    "body": "#define \"$1\" \"$2\""
   },
   "main": {
     "prefix": "main",
-    "body": [
-      "int main(int argc, const char** argv) {",
-      "\treturn 0;",
-      "}"
-    ]
+    "body": "int main(int argc, const char** argv) {\n\treturn 0;\n}"
   }
 }
