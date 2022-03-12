@@ -60,9 +60,9 @@
       "}",
       "::-webkit-scrollbar-track{",
       "\tborder-radius: 6px;",
-      "\tbackground: #0000;"
+      "\tbackground: #0000;",
       "}"
-    ],
+    ]
   },
   "Media Query": {
     "prefix": "@m",
@@ -96,7 +96,6 @@
     "prefix": "bo",
     "body": "border: none;\noutline: none;"
   },
-  // S
   "Hover": {
     "prefix": ":h",
     "body": ":hover{\n\t${0:}\n}"
@@ -153,7 +152,6 @@
     "prefix": ":f",
     "body": ":focus{\n\t${0:}\n}"
   },
-  // E
   "Background with Linear-Gradient": {
     "prefix": "bgl",
     "body": "background: linear-gradient(${1:90}deg,#${2:696969},#${3:696969});"

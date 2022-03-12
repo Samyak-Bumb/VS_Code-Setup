@@ -74,7 +74,7 @@
   },
   "for f": {
     "prefix": "forf",
-    "body": "FOR /F \"eol=${1:end_of_line}, skip=${2:num_of_lines}, delims=${3:delimiter}, tokens=${4:tokens} \" %%${5:i} IN (${6:set}) DO (\n\t${7}\n}",
+    "body": "FOR /F \"eol=${1:end_of_line}, skip=${2:num_of_lines}, delims=${3:delimiter}, tokens=${4:tokens} \" %%${5:i} IN (${6:set}) DO (\n\t${7}\n}"
   },
   "function": {
     "prefix": "func",

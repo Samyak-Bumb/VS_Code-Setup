@@ -60,7 +60,7 @@
     "body": "<nav>\n\t$0\n</nav>"
   },
   "style": {
-    "prefix": "style",
+    "prefix": "style:link",
     "body": "<style>\n\t*{\n\t\tmargin: 0;\n\t\tpadding: 0;\n\t\tbox-sizing: border-box;\n\t}\n\t$0\n</style>"
   },
   "vdo": {

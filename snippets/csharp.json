@@ -26,10 +26,7 @@
   },
   "Creates a call to Clear": {
     "prefix": "cclear",
-    "body": [
-      "Console.Clear();",
-      "$0"
-    ]
+    "body": "Console.Clear();\n$0"
   },
   "General output to console": {
     "prefix": "cgo",
@@ -41,33 +38,15 @@
   },
   "Creates a class": {
     "prefix": "class",
-    "body": [
-      "public class ${1:MyClass}",
-      "{",
-      "\t$0",
-      "}"
-    ]
+    "body": "public class ${1:MyClass}\n{\n\t$0\n}"
   },
   "Creates an abstract class declaration": {
     "prefix": "classa",
-    "body": [
-      "public abstract class ${1:MyClass}",
-      "{",
-      "\t$0",
-      "}"
-    ]
+    "body": "public abstract class ${1:MyClass}\n{\n\t$0\n}"
   },
   "Creates a disposable class": {
     "prefix": "classd",
-    "body": [
-      "public class ${1:MyClass} : IDisposable",
-      "{\n",
-      "\tpublic void Dispose()",
-      "\t{",
-      "\t\tGC.SuppressFinalize(this);",
-      "\t}\n",
-      "\t$0\n}"
-    ]
+    "body": "public class ${1:MyClass} : IDisposable\n{\n\n\tpublic void Dispose()\n\t{\n\t\tGC.SuppressFinalize(this);\n\t}\n\n\t$0\n}"
   },
   "Creates a constant": {
     "prefix": "const",
