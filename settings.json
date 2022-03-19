@@ -73,7 +73,7 @@
   ],
   "editor.quickSuggestions": {
     "other": true,
-    "comments": true,
+    "comments": false,
     "strings": false
   },
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
@@ -272,20 +272,10 @@
     "editor.defaultFormatter": "vscode.typescript-language-features",
   },
   "[json]": {
-    "editor.quickSuggestions": {
-      "other": true,
-      "comments": false,
-      "strings": true
-    },
     "editor.formatOnPaste": true,
     "editor.defaultFormatter": "vscode.json-language-features"
   },
   "[jsonc]": {
-    "editor.quickSuggestions": {
-      "other": true,
-      "comments": false,
-      "strings": true
-    },
     "editor.defaultFormatter": "vscode.json-language-features"
   },
   "workbench.productIconTheme": "fluent-icons",
@@ -362,7 +352,6 @@
   "editor.autoIndent": "advanced",
   "html.format.indentHandlebars": true,
   "editor.stickyTabStops": true,
-  "extensions.autoUpdate": false,
   "audioCues.lineHasInlineSuggestion": "on",
   "audioCues.onDebugBreak": "on",
   "update.enableWindowsBackgroundUpdates": false,
@@ -373,7 +362,13 @@
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
   "editor.minimap.enabled": false,
-  "workbench.activityBar.visible": false,
   "github.gitAuthentication": false,
-  "workbench.statusBar.visible": false
+  "workbench.colorTheme": "Samyak Bumb",
+  "extensions.autoUpdate": false,
+  "python.terminal.executeInFileDir": true,
+  "python.terminal.activateEnvInCurrentTerminal": true,
+  "python.testing.pytestEnabled": true,
+  "workbench.activityBar.visible": false,
+  "workbench.statusBar.visible": false,
+  "terminal.integrated.cursorBlinking": true
 }

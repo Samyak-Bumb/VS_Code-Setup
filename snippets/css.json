@@ -278,5 +278,5 @@
   "Extra Large Devices Only": {
     "prefix": "extra-large-devices-only-media-query",
     "body": "@media (min-width: 1200px){\n$0\t${1:Rules}\n}"
-  }
+  },
 }
