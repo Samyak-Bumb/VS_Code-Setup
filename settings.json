@@ -305,7 +305,6 @@
   "editor.linkedEditing": true,
   "material-code.blueIntensity": "low",
   "editor.autoClosingDelete": "always",
-  "editor.bracketPairColorization.enabled": true,
   "html.format.wrapLineLength": 99999,
   "editor.dragAndDrop": false,
   "scm.alwaysShowRepositories": true,
@@ -363,12 +362,17 @@
   "editor.formatOnSave": true,
   "editor.minimap.enabled": false,
   "github.gitAuthentication": false,
-  "workbench.colorTheme": "Samyak Bumb",
   "extensions.autoUpdate": false,
   "python.terminal.executeInFileDir": true,
   "python.terminal.activateEnvInCurrentTerminal": true,
   "python.testing.pytestEnabled": true,
+  "terminal.integrated.cursorBlinking": true,
+  "workbench.editor.highlightModifiedTabs": true,
+  "audioCues.noInlayHints": "on",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": "active",
+  "editor.guides.bracketPairsHorizontal": false,
   "workbench.activityBar.visible": false,
-  "workbench.statusBar.visible": false,
-  "terminal.integrated.cursorBlinking": true
+  "workbench.colorTheme": "Samyak Bumb",
+  "workbench.statusBar.visible": false
 }

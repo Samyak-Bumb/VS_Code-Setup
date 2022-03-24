@@ -38,7 +38,7 @@
   },
   "else": {
     "prefix": "els",
-    "body": "else:\n\tprint(\"$0\")"
+    "body": "else:\n\t$0"
   },
   "def": {
     "prefix": "df",
@@ -62,7 +62,7 @@
   },
   "Foreign Key": {
     "prefix": "ForeignKeyField",
-    "body": "${name} = models.ForeignKey('${TargetModel}', related_name='$1', on_delete=models.CASCADE)"
+    "body": "${name} = modls.ForeignKey('${TargetModel}', related_name='$1', on_delete=models.CASCADE)"
   },
   "View": {
     "prefix": "View",
@@ -110,7 +110,7 @@
   "pygame Boiler Plate": {
     "prefix": "!pygame",
     "body": [
-      "# Created/Wriiten By Samyak Bumb\n",
+      "# Created/Written By Samyak Bumb\n",
       "import pygame",
       "import sys\n\n",
       "pygame.init()",
@@ -304,11 +304,11 @@
     "prefix": "set_icon",
     "body": "pygame.display.set_icon()"
   },
-  "Set_mode": {
+  "Set_mode display": {
     "prefix": "set_mode",
     "body": "pygame.display.set_mode(${1:resolution=0}, ${2:0})"
   },
-  "Set_palette": {
+  "Set_palette display": {
     "prefix": "set_palette",
     "body": "pygame.display.set_palette()"
   },
@@ -352,7 +352,7 @@
     "prefix": "polygon",
     "body": "pygame.draw.polygon(${1:Surface}, ${2:color}, ${3:pointlist}, ${4:width=0})"
   },
-  "Rect": {
+  "Rect Draw": {
     "prefix": "rect",
     "body": "pygame.draw.rect(${1:Surface}, ${2:color}, ${3:Rect}, ${4:width=0})"
   },
@@ -420,125 +420,9 @@
     "prefix": "wait",
     "body": "pygame.event.wait()"
   },
-  "Aliens.main Examples module": {
-    "prefix": "aliens.main",
-    "body": "pygame.examples.aliens.main()"
-  },
-  "Arraydemo.main Examples module": {
-    "prefix": "arraydemo.main",
-    "body": "pygame.examples.arraydemo.main()"
-  },
-  "Blend_fill.main Examples module": {
-    "prefix": "blend_fill.main",
-    "body": "pygame.examples.blend_fill.main()"
-  },
-  "Blit_blends.main Examples module": {
-    "prefix": "blit_blends.main",
-    "body": "pygame.examples.blit_blends.main()"
-  },
-  "Camera.main Examples module": {
-    "prefix": "camera.main",
-    "body": "pygame.examples.camera.main()"
-  },
-  "Chimp.main Examples module": {
-    "prefix": "chimp.main",
-    "body": "pygame.examples.chimp.main()"
-  },
-  "Cursors.main Examples module": {
-    "prefix": "cursors.main",
-    "body": "pygame.examples.cursors.main()"
-  },
-  "Eventlist.main Examples module": {
-    "prefix": "eventlist.main",
-    "body": "pygame.examples.eventlist.main()"
-  },
-  "Fastevents.main Examples module": {
-    "prefix": "fastevents.main",
-    "body": "pygame.examples.fastevents.main()"
-  },
-  "Fonty.main Examples module": {
-    "prefix": "fonty.main",
-    "body": "pygame.examples.fonty.main()"
-  },
-  "Freetype_misc.main Examples module": {
-    "prefix": "freetype_misc.main",
-    "body": "pygame.examples.freetype_misc.main()"
-  },
-  "Glcube.main Examples module": {
-    "prefix": "glcube.main",
-    "body": "pygame.examples.glcube.main()"
-  },
-  "Headless_no_windows_needed.main Examples module": {
-    "prefix": "headless_no_windows_needed.main",
-    "body": "pygame.examples.headless_no_windows_needed.main(${1:fin}, ${2:fout}, ${3:w}, ${4:h})"
-  },
-  "Liquid.main Examples module": {
-    "prefix": "liquid.main",
-    "body": "pygame.examples.liquid.main()"
-  },
-  "Mask.main Examples module": {
-    "prefix": "mask.main",
-    "body": "pygame.examples.mask.main()"
-  },
-  "Midi.main Examples module": {
-    "prefix": "midi.main",
-    "body": "pygame.examples.midi.main(${1:mode=Output}, ${2:device_id=None})"
-  },
-  "Moveit.main Examples module": {
-    "prefix": "moveit.main",
-    "body": "pygame.examples.moveit.main()"
-  },
-  "Oldalien.main Examples module": {
-    "prefix": "oldalien.main",
-    "body": "pygame.examples.oldalien.main()"
-  },
-  "Overlay.main Examples module": {
-    "prefix": "overlay.main",
-    "body": "pygame.examples.overlay.main()"
-  },
-  "Pixelarray.main Examples module": {
-    "prefix": "pixelarray.main",
-    "body": "pygame.examples.pixelarray.main()"
-  },
-  "Playmus.main Examples module": {
-    "prefix": "playmus.main",
-    "body": "pygame.examples.playmus.main()"
-  },
-  "Scaletest.main Examples module": {
-    "prefix": "scaletest.main",
-    "body": "pygame.examples.scaletest.main(${1:imagefile}, ${2:convert_alpha=False}, ${3:run_speed_test=True})"
-  },
-  "Scrap_clipboard.main Examples module": {
-    "prefix": "scrap_clipboard.main",
-    "body": "pygame.examples.scrap_clipboard.main()"
-  },
-  "Scroll.main Examples module": {
-    "prefix": "scroll.main",
-    "body": "pygame.examples.scroll.main()"
-  },
-  "Sound.main Examples module": {
-    "prefix": "sound.main",
-    "body": "pygame.examples.sound.main()"
-  },
-  "Sound_array_demos.main Examples module": {
-    "prefix": "sound_array_demos.main",
-    "body": "pygame.examples.sound_array_demos.main()"
-  },
-  "Stars.main Examples module": {
-    "prefix": "stars.main",
-    "body": "pygame.examples.stars.main()"
-  },
-  "Testsprite.main Examples module": {
-    "prefix": "testsprite.main",
-    "body": "pygame.examples.testsprite.main(${1:update_rects = True}, ${2:use_static = False}, ${3:use_FastRenderGroup = False}, ${4:screen_dims = 640}, ${5:480]}, ${6:use_alpha = False}, ${7:flags = 0})"
-  },
-  "Vgrade.main Examples module": {
-    "prefix": "vgrade.main",
-    "body": "pygame.examples.vgrade.main()"
-  },
   "Font": {
     "prefix": "Font",
-    "body": "pygame.font.Font(${1:filename}, ${2:size})"
+    "body": "pygame.font.Font(\"${1:filename}\", ${2:size})"
   },
   "SysFont": {
     "prefix": "SysFont",
@@ -632,7 +516,7 @@
     "prefix": "aatrigon",
     "body": "pygame.gfxdraw.aatrigon(${1:surface}, ${2:x1}, ${3:y1}, ${4:x2}, ${5:y2}, ${6:x3}, ${7:y3}, ${8:color})"
   },
-  "Arc": {
+  "Arc gfxdraw": {
     "prefix": "arc",
     "body": "pygame.gfxdraw.arc(${1:surface}, ${2:x}, ${3:y}, ${4:r}, ${5:start}, ${6:end}, ${7:color})"
   },
@@ -644,11 +528,11 @@
     "prefix": "box",
     "body": "pygame.gfxdraw.box(${1:surface}, ${2:rect}, ${3:color})"
   },
-  "Circle": {
+  "Circle gfxdraw": {
     "prefix": "circle",
     "body": "pygame.gfxdraw.circle(${1:surface}, ${2:x}, ${3:y}, ${4:r}, ${5:color})"
   },
-  "Ellipse": {
+  "Ellipse gfxdraw": {
     "prefix": "ellipse",
     "body": "pygame.gfxdraw.ellipse(${1:surface}, ${2:x}, ${3:y}, ${4:rx}, ${5:ry}, ${6:color})"
   },
@@ -672,7 +556,7 @@
     "prefix": "hline",
     "body": "pygame.gfxdraw.hline(${1:surface}, ${2:x1}, ${3:x2}, ${4:y}, ${5:color})"
   },
-  "Line": {
+  "Line gfxdraw": {
     "prefix": "line",
     "body": "pygame.gfxdraw.line(${1:surface}, ${2:x1}, ${3:y1}, ${4:x2}, ${5:y2}, ${6:color})"
   },
@@ -684,7 +568,7 @@
     "prefix": "pixel",
     "body": "pygame.gfxdraw.pixel(${1:surface}, ${2:x}, ${3:y}, ${4:color})"
   },
-  "Polygon": {
+  "Polygon gfxdraw": {
     "prefix": "polygon",
     "body": "pygame.gfxdraw.polygon(${1:surface}, ${2:points}, ${3:color})"
   },
@@ -716,7 +600,7 @@
     "prefix": "get_extended",
     "body": "pygame.image.get_extended()"
   },
-  "Load": {
+  "Load image": {
     "prefix": "load",
     "body": "pygame.image.load(${1:fileobj}, ${2:namehint=\"\"})"
   },
@@ -784,7 +668,7 @@
     "prefix": "quit",
     "body": "pygame.joystick.quit()"
   },
-  "Get_focused": {
+  "Get_focused key": {
     "prefix": "get_focused",
     "body": "pygame.key.get_focused()"
   },
@@ -792,7 +676,7 @@
     "prefix": "get_mods",
     "body": "pygame.key.get_mods()"
   },
-  "Get_pressed": {
+  "Get_pressed key": {
     "prefix": "get_pressed",
     "body": "pygame.key.get_pressed()"
   },
@@ -812,102 +696,6 @@
     "prefix": "set_repeat",
     "body": "pygame.key.set_repeat(${1:delay}, ${2:interval})"
   },
-  "Channel": {
-    "prefix": "Channel",
-    "body": "pygame.mixer.Channel()"
-  },
-  "Sound": {
-    "prefix": "Sound",
-    "body": "pygame.mixer.Sound()"
-  },
-  "Fadeout": {
-    "prefix": "fadeout",
-    "body": "pygame.mixer.fadeout()"
-  },
-  "Find_channel": {
-    "prefix": "find_channel",
-    "body": "pygame.mixer.find_channel()"
-  },
-  "Get_busy mixer": {
-    "prefix": "get_busy",
-    "body": "pygame.mixer.get_busy()"
-  },
-  "Get_endevent mixer": {
-    "prefix": "get_endevent",
-    "body": "pygame.mixer.get_endevent()"
-  },
-  "Get_init mixer": {
-    "prefix": "get_init",
-    "body": "pygame.mixer.get_init()"
-  },
-  "Get_length": {
-    "prefix": "get_length",
-    "body": "pygame.mixer.get_length()"
-  },
-  "Get_num_channels": {
-    "prefix": "get_num_channels",
-    "body": "pygame.mixer.get_num_channels()"
-  },
-  "Get_queue": {
-    "prefix": "get_queue",
-    "body": "pygame.mixer.get_queue()"
-  },
-  "Get_raw": {
-    "prefix": "get_raw",
-    "body": "pygame.mixer.get_raw()"
-  },
-  "Get_sound": {
-    "prefix": "get_sound",
-    "body": "pygame.mixer.get_sound()"
-  },
-  "Get_volume": {
-    "prefix": "get_volume",
-    "body": "pygame.mixer.get_volume()"
-  },
-  "Pause mixer": {
-    "prefix": "pause",
-    "body": "pygame.mixer.pause()"
-  },
-  "Play mixer": {
-    "prefix": "play",
-    "body": "pygame.mixer.play(${1:Sound}, ${2:loops=0}, ${3:maxtime=0}, ${4:fade_ms=0})"
-  },
-  "Pre_init": {
-    "prefix": "pre_init",
-    "body": "pygame.mixer.pre_init(${1:frequency=22050}, ${2:size=-16}, ${3:channels=2}, ${4:buffersize=4096})"
-  },
-  "Queue": {
-    "prefix": "queue",
-    "body": "pygame.mixer.queue()"
-  },
-  "Quit mixer": {
-    "prefix": "quit",
-    "body": "pygame.mixer.quit()"
-  },
-  "Set_endevent": {
-    "prefix": "set_endevent",
-    "body": "pygame.mixer.set_endevent()"
-  },
-  "Set_num_channels": {
-    "prefix": "set_num_channels",
-    "body": "pygame.mixer.set_num_channels()"
-  },
-  "Set_reserved": {
-    "prefix": "set_reserved",
-    "body": "pygame.mixer.set_reserved()"
-  },
-  "Set_volume": {
-    "prefix": "set_volume",
-    "body": "pygame.mixer.set_volume(${1:left}, ${2:right})"
-  },
-  "Stop Mixer": {
-    "prefix": "stop",
-    "body": "pygame.mixer.stop()"
-  },
-  "Unpause Mixer": {
-    "prefix": "unpause",
-    "body": "pygame.mixer.unpause()"
-  },
   "Fadeout": {
     "prefix": "fadeout",
     "body": "pygame.music.fadeout()"
@@ -920,7 +708,7 @@
     "prefix": "get_endevent",
     "body": "pygame.music.get_endevent()"
   },
-  "Get_pos": {
+  "Get_pos music": {
     "prefix": "get_pos",
     "body": "pygame.music.get_pos()"
   },
@@ -928,7 +716,7 @@
     "prefix": "get_volume",
     "body": "pygame.music.get_volume()"
   },
-  "Load": {
+  "Load music": {
     "prefix": "load",
     "body": "pygame.music.load()"
   },
@@ -952,7 +740,7 @@
     "prefix": "set_endevent",
     "body": "pygame.music.set_endevent()"
   },
-  "Set_pos": {
+  "Set_pos music": {
     "prefix": "set_pos",
     "body": "pygame.music.set_pos()"
   },
@@ -972,15 +760,15 @@
     "prefix": "get_cursor",
     "body": "pygame.mouse.get_cursor()"
   },
-  "Get_focused": {
+  "Get_focused mouse": {
     "prefix": "get_focused",
     "body": "pygame.mouse.get_focused()"
   },
-  "Get_pos": {
+  "Get_pos mouse": {
     "prefix": "get_pos",
     "body": "pygame.mouse.get_pos()"
   },
-  "Get_pressed": {
+  "Get_pressed mouse": {
     "prefix": "get_pressed",
     "body": "pygame.mouse.get_pressed()"
   },
@@ -992,7 +780,7 @@
     "prefix": "set_cursor",
     "body": "pygame.mouse.set_cursor(${1:size}, ${2:hotspot}, ${3:xormasks}, ${4:andmasks})"
   },
-  "Set_pos": {
+  "Set_pos mouse": {
     "prefix": "set_pos",
     "body": "pygame.mouse.set_pos(${1:x}, ${2:y]})"
   },
@@ -1032,7 +820,7 @@
     "prefix": "itemsize",
     "body": "pygame.PixelArray.itemsize"
   },
-  "Make_surface": {
+  "Make_surface PixelArray": {
     "prefix": "make_surface",
     "body": "pygame.PixelArray.make_surface()"
   },
@@ -1052,7 +840,7 @@
     "prefix": "strides",
     "body": "pygame.PixelArray.strides"
   },
-  "Surface": {
+  "Surface PixelArray": {
     "prefix": "surface",
     "body": "pygame.PixelArray.surface"
   },
@@ -1060,8 +848,8 @@
     "prefix": "transpose",
     "body": "pygame.PixelArray.transpose()"
   },
-  "Rect": {
-    "prefix": "Rect",
+  "Rect Rect": {
+    "prefix": "RectR",
     "body": "pygame.Rect.Rect(${1:left}, ${2:top}, ${3:width}, ${4:height})"
   },
   "Clamp": {
@@ -1148,58 +936,6 @@
     "prefix": "unionall_ip",
     "body": "pygame.Rect.unionall_ip()"
   },
-  "Contains ": {
-    "prefix": "contains ",
-    "body": "pygame.scrap.contains ()"
-  },
-  "Get ": {
-    "prefix": "get ",
-    "body": "pygame.scrap.get ()"
-  },
-  "Get_types ": {
-    "prefix": "get_types ",
-    "body": "pygame.scrap.get_types ()"
-  },
-  "Init ": {
-    "prefix": "init ",
-    "body": "pygame.scrap.init ()"
-  },
-  "Lost": {
-    "prefix": "lost",
-    "body": "pygame.scrap.lost()"
-  },
-  "Put": {
-    "prefix": "put",
-    "body": "pygame.scrap.put(${1:type}, ${2:data})"
-  },
-  "Set_mode": {
-    "prefix": "set_mode",
-    "body": "pygame.scrap.set_mode()"
-  },
-  "Array": {
-    "prefix": "array",
-    "body": "pygame.sndarray.array()"
-  },
-  "Get_arraytype": {
-    "prefix": "get_arraytype ",
-    "body": "pygame.sndarray.get_arraytype ()"
-  },
-  "Get_arraytypes": {
-    "prefix": "get_arraytypes ",
-    "body": "pygame.sndarray.get_arraytypes ()"
-  },
-  "Make_sound": {
-    "prefix": "make_sound",
-    "body": "pygame.sndarray.make_sound()"
-  },
-  "Samples": {
-    "prefix": "samples",
-    "body": "pygame.sndarray.samples()"
-  },
-  "Use_arraytype '": {
-    "prefix": "use_arraytype ",
-    "body": "pygame.sndarray.use_arraytype ()"
-  },
   "DirtySprite": {
     "prefix": "DirtySprite",
     "body": "pygame.sprite.DirtySprite()"
@@ -1244,7 +980,7 @@
     "prefix": "change_layer",
     "body": "pygame.sprite.change_layer(${1:sprite}, ${2:new_layer})"
   },
-  "Clear": {
+  "Clear sprite": {
     "prefix": "clear",
     "body": "pygame.sprite.clear(${1:surface}, ${2:bg})"
   },
@@ -1284,7 +1020,7 @@
     "prefix": "get_bottom_layer",
     "body": "pygame.sprite.get_bottom_layer()"
   },
-  "Get_clip": {
+  "Get_clip sprite": {
     "prefix": "get_clip",
     "body": "pygame.sprite.get_clip()"
   },
@@ -1352,7 +1088,7 @@
     "prefix": "repaint_rect",
     "body": "pygame.sprite.repaint_rect()"
   },
-  "Set_clip": {
+  "Set_clip sprite": {
     "prefix": "set_clip",
     "body": "pygame.sprite.set_clip()"
   },
@@ -1380,8 +1116,8 @@
     "prefix": "update",
     "body": "pygame.sprite.update()"
   },
-  "Surface": {
-    "prefix": "Surface",
+  "Surface Surface": {
+    "prefix": "SurfaceS",
     "body": "pygame.Surface.Surface(${1:width}, ${2:height})"
   },
   "_pixels_address": {
@@ -1444,7 +1180,7 @@
     "prefix": "get_bytesize",
     "body": "pygame.Surface.get_bytesize()"
   },
-  "Get_clip": {
+  "Get_clip Surface": {
     "prefix": "get_clip",
     "body": "pygame.Surface.get_clip()"
   },
@@ -1540,7 +1276,7 @@
     "prefix": "set_at",
     "body": "pygame.Surface.set_at(${1:x}, ${2:y})"
   },
-  "Set_clip": {
+  "Set_clip Surface": {
     "prefix": "set_clip",
     "body": "pygame.Surface.set_clip()"
   },
@@ -1552,7 +1288,7 @@
     "prefix": "set_masks",
     "body": "pygame.Surface.set_masks(${1:r}, ${2:g}, ${3:b}, ${4:a})"
   },
-  "Set_palette": {
+  "Set_palette Surface": {
     "prefix": "set_palette",
     "body": "pygame.Surface.set_palette(${1:RGB}, ${2:RGB}, ${2:RGB}, ${4:...]})"
   },
@@ -1604,7 +1340,7 @@
     "prefix": "get_arraytypes ",
     "body": "pygame.surfarray.get_arraytypes ()"
   },
-  "Make_surface": {
+  "Make_surface surfarray": {
     "prefix": "make_surface",
     "body": "pygame.surfarray.make_surface()"
   },
@@ -1680,7 +1416,7 @@
     "prefix": "tick_busy_loop",
     "body": "pygame.time.tick_busy_loop()"
   },
-  "Wait": {
+  "Wait time": {
     "prefix": "wait",
     "body": "pygame.time.wait()"
   },

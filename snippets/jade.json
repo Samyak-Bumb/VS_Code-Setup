@@ -1,16 +1,4 @@
 {
-  "Pug/Jade HTML Template": {
-    "prefix": "html",
-    "body": [
-      "doctype",
-      "html(lang='en')",
-      "\thead",
-      "\t\tmeta(charset='utf-8')",
-      "\t\ttitle",
-      "\tbody"
-    ]
-  },
-  //
   "favicon": {
     "prefix": "favicon",
     "body": "link(rel=\"${1:shortcut-icon}\", href=\"${2:path}.ico\")"
@@ -19,24 +7,6 @@
     "prefix": "meta",
     "body": "meta(name=\"${1:name}\" content=\"${2:content}\")"
   },
-  //
-  "lorem lipsum text": {
-    "prefix": "lorem",
-    "body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-  },
-  "require pug": {
-    "prefix": "cpug",
-    "body": "const pug = require('pug');"
-  },
-  "import pug": {
-    "prefix": "ipug",
-    "body": "import pug from 'pug';"
-  },
-  "font-awesome icon": {
-    "prefix": "fa",
-    "body": "i.fa.fa-${1:value}(aria-hidden='true') &nbsp;"
-  },
-  //
   "image": {
     "prefix": "img",
     "body": "img(src=\"$1\", alt=\"${2:alt}\")"
@@ -45,7 +15,6 @@
     "prefix": "form",
     "body": "form(action=\"$1\" method=\"${2:method}\")"
   },
-  //
   "extends": {
     "prefix": "ext",
     "body": "extends $1"
@@ -62,7 +31,6 @@
     "prefix": "pugrf",
     "body": "pug.renderFile($1);"
   },
-  //
   "class": {
     "prefix": "class",
     "body": "class=\"$1\"$0"
@@ -74,10 +42,6 @@
   "data": {
     "prefix": "data",
     "body": "data-$1=\"$2\"$0"
-  },
-  "aria": {
-    "prefix": "aria",
-    "body": "aria-$1=\"$2\"$0"
   },
   "role": {
     "prefix": "role",
@@ -107,7 +71,6 @@
     "prefix": "value",
     "body": "value=\"$1\"$0"
   },
-  //
   "var": {
     "prefix": "var",
     "body": "- var ${1:name} = $0"
@@ -136,7 +99,6 @@
     "prefix": "mixin:call",
     "body": "+${1:name}(${2:attrs})${3:(${4:attrs})}\n$0"
   },
-  //
   "link": {
     "prefix": "link",
     "body": "link(rel=\"stylesheet\", href=\"${1:path.css}\", ${3:attr})"
@@ -149,20 +111,14 @@
     "prefix": "style:include",
     "body": "style\n\tinclude ${1:./file.css}\n$0"
   },
-  //
   "script": {
     "prefix": "script",
     "body": "script(src=\"${1:file}.js\")\n$0"
-  },
-  "script.": {
-    "prefix": "script:inline",
-    "body": "script.\n\t$1\n$0"
   },
   "script include": {
     "prefix": "script:include",
     "body": "script\n\tinclude ${1:./file.js}\n$0"
   },
-  //
   "a": {
     "prefix": "a",
     "body": "a(href=\"${2:#}\", title=\"${3:title}\")${1:.class} $0"
