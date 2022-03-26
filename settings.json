@@ -355,7 +355,6 @@
   "audioCues.onDebugBreak": "on",
   "update.enableWindowsBackgroundUpdates": false,
   "code-runner.runInTerminal": true,
-  "editor.lineNumbers": "off",
   "search.showLineNumbers": true,
   "editor.minimap.scale": 2,
   "editor.formatOnPaste": true,
@@ -373,6 +372,8 @@
   "editor.guides.bracketPairs": "active",
   "editor.guides.bracketPairsHorizontal": false,
   "workbench.activityBar.visible": false,
+  "bracket-pair-colorizer-2.depreciation-notice": false,
   "workbench.colorTheme": "Samyak Bumb",
+  "editor.lineNumbers": "off",
   "workbench.statusBar.visible": false
 }
