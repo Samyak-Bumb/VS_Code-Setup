@@ -20,6 +20,10 @@
     "prefix": "ip",
     "body": "input(\"${0:}\")"
   },
+  "For": {
+    "prefix": "for",
+    "body": "for ${1:item} in range($2):\n\t\t"
+  },
   "Import": {
     "prefix": "imp",
     "body": "import ${0:Name_of_Module}"
@@ -107,7 +111,11 @@
     "prefix": "Traceback",
     "body": "import traceback; traceback.print_exc();"
   },
-  "pygame Boiler Plate": {
+  "Ursina Boiler Plate": {
+    "prefix": "!ursina",
+    "body": "# Created/Written By Samyak Bumb\n\nfrom ursina import *\n\n\napp = Ursina()\napp.run()"
+  },
+  "Pygame Boiler Plate": {
     "prefix": "!pygame",
     "body": [
       "# Created/Written By Samyak Bumb\n",

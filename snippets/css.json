@@ -168,9 +168,21 @@
     "prefix": "pen",
     "body": "pointer-events: none;"
   },
-  "Filter with Blur": {
+  "Filter": {
     "prefix": "fr",
+    "body": "filter: $0;"
+  },
+  "Filter with Blur": {
+    "prefix": "frb",
     "body": "filter: blur(${0:1}px);"
+  },
+  "Filter with Hue": {
+    "prefix": "frh",
+    "body": "filter: hue-rotate(${0:360}deg);"
+  },
+  "Filter with Drop Shadow": {
+    "prefix": "frd",
+    "body": "filter: drop-shadow($0);"
   },
   "Variable": {
     "prefix": "var",
@@ -183,6 +195,10 @@
   "Background with Variable": {
     "prefix": "bgv",
     "body": "background: var(--${0:name});"
+  },
+  "Background Color with Variable": {
+    "prefix": "bgcv",
+    "body": "background-color: var(--${0:name});"
   },
   "Color with Variable": {
     "prefix": "cv",
