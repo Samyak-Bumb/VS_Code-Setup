@@ -1,0 +1,26 @@
+{
+	"Clear": {
+		"prefix": "cls",
+		"body": "Clear-Host"
+	},
+	"Write": {
+		"prefix": "echo",
+		"body": "Write-Output $0"
+	},
+	"Remove Directory": {
+		"prefix": "rd",
+		"body": "Write-Output $0"
+	},
+	"Change Directory": {
+		"prefix": "cd",
+		"body": "Set-Location"
+	},
+	"Make Directory": {
+		"prefix": "md",
+		"body": "New-Item -ItemType \"directory\" \"${1:fldrName}\""
+	},
+	"Clean Delete": {
+		"prefix": "md",
+		"body": "-Recurse -Force -Confirm:$false -LiteralPath"
+	}
+}

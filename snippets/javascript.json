@@ -1,5 +1,73 @@
 // Created/Written By Samyak Bumb
 {
+  "Get Value of a brower Cookie": {
+    "prefix": "browerCookie",
+    "body": "const cookie = name => `; ${document.cookie}`.split(`; ${name}=`).pop().split(';').shift();\n\ncookie('_ga');"
+  },
+  "Convert RGB to Hex": {
+    "prefix": "rgbToHex",
+    "body": "const rgbToHex = (r, g, b) =>\n\t\"#\" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);\n\nrgbToHex(${1:255}, ${2:255}, ${3:255});"
+  },
+  "Copy to Clipboard": {
+    "prefix": "copyToClipboard",
+    "body": "const copyToClipboard = (text) => navigator.clipboard.writeText(text);\n\ncopyToClipboard(\"${0:Jai Jinendra}\");"
+  },
+  "Capitalise a String": {
+    "prefix": "capitalizeString",
+    "body": "const capitalize = str => str.charAt(0).toUpperCase() + str.slice(1)\n\ncapitalize(\"${0:jai Jinendra}\")"
+  },
+  "Find the number of days between two days": {
+    "prefix": "dayDiff",
+    "body": "const dayDiff = (date1, date2) => Math.ceil(Math.abs(date1.getTime() - date2.getTime()) / 86400000)\n\ndayDiff(new Date(\"20${1:23}-${2:10}-${3:21}\"), new Date(\"20${4:24}-${5:10}-${6:22}\"))"
+  },
+  "Clear All Cookies": {
+    "prefix": "clearCookie",
+    "body": "const clearCookies = document.cookie.split(';').forEach(cookie => document.cookie = cookie.replace(/^ +/, '').replace(/=.*/, `=;expires=${new Date(0).toUTCString()};path=/`));"
+  },
+  "Generate Random Hex": {
+    "prefix": "randomHex",
+    "body": "const randomHex = () => `#${Math.floor(Math.random() * 0xffffff).toString(16).padEnd(6, \"0\")}`;\n\nconsole.log(randomHex());"
+  },
+  "Check if a number is even or odd": {
+    "prefix": "evenOdd",
+    "body": "const isEven = num => num % 2 === 0;\n\nconsole.log(isEven(${1:2}));"
+  },
+  "Find Average of Numbers": {
+    "prefix": "averageNu",
+    "body": "const average = (...args) => args.reduce((a, b) => a + b) / args.length;\n\naverage(${1:1}, ${2:2}, ${3:3}, ${4:4});"
+  },
+  "Scroll to Top": {
+    "prefix": "goToTop",
+    "body": "const goToTop = () => window.scrollTo(0, 0);\n\ngoToTop();"
+  },
+  "Scroll to Top smooth": {
+    "prefix": "goToTopSmooth",
+    "body": "const scrollToTop = () => {\n\tconst c = document.documentElement.scrollTop || document.body.scrollTop;\n\tif (c > 0) {\n\t\twindow.requestAnimationFrame(scrollToTop);\n\t\twindow.scrollTo(0, c - c / 8);\n\t}\n};\n\nscrollToTop();"
+  },
+  "Get the Current scroll position": {
+    "prefix": "getScrollPosition",
+    "body": "const getScrollPosition = (el = window) => ({\n\tx: el.pageXOffset !== undefined ? el.pageXOffset : el.scrollLeft,\n\ty: el.pageYOffset !== undefined ? el.pageYOffset : el.scrollTop\n});\n\ngetScrollPosition();"
+  },
+  "Reverse a string": {
+    "prefix": "reverseString",
+    "body": "const reverse = str => str.split('').reverse().join('');\n\nreverse('Hello world');"
+  },
+  "Get Selected Text": {
+    "prefix": "getSelectedTxt",
+    "body": "const getSelectedTxt = () => window.getSelection().toString();\n\ngetSelectedTxt();"
+  },
+  "Find the day of year": {
+    "prefix": "dayOfYear",
+    "body": "const dayOfYear = (date) =>\n\tMath.floor((date - new Date(date.getFullYear(), 0, 0)) / 1000 / 60 / 60 / 24);\n\ndayOfYear(new Date());"
+  },
+  "Get the Current URL": {
+    "prefix": "currentURL",
+    "body": "const currentURL = () => window.location.href;\n\ncurrentURL();"
+  },
+  "find out if the browser tab of the page is focused?": {
+    "prefix": "isBrowserTabFocused",
+    "body": "const isBrowserTabFocused = () => !document.hidden;\n\nisBrowserTabFocused();"
+  },
   "import": {
     "prefix": "imp",
     "body": "import ${2:moduleName} from '${1:module}';$0"

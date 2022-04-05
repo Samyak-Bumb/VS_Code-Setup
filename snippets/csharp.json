@@ -1,28 +1,11 @@
 {
   "Creates a HelloWorld sample": {
     "prefix": "#helloworld",
-    "body": [
-      "using System;\n",
-      "namespace ConsoleApp",
-      "{",
-      "\tpublic class Program",
-      "\t{",
-      "\t\tpublic static void Main(string[] args)",
-      "\t\t{",
-      "\t\t\tConsole.WriteLine(\"Hello World!\");",
-      "\t\t}",
-      "\t}",
-      "}"
-    ]
+    "body": "using System;\n\nnamespace ConsoleApp\n{\n\tpublic class Program\n\t{\n\t\tpublic static void Main(string[] args)\n\t\t{\n\t\t\tConsole.WriteLine(\"Hello World!\");\n\t\t}\n\t}\n}"
   },
   "Creates a destructor for the containing class": {
     "prefix": "~",
-    "body": [
-      "~${1:Program}()",
-      "{",
-      "\t$0",
-      "}"
-    ]
+    "body": "~${1:Program}()\n{\n\t$0\n}"
   },
   "Creates a call to Clear": {
     "prefix": "cclear",
@@ -30,11 +13,7 @@
   },
   "General output to console": {
     "prefix": "cgo",
-    "body": [
-      "Console.WriteLine(\"Console app started\");\n\n$0",
-      "Console.WriteLine(\"Press any key to exit...\");",
-      "Console.ReadKey(true);"
-    ]
+    "body": "Console.WriteLine(\"Console app started\");\n\n$0\nConsole.WriteLine(\"Press any key to exit...\");\nConsole.ReadKey(true);"
   },
   "Creates a class": {
     "prefix": "class",
@@ -66,12 +45,7 @@
   },
   "Creates a do while loop": {
     "prefix": "dowhile",
-    "body": [
-      "do",
-      "{",
-      "\t$0",
-      "} while (${1:true})"
-    ]
+    "body": "do\n{\n\t$0\n} while (${1:true})"
   },
   "Creates an else statement": {
     "prefix": "else",
@@ -220,37 +194,19 @@
   },
   "Creates a Method structure": {
     "prefix": "method",
-    "body": [
-      "${1:public} ${2:void} ${3:MyMethod}(${4:string} ${5:parameter})",
-      "{",
-      "\t$0",
-      "}"
-    ]
+    "body": "${1:public} ${2:void} ${3:MyMethod}(${4:string} ${5:parameter})\n{\n\t$0\n}"
   },
   "Creates an Async Method structure": {
     "prefix": "method_async",
-    "body": [
-      "${1:public} async ${2:Task}<${3:object}> ${4:MyMethodAsync}(${5:string} ${6:parameter})",
-      "{",
-      "\t$0",
-      "}"
-    ]
+    "body": "${1:public} async ${2:Task}<${3:object}> ${4:MyMethodAsync}(${5:string} ${6:parameter})\n{\n\t$0\n}"
   },
   "Creates a Windows Message Box": {
     "prefix": "msgbox",
-    "body": [
-      "System.Windows.Forms.MessageBox.Show(\"${1:Hello}\");",
-      "$0"
-    ]
+    "body": "System.Windows.Forms.MessageBox.Show(\"${1:Hello}\");\n$0"
   },
   "Creates a Namespace": {
     "prefix": "namespace",
-    "body": [
-      "namespace ${1:MyNamespace}",
-      "{",
-      "\t$0",
-      "}"
-    ]
+    "body": "namespace ${1:MyNamespace}\n{\n\t$0\n}"
   },
   "Creates a property": {
     "prefix": "prop",
@@ -258,10 +214,7 @@
   },
   "Creates an immutable property": {
     "prefix": "propi",
-    "body": [
-      "private readonly ${1:string} ${2:_name};\n",
-      "public $1 ${3:Name} => $2;\n$0",
-    ]
+    "body": "private readonly ${1:string} ${2:_name};\n\npublic $1 ${3:Name} => $2;\n$0"
   },
   "Creates an init property": {
     "prefix": "propinit",
@@ -273,18 +226,11 @@
   },
   "Creates a public string method declaration": {
     "prefix": "pum",
-    "body": [
-      "public ${1:string} ${2:Method}(${3:string} ${4:parameter})\n{",
-      "\t$0",
-      "\treturn System.NotImplementedException;\n}"
-    ]
+    "body": "public ${1:string} ${2:Method}(${3:string} ${4:parameter})\n{\n\t$0\n\treturn System.NotImplementedException;\n}"
   },
   "Creates a public void method declaration": {
     "prefix": "pvm",
-    "body": [
-      "public void ${1:Method}(${2:string} ${3:parameter})\n{",
-      "\t$0\n}"
-    ]
+    "body": "public void ${1:Method}(${2:string} ${3:parameter})\n{\n\t$0\n}"
   },
   "Creates a record type": {
     "prefix": "record",
@@ -525,37 +471,23 @@
   },
   "Xml Comment - <c> Gives you a way to indicate that text within a description should be marked as code": {
     "prefix": "xml_<c>",
-    "body": [
-      "/// <c>${1:text}</c>"
-    ]
+    "body": "/// <c>${1:text}</c>"
   },
   "Xml Comment - <code> Gives you a way to indicate multiple lines as code. Use <c> to indicate that text within a description should be marked as code": {
     "prefix": "xml_<code>",
-    "body": [
-      "/// <code>",
-      "/// ${1:content}",
-      "/// </code>"
-    ]
+    "body": "/// <code>\n/// ${1:content}\n/// </code>"
   },
   "Xml Comment - <example> Lets you specify an example of how to use a method or other library member": {
     "prefix": "xml_<example>",
-    "body": [
-      "/// <example>",
-      "/// ${1:description}",
-      "/// </example>"
-    ]
+    "body": "/// <example>\n/// ${1:description}\n/// </example>"
   },
   "Xml Comment - <exception> Lets you specify which exceptions can be thrown": {
     "prefix": "xml_<exception>",
-    "body": [
-      "/// <exception cref=\"${1:member}\">${2:description}</exception>"
-    ]
+    "body": "/// <exception cref=\"${1:member}\">${2:description}</exception>"
   },
   "Xml Comment - <include> Lets you refer to comments in another file that describe the types and members in your source code": {
     "prefix": "xml_<include>",
-    "body": [
-      "/// <include file='${1:filename}' path='${2:tagpath}[@name=\"${3:id}\"]' />"
-    ]
+    "body": "/// <include file='${1:filename}' path='${2:tagpath}[@name=\"${3:id}\"]' />"
   },
   "Xml Comment - <list> A list or table can have as many <item> blocks as needed": {
     "prefix": "xml_<list>",
@@ -574,75 +506,51 @@
   },
   "Xml Comment - <para> Is for use inside a tag, such as <summary>, <remarks>, or <returns>, and lets you add structure to the text": {
     "prefix": "xml_<para>",
-    "body": [
-      "/// <para>${1:content}</para>"
-    ]
+    "body": "/// <para>${1:content}</para>"
   },
   "Xml Comment - <param> Should be used in the comment for a method declaration to describe one of the parameters for the method": {
     "prefix": "xml_<param>",
-    "body": [
-      "/// <param name=\"${1:name}\">${2:description}</param>"
-    ]
+    "body": "/// <param name=\"${1:name}\">${2:description}</param>"
   },
   "Xml Comment - <paramref> Gives you a way to indicate that a word in the code comments, for example in a <summary> or <remarks> block refers to a parameter": {
     "prefix": "xml_<paramref>",
-    "body": [
-      "/// <paramref name=\"${1:name}\"/>"
-    ]
+    "body": "/// <paramref name=\"${1:name}\"/>"
   },
   "Xml Comment - <permission> Lets you document the access of a member": {
     "prefix": "xml_<permission>",
-    "body": [
-      "/// <permission cref=\"${1:member}\">${2:description}</permission>"
-    ]
+    "body": "/// <permission cref=\"${1:member}\">${2:description}</permission>"
   },
   "Xml Comment - <remarks> Is used to add information about a type, supplementing the information specified with <summary>": {
     "prefix": "xml_<remarks>",
-    "body": [
-      "/// <remarks>${1:description}</remarks>"
-    ]
+    "body": "/// <remarks>${1:description}</remarks>"
   },
   "Xml Comment - <returns> Should be used in the comment for a method declaration to describe the return value": {
     "prefix": "xml_<returns>",
-    "body": [
-      "/// <returns>${1:description}</returns>"
-    ]
+    "body": "/// <returns>${1:description}</returns>"
   },
   "Xml Comment - <see> Lets you specify a link from within text. Use <seealso> to indicate that text should be placed in a See Also section": {
     "prefix": "xml_<see>",
-    "body": [
-      "/// <see cref=\"${1:member}\"/>"
-    ]
+    "body": "/// <see cref=\"${1:member}\"/>"
   },
   "Xml Comment - <seealso> Lets you specify the text that you might want to appear in a See Also section": {
     "prefix": "xml_<seealso>",
-    "body": [
-      "/// <seealso cref=\"${1:member}\"/>"
-    ]
+    "body": "/// <seealso cref=\"${1:member}\"/>"
   },
   "Xml Comment - <summary> Should be used to describe a type or a type member": {
     "prefix": "xml_<summary>",
-    "body": [
-      "/// <summary>${1:description}</summary>"
-    ]
+    "body": "/// <summary>${1:description}</summary>"
   },
   "Xml Comment - <typeparam> Should be used in the comment for a generic type or method declaration to describe a type parameter": {
     "prefix": "xml_<typeparam>",
-    "body": [
-      "/// <typeparam name=\"${1:name}\">${2:description}</typeparam>"
-    ]
+    "body": "/// <typeparam name=\"${1:name}\">${2:description}</typeparam>"
   },
   "Xml Comment - <typeparamref> Enable consumers of the documentation file to format the word in some distinct way, for example in italics": {
     "prefix": "xml_<typeparamref>",
-    "body": [
-      "/// <typeparamref name=\"${1:name}\"/>"
-    ]
+    "body": "/// <typeparamref name=\"${1:name}\"/>"
   },
   "Xml Comment - <value> Lets you describe the value that a property represents": {
     "prefix": "xml_<value>",
-    "body": [
-      "/// <value>${1:property-description}</value>"
-    ]
+    "body": "/// <value>${1:property-description}</value>"
   },
   "ASP.NET Core 2.0 csproj Generator": {
     "prefix": "ac_csproj_2.0",
@@ -782,9 +690,7 @@
   },
   "ASP.NET Core - Creates a comment block in ASP.NET": {
     "prefix": "ac_comment",
-    "body": [
-      "<%-- $0 -->"
-    ]
+    "body": "<%-- $0 -->"
   },
   "ASP.NET Core - Creates a way to configure the JSON configuration provider": {
     "prefix": "ac_conf",
@@ -901,25 +807,15 @@
   },
   "ASP.NET Core Razor - Creates a code block for Razor": {
     "prefix": "rz_code",
-    "body": [
-      "@code {",
-      "\t$0",
-      "}"
-    ]
+    "body": "@code {\n\t$0\n}"
   },
   "ASP.NET Core Razor - Creates a comment block for Razor": {
     "prefix": "rz_comment",
-    "body": [
-      "@* $0 *@"
-    ]
+    "body": "@* $0 *@"
   },
   "ASP.NET Core Razor - Creates a directive block for Razor": {
     "prefix": "rz_directive",
-    "body": [
-      "@{",
-      "\t$0",
-      "}"
-    ]
+    "body": "@{\n\t$0\n}"
   },
   "ASP.NET Core Razor - Creates a do while loop for Razor": {
     "prefix": "rz_dowhile",
@@ -1046,17 +942,11 @@
   },
   "ASP.NET Core Razor - Creates a ViewBag for Razor": {
     "prefix": "rz_viewbag",
-    "body": [
-      "@ViewBag.${1:MyViewBagName}",
-      "$0"
-    ]
+    "body": "@ViewBag.${1:MyViewBagName}\n$0"
   },
   "ASP.NET Core Razor - Creates a ViewData for Razor": {
     "prefix": "rz_viewdata",
-    "body": [
-      "@ViewData[\"${1:myViewData}\"]",
-      "$0"
-    ]
+    "body": "@ViewData[\"${1:myViewData}\"]\n$0"
   },
   "ASP.NET Core Razor - Creates a while loop for Razor": {
     "prefix": "rz_while",
