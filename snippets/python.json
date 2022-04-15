@@ -26,7 +26,7 @@
   },
   "Import": {
     "prefix": "imp",
-    "body": "import ${0:Name_of_Module}"
+    "body": "import ${0:module}"
   },
   "String": {
     "prefix": "str",

@@ -100,6 +100,10 @@
     "prefix": "mde",
     "body": "module.exports ={\n\t$0\n};\n"
   },
+  "addEventListener": {
+  "prefix": "ael",
+  "body": "${1:btn}.addEventListener(\"${2:click}\",()=>{\n\t$0\n});"
+},
   "exportNamedVariable": {
     "prefix": "env",
     "body": "export const ${1:exportVariable} = ${2:localVariable};\n"
