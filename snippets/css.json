@@ -4,7 +4,7 @@
     "prefix": "q",
     "body": [
       // https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;700&display=swap
-      // font-family: 'Baloo 2', cursive;
+      // font-family: "Baloo 2", cursive;
       "@import url(\"https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;700&display=swap\");\n",
       "*{",
       "\tmargin: 0;",
@@ -51,18 +51,14 @@
     "prefix": "scrollbar",
     "body": [
       "::-webkit-scrollbar{",
-      "\twidth: 10px;",
-      "\tbackground: #c4c8d4",
-      "}",
+      "\twidth: 10px\n}",
       "::-webkit-scrollbar-thumb{",
+      "\toutline: none;",
+      "\tborder: none;",
       "\tborder-radius: 10px;",
-      "\tbackground: #9ca8b4;",
-      "\tborder: 2px solid #2b333b;",
-      "}",
+      "\tbackground: #9ca8b4\n}",
       "::-webkit-scrollbar-track{",
-      "\tborder-radius: 6px;",
-      "\tbackground: #0000;",
-      "}"
+      "\tbackground: #0000\n}",
     ]
   },
   "Media Query": {

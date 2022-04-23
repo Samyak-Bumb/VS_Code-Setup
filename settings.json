@@ -121,7 +121,7 @@
   "terminal.integrated.allowChords": false,
   "terminal.integrated.cursorStyle": "line",
   "terminal.integrated.fontSize": 12.5,
-  "terminal.integrated.fontFamily": "'Cascadia Code', Menlo, Monaco, 'Courier New', monospace",
+  "terminal.integrated.fontFamily": "'Operator Mono', Menlo, Monaco, 'Courier New', monospace",
   "workbench.editor.pinnedTabSizing": "shrink",
   "terminal.integrated.defaultProfile.windows": "PowerShell",
   "editor.scrollbar.horizontalScrollbarSize": 11,
@@ -355,7 +355,9 @@
   "editor.formatOnSave": true,
   "workbench.layoutControl.type": "menu",
   "editor.lineNumbers": "off",
-  "workbench.statusBar.visible": false,
+  "task.quickOpen.history": 2,
+  "workbench.editor.limit.enabled": true,
+  "workbench.colorTheme": "Samyak Bumb",
   "workbench.activityBar.visible": false,
-  "workbench.colorTheme": "Eva Dark"
+  "workbench.statusBar.visible": false
 }
