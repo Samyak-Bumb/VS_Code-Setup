@@ -648,5 +648,9 @@
 	{
 		"key": "f1",
 		"command": "-workbench.action.showCommands"
+	},
+	{
+		"key": "ctrl+shift+a x",
+		"command": "editor.action.indentUsingSpaces"
 	}
 ]

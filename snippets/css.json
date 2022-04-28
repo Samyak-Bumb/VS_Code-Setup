@@ -3,14 +3,12 @@
   "CSS Boilerplate with Loader By Samyak": {
     "prefix": "q",
     "body": [
-      // https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;700&display=swap
-      // font-family: "Baloo 2", cursive;
-      "@import url(\"https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;700&display=swap\");\n",
+      "@import url(\"https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;700&display=swap\");\n",
       "*{",
       "\tmargin: 0;",
       "\tpadding: 0;",
       "\tbox-sizing: border-box;",
-      "\tfont-family: \"Poppins\", sans-serif\n}\n:root{\n\t--light: #fbfbfb;\n\t--dark: #111;\n\t--selection: #00d1b2;\n}",
+      "\tfont-family: \"Baloo 2\", cursive\n}\n:root{\n\t--light: #fbfbfb;\n\t--dark: #111;\n\t--selection: #00d1b2;\n}",
       "::selection{",
       "\tcolor: var(--light);",
       "\tbackground-color: var(--selection)\n}",
@@ -58,7 +56,7 @@
       "\tborder-radius: 10px;",
       "\tbackground: #9ca8b4\n}",
       "::-webkit-scrollbar-track{",
-      "\tbackground: #0000\n}",
+      "\tbackground: #0000\n}"
     ]
   },
   "Media Query": {
@@ -246,50 +244,49 @@
     "body": "/**\n\n\tTODO:\n\t\t- ${1:First todo}\n\t\t- ${0:Second todo}\n\n */\n\n"
   },
   "Small Devices and Larger": {
-    "prefix": "small-devices-and-up-media-query",
+    "prefix": "media-small-devices-an",
     "body": "@media (min-width: 576px){\n$0\t${1:Rules}\n"
   },
   "Medium Devices and Larger": {
-    "prefix": "medium-devices-and-up-media-query",
+    "prefix": "media-medium-devices-an",
     "body": "@media (min-width: 768px){\n$0\t${1:Rules}\n}"
   },
   "Large Devices and Larger": {
-    "prefix": "large-devices-and-up-media-query",
+    "prefix": "media-large-devices-an",
     "body": "@media (min-width: 992px){\n$0\t${1:Rules}\n}"
   },
   "Small devices devices and Smaller": {
-    "prefix": "small-devices-and-down-media-query",
+    "prefix": "media-small-devices-an",
     "body": "@media (max-width: 767.98px){\n$0\t${1:Rules}\n}"
   },
   "Medium devices devices and Smaller": {
-    "prefix": "medium-devices-and-down-media-query",
+    "prefix": "media-medium-devices-an",
     "body": "@media (max-width: 991.98px){\n$0\t${1:Rules}\n}"
   },
   "Large devices devices and Smaller": {
-    "prefix": "large-devices-and-down-media-query",
+    "prefix": "media-large-devices-an",
     "body": "@media (max-width: 1199.98px){\n$0\t${1:Rules}\n}"
   },
   "Extra Small devices only": {
-    "prefix": "extra-small-devices-only-media-query",
+    "prefix": "media-extra-small-device",
     "body": "@media (max-width: 575.98px){\n$0\t${1:Rules}\n}"
   },
   "Small devices only": {
-    "prefix": "small-devices-only-media-query",
+    "prefix": "media-small-device",
     "body": "@media (min-width: 576px) and (max-width: 767.98px){\n$0\t${1:Rules}\n}"
   },
   "Medium devices only": {
-    "prefix": "medium-devices-only-media-query",
+    "prefix": "media-medium-device",
     "body": "@media (min-width: 768px) and (max-width: 991.98px){\n$0\t${1:Rules}\n}"
   },
   "Large devices only": {
-    "prefix": "large-devices-only-media-query",
+    "prefix": "media-large-device",
     "body": "@media (min-width: 992px) and (max-width: 1199.98px){\n$0\t${1:Rules}\n}"
   },
   "Extra Large Devices Only": {
-    "prefix": "extra-large-devices-only-media-query",
+    "prefix": "media-extra-large-device",
     "body": "@media (min-width: 1200px){\n$0\t${1:Rules}\n}"
   },
-  // "Colors"
   "White": {
     "prefix": "oc-white",
     "body": "#ffffff"

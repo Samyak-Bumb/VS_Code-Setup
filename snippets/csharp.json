@@ -1,3 +1,4 @@
+// Created/Written By Samyak Bumb
 {
   "Creates a HelloWorld sample": {
     "prefix": "#helloworld",
@@ -493,14 +494,14 @@
     "prefix": "xml_<list>",
     "body": [
       "/// <list type=\"bullet\">",
-      "///     <listheader>",
-      "///        <term>${1:term}</term>",
-      "///        <description>${2:description}</description>",
-      "///     </listheader>",
-      "///     <item>",
-      "///        <term>${3:term}</term>",
-      "///        <description>${4:description}</description>",
-      "///     </item>",
+      "///\t<listheader>",
+      "///\t\t<term>${1:term}</term>",
+      "///\t\t<description>${2:description}</description>",
+      "///\t</listheader>",
+      "///\t<item>",
+      "///\t\t<term>${3:term}</term>",
+      "///\t\t<description>${4:description}</description>",
+      "///\t</item>",
       "/// </list>"
     ]
   },
@@ -848,33 +849,15 @@
   },
   "ASP.NET Core Razor - Creates a functions block for Razor": {
     "prefix": "rz_functions",
-    "body": [
-      "@functions {",
-      "\t$0",
-      "}"
-    ]
+    "body": "@functions {\n\t$0\n}"
   },
   "ASP.NET Core Razor - Creates an if statement for Razor": {
     "prefix": "rz_if",
-    "body": [
-      "@if (${1:true})",
-      "{",
-      "\t$0",
-      "}"
-    ]
+    "body": "@if (${1:true})\n{\n\t$0\n}"
   },
   "ASP.NET Core Razor - Creates an if else statement for Razor": {
     "prefix": "rz_ifelse",
-    "body": [
-      "@if (${1:true})",
-      "{",
-      "\t$0",
-      "}",
-      "else",
-      "{",
-      "\t$2",
-      "}"
-    ]
+    "body": "@if (${1:true})\n{\n\t$0\n}\nelse\n{\n\t$2\n}"
   },
   "ASP.NET Core Razor - Implements an interface for Razor": {
     "prefix": "rz_implements",
@@ -906,39 +889,15 @@
   },
   "ASP.NET Core Razor - Creates a switch statement for Razor": {
     "prefix": "rz_switch",
-    "body": [
-      "@switch (${1:value})\n{",
-      "\tcase ${2:value1}:",
-      "\t\tbreak;",
-      "\tdefault:",
-      "\t\tbreak;\n}\n$0"
-    ]
+    "body": "@switch (${1:value})\n{\n\tcase ${2:value1}:\n\t\tbreak;\n\tdefault:\n\t\tbreak;\n}\n$0"
   },
   "ASP.NET Core Razor - Creates a try catch finally for Razor": {
     "prefix": "rz_try",
-    "body": [
-      "@try",
-      "{",
-      "\t$0",
-      "}",
-      "catch (${1:Exception} ${2:ex})",
-      "{",
-      "\t<${3:p}>Error: @$2.Message</$3>",
-      "}",
-      "finally",
-      "{",
-      "\t",
-      "}"
-    ]
+    "body": "@try\n{\n\t$0\n}\ncatch (${1:Exception} ${2:ex})\n{\n\t<${3:p}>Error: @$2.Message</$3>\n}\nfinally\n{\n\t\n}"
   },
   "ASP.NET Core Razor - Creates an using statement for Razor": {
     "prefix": "rz_using",
-    "body": [
-      "@using (${1:Html.BeginForm()})",
-      "{",
-      "\t$0",
-      "}"
-    ]
+    "body": "@using (${1:Html.BeginForm()})\n{\t$0\n}"
   },
   "ASP.NET Core Razor - Creates a ViewBag for Razor": {
     "prefix": "rz_viewbag",
@@ -950,33 +909,11 @@
   },
   "ASP.NET Core Razor - Creates a while loop for Razor": {
     "prefix": "rz_while",
-    "body": [
-      "@{ var ${1:flag} = ${2:true}; }",
-      "@while ($1)",
-      "{",
-      "\t$0",
-      "\t$1 = ${3:false};",
-      "}"
-    ]
+    "body": "@{ var ${1:flag} = ${2:true}; }\n@while ($1)\n{\n\t$0\n\t$1 = ${3:false};\n}"
   },
   ".NET Core - Creates a MS-Test class": {
     "prefix": "mstest",
-    "body": [
-      "using Microsoft.VisualStudio.TestTools.UnitTesting;",
-      "using System;\n",
-      "namespace ${1:ProjectNamespace}.Test",
-      "{",
-      "\t[TestClass]",
-      "\tpublic class ${2:ClassName}Test",
-      "\t{",
-      "\t\t[TestMethod]",
-      "\t\tpublic void ${3:MethodName}()",
-      "\t\t{",
-      "\t\t\t",
-      "\t\t}",
-      "\t}",
-      "}"
-    ]
+    "body": "using Microsoft.VisualStudio.TestTools.UnitTesting;\nusing System;\n\nnamespace ${1:ProjectNamespace}.Test\n{\n\t[TestClass]\n\tpublic class ${2:ClassName}Test\n\t{\n\t\t[TestMethod]\n\t\tpublic void ${3:MethodName}()\n\t\t{\n\t\t\t\n\t\t}\n\t}\n}"
   },
   "gRPC .Net 5 - Creates csproj for the Client": {
     "prefix": "gRPC_client_csproj",
@@ -1102,26 +1039,12 @@
       "\t\t\t_logger.LogInformation($\"Sending hello to {request.Name}\");",
       "\t\t\treturn Task.FromResult(new HelloReply { Message = \"Hello \" + request.Name });",
       "\t\t}",
-      "\t}\n",
+      "\t}\n"
     ]
   },
   "gRPC .Net 5 - Creates the Settings (appsettings.json) content for the Server": {
     "prefix": "gRPC_server_settings",
-    "body": [
-      "{",
-      "\t\"Logging\": {",
-      "\t\t\"LogLevel\": {",
-      "\t\t\t\"Default\": \"Information\"",
-      "\t\t}",
-      "\t},",
-      "\t\"AllowedHosts\": \"*\",",
-      "\t\"Kestrel\": {",
-      "\t\t\"EndpointDefaults\": {",
-      "\t\t\t\"Protocols\": \"Http2\"",
-      "\t\t}",
-      "\t}",
-      "}"
-    ]
+    "body": "{\n\t\"Logging\": {\n\t\t\"LogLevel\": {\n\t\t\t\"Default\": \"Information\"\n\t\t}\n\t},\n\t\"AllowedHosts\": \"*\",\n\t\"Kestrel\": {\n\t\t\"EndpointDefaults\": {\n\t\t\t\"Protocols\": \"Http2\"\n\t\t}\n\t}\n}"
   },
   "gRPC .Net 5 - Creates the Startup class for the Server": {
     "prefix": "gRPC_server_startup",
@@ -1129,64 +1052,31 @@
       "using Microsoft.AspNetCore.Builder;",
       "using Microsoft.AspNetCore.Hosting;",
       "using Microsoft.Extensions.DependencyInjection;",
-      "using Microsoft.Extensions.Hosting;",
-      "",
-      "namespace Server",
-      "{",
-      "\tpublic class Startup",
-      "\t{",
-      "\t\tpublic void ConfigureServices(IServiceCollection services)",
-      "\t\t{",
-      "\t\t\tservices.AddGrpc();",
-      "\t\t}",
-      "",
+      "using Microsoft.Extensions.Hosting;\n",
+      "namespace Server\n{",
+      "\tpublic class Startup\n\t{",
+      "\t\tpublic void ConfigureServices(IServiceCollection services)\n\t\t{",
+      "\t\t\tservices.AddGrpc();\n\t\t}\n",
       "\t\tpublic void Configure(IApplicationBuilder app, IWebHostEnvironment env)",
       "\t\t{",
       "\t\t\tif (env.IsDevelopment())",
       "\t\t\t{",
-      "\t\t\t\tapp.UseDeveloperExceptionPage();",
-      "\t\t\t}",
-      "",
-      "\t\t\tapp.UseRouting();",
-      "",
-      "\t\t\tapp.UseEndpoints(endpoints =>",
-      "\t\t\t{",
-      "\t\t\t\tendpoints.MapGrpcService<GreeterService>();",
-      "\t\t\t});",
-      "\t\t}",
-      "\t}",
-      "}"
+      "\t\t\t\tapp.UseDeveloperExceptionPage();\n\t\t\t}\n",
+      "\t\t\tapp.UseRouting();\n",
+      "\t\t\tapp.UseEndpoints(endpoints =>\n\t\t\t{",
+      "\t\t\t\tendpoints.MapGrpcService<GreeterService>();\n\t\t\t});\n\t\t}\n\t}\n}"
     ]
   },
   "Extension for get the MD5 value from a stream": {
     "prefix": "ex_md5_from_stream",
-    "body": [
-      "public static string GetMD5(this System.IO.Stream stream)",
-      "{",
-      "\tstream.Position = 0;",
-      "\tvar arrayByteHashValue = new System.Security.Cryptography.MD5CryptoServiceProvider().ComputeHash(stream);",
-      "\treturn BitConverter.ToString(arrayByteHashValue).Replace(\"-\", String.Empty).ToLower();",
-      "}"
-    ]
+    "body": "public static string GetMD5(this System.IO.Stream stream)\n{\n\tstream.Position = 0;\n\tvar arrayByteHashValue = new System.Security.Cryptography.MD5CryptoServiceProvider().ComputeHash(stream);\n\treturn BitConverter.ToString(arrayByteHashValue).Replace(\"-\", String.Empty).ToLower();\n}"
   },
   "Extension for convert a stream to string": {
     "prefix": "ex_stream_to_string",
-    "body": [
-      "public static string ToString(this System.IO.Stream stream)",
-      "{",
-      "\tstream.Position = 0;",
-      "\treturn new System.IO.StreamReader(stream).ReadToEnd();",
-      "}"
-    ]
+    "body": "public static string ToString(this System.IO.Stream stream)\n{\n\tstream.Position = 0;\n\treturn new System.IO.StreamReader(stream).ReadToEnd();\n}"
   },
   "Extension for convert a string to stream": {
     "prefix": "ex_string_to_stream",
-    "body": [
-      "public static System.IO.Stream ConvertToStream(this string source)",
-      "{",
-      "\tvar byteArray = System.Text.Encoding.UTF8.GetBytes(source);",
-      "\treturn new System.IO.MemoryStream(byteArray);",
-      "}"
-    ]
+    "body": "public static System.IO.Stream ConvertToStream(this string source)\n{\n\tvar byteArray = System.Text.Encoding.UTF8.GetBytes(source);\n\treturn new System.IO.MemoryStream(byteArray);\n}"
   }
 }

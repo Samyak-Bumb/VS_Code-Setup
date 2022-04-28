@@ -358,6 +358,5 @@
   "task.quickOpen.history": 2,
   "workbench.editor.limit.enabled": true,
   "workbench.colorTheme": "Samyak Bumb",
-  "workbench.activityBar.visible": false,
-  "workbench.statusBar.visible": false
+  "workbench.activityBar.visible": false
 }
