@@ -1,14 +1,14 @@
 // Created/Written By Samyak Bumb
 {
-  "Creates a HelloWorld sample": {
+  "HelloWorld sample": {
     "prefix": "#helloworld",
     "body": "using System;\n\nnamespace ConsoleApp\n{\n\tpublic class Program\n\t{\n\t\tpublic static void Main(string[] args)\n\t\t{\n\t\t\tConsole.WriteLine(\"Hello World!\");\n\t\t}\n\t}\n}"
   },
-  "Creates a destructor for the containing class": {
+  "destructor for the containing class": {
     "prefix": "~",
     "body": "~${1:Program}()\n{\n\t$0\n}"
   },
-  "Creates a call to Clear": {
+  "call to Clear": {
     "prefix": "cclear",
     "body": "Console.Clear();\n$0"
   },
@@ -16,271 +16,169 @@
     "prefix": "cgo",
     "body": "Console.WriteLine(\"Console app started\");\n\n$0\nConsole.WriteLine(\"Press any key to exit...\");\nConsole.ReadKey(true);"
   },
-  "Creates a class": {
+  "class": {
     "prefix": "class",
     "body": "public class ${1:MyClass}\n{\n\t$0\n}"
   },
-  "Creates an abstract class declaration": {
+  "abstract class declaration": {
     "prefix": "classa",
     "body": "public abstract class ${1:MyClass}\n{\n\t$0\n}"
   },
-  "Creates a disposable class": {
+  "disposable class": {
     "prefix": "classd",
     "body": "public class ${1:MyClass} : IDisposable\n{\n\n\tpublic void Dispose()\n\t{\n\t\tGC.SuppressFinalize(this);\n\t}\n\n\t$0\n}"
   },
-  "Creates a constant": {
+  "constant": {
     "prefix": "const",
     "body": "${1:public} const ${2:string} ${3:CONSTANT_NAME} = \"${4:value}\";\n$0"
   },
-  "Creates a call to ReadLine": {
+  "call to ReadLine": {
     "prefix": "cr",
     "body": "Console.ReadLine();\n$0"
   },
-  "Creates a call to ReadKey": {
+  "call to ReadKey": {
     "prefix": "crk",
     "body": "Console.ReadKey();\n$0"
   },
-  "Creates a call to WriteLine": {
+  "call to WriteLine": {
     "prefix": "cwl",
     "body": "Console.WriteLine($\"${1:Text}\");\n$0"
   },
-  "Creates a do while loop": {
+  "do while loop": {
     "prefix": "dowhile",
     "body": "do\n{\n\t$0\n} while (${1:true})"
   },
-  "Creates an else statement": {
+  "else statement": {
     "prefix": "else",
-    "body": [
-      "else",
-      "{",
-      "\t$0",
-      "}"
-    ]
+    "body": "else\n{\n\t$0\n}"
   },
-  "Creates an enum type": {
+  "enum type": {
     "prefix": "enum",
-    "body": [
-      "public enum ${1:MyEnumType}",
-      "{",
-      "\t$0",
-      "}"
-    ]
+    "body": "public enum ${1:MyEnumType}\n{\n\t$0\n}"
   },
-  "Creates an exception class": {
+  "exception class": {
     "prefix": "exception",
     "body": [
-      "public class ${1:MyException} : System.Exception",
-      "{",
+      "public class ${1:MyException} : System.Exception\n}",
       "\tpublic $1() {}",
       "\tpublic $1(string message) : base(message) {}",
       "\tpublic $1(string message, System.Exception inner) : base(message, inner) {}",
-      "\tpublic $1(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) : base(info, context) {}",
-      "}"
+      "\tpublic $1(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) : base(info, context) {}\n}"
     ]
   },
-  "Creates a for loop": {
+  "for loop": {
     "prefix": "for",
-    "body": [
-      "for (var ${1:i} = 0; $1 < ${2:length}; $1++)",
-      "{",
-      "\t$0",
-      "}"
-    ]
+    "body": "for (var ${1:i} = 0; $1 < ${2:length}; $1++)\n{\n\t$0\n}"
   },
-  "Creates a foreach statement": {
+  "foreach statement": {
     "prefix": "foreach",
-    "body": [
-      "foreach (var ${1:item} in ${2:collection})",
-      "{",
-      "\t$0",
-      "}"
-    ]
+    "body": "foreach (var ${1:item} in ${2:collection})\n{\n\t$0\n}"
   },
-  "Creates a new instance of the Guid structure": {
+  "new instance of the Guid structure": {
     "prefix": "guid",
-    "body": [
-      "Guid ${1:guid} = Guid.NewGuid();",
-      "$0"
-    ]
+    "body": "Guid ${1:guid} = Guid.NewGuid();\n$0"
   },
-  "Creates as string, a new instance of the Guid structure without hyphens": {
+  " string, a new instance of the Guid structure without hyphens": {
     "prefix": "guidn",
-    "body": [
-      "string ${1:guid} = Guid.NewGuid().ToString(\"N\");",
-      "$0"
-    ]
+    "body": "string ${1:guid} = Guid.NewGuid().ToString(\"N\");\n$0"
   },
-  "Creates an if statement": {
+  "if statement": {
     "prefix": "if",
-    "body": [
-      "if (${1:true})",
-      "{",
-      "\t$0",
-      "}"
-    ]
+    "body": "if (${1:true})\n{\n\t$0\n}"
   },
-  "Creates an if else statement": {
+  "if else statement": {
     "prefix": "ifelse",
-    "body": [
-      "if (${1:true})",
-      "{",
-      "\t$0",
-      "}",
-      "else",
-      "{",
-      "\t",
-      "}"
-    ]
+    "body": "if (${1:true})\n{\n\t$0\n}\nelse\n{\n\t\n}"
   },
-  "Creates a conditional operator": {
+  "conditional operator": {
     "prefix": "iif",
-    "body": [
-      "var ${1:value} = ${2:true};",
-      "var ${3:result} = (${1} ? ${4:true} : ${5:false});",
-      "$0"
-    ]
+    "body": "var ${1:value} = ${2:true};\nvar ${3:result} = (${1} ? ${4:true} : ${5:false});\n$0"
   },
-  "Creates an immutable object": {
+  "immutable object": {
     "prefix": "immutable",
-    "body": [
-      "${1:public} class ${2:ImmutableObject}",
-      "{",
-      "\tprivate readonly ${3:string} ${4:_name};",
-      "\tpublic $3 ${5:Name} => $4\n",
-      "\tpublic $2($3 ${6:name})",
-      "\t{",
-      "\t\t$4 = $6;",
-      "\t}\n}"
-    ]
+    "body": "${1:public} class ${2:ImmutableObject}\n{\n\tprivate readonly ${3:string} ${4:_name};\n\tpublic $3 ${5:Name} => $4\n\n\tpublic $2($3 ${6:name})\n\t{\n\t\t$4 = $6;\n\t}\n}"
   },
-  "Creates an interface": {
+  "interface": {
     "prefix": "interface",
-    "body": [
-      "public interface I${1:MyInterface}\n{",
-      "\t$0\n}"
-    ]
+    "body": "public interface I${1:MyInterface}\n{\n\t$0\n}"
   },
-  "Creates a LINQ Distinct sentence": {
+  "LINQ Distinct sentence": {
     "prefix": "linq_distinct",
-    "body": [
-      "${1:var} ${2:data} = (from ${3:item} in ${4:collection}",
-      "\t\t\tselect $3).Distinct()"
-    ]
+    "body": "${1:var} ${2:data} = (from ${3:item} in ${4:collection}\n\t\t\tselect $3).Distinct()"
   },
-  "Creates a LINQ Where sentence": {
+  "LINQ Where sentence": {
     "prefix": "linq_where",
-    "body": [
-      "${1:var} ${2:data} = from ${3:item} in ${4:collection}",
-      "\t\t\twhere $3.${5:FieldName}.${6:Contains}(\"${7:Text}\")",
-      "\t\t\tselect $3;"
-    ]
+    "body": "${1:var} ${2:data} = from ${3:item} in ${4:collection}\n\t\t\twhere $3.${5:FieldName}.${6:Contains}(\"${7:Text}\")\n\t\t\tselect $3;"
   },
-  "Creates a lock statement": {
+  "lock statement": {
     "prefix": "lock",
-    "body": [
-      "lock (${1:true})",
-      "{",
-      "\t$0",
-      "}"
-    ]
+    "body": "lock (${1:true})\n{\n\t$0\n}"
   },
-  "Creates a Console Main structure": {
+  "Console Main structure": {
     "prefix": "main",
-    "body": [
-      "public static void Main(string[] args)",
-      "{",
-      "\t$0",
-      "}"
-    ]
+    "body": "public static void Main(string[] args)\n{\n\t$0\n}"
   },
-  "Creates a Method structure": {
+  "Method structure": {
     "prefix": "method",
     "body": "${1:public} ${2:void} ${3:MyMethod}(${4:string} ${5:parameter})\n{\n\t$0\n}"
   },
-  "Creates an Async Method structure": {
+  "Async Method structure": {
     "prefix": "method_async",
     "body": "${1:public} async ${2:Task}<${3:object}> ${4:MyMethodAsync}(${5:string} ${6:parameter})\n{\n\t$0\n}"
   },
-  "Creates a Windows Message Box": {
+  "Windows Message Box": {
     "prefix": "msgbox",
     "body": "System.Windows.Forms.MessageBox.Show(\"${1:Hello}\");\n$0"
   },
-  "Creates a Namespace": {
+  "Namespace": {
     "prefix": "namespace",
     "body": "namespace ${1:MyNamespace}\n{\n\t$0\n}"
   },
-  "Creates a property": {
+  "property": {
     "prefix": "prop",
     "body": "${1:public} ${2:string} ${3:Name} { get; set; }\n\n$0"
   },
-  "Creates an immutable property": {
+  "immutable property": {
     "prefix": "propi",
     "body": "private readonly ${1:string} ${2:_name};\n\npublic $1 ${3:Name} => $2;\n$0"
   },
-  "Creates an init property": {
+  "init property": {
     "prefix": "propinit",
     "body": "public ${1:string} ${2:Name} { get; init; }\n\n$0"
   },
-  "Creates a property read-only": {
+  "property read-only": {
     "prefix": "propr",
     "body": "public ${1:string} ${2:Name} { get; private set; }\n\n$0"
   },
-  "Creates a public string method declaration": {
+  "public string": {
     "prefix": "pum",
     "body": "public ${1:string} ${2:Method}(${3:string} ${4:parameter})\n{\n\t$0\n\treturn System.NotImplementedException;\n}"
   },
-  "Creates a public void method declaration": {
+  "public void": {
     "prefix": "pvm",
     "body": "public void ${1:Method}(${2:string} ${3:parameter})\n{\n\t$0\n}"
   },
-  "Creates a record type": {
+  "record type": {
     "prefix": "record",
     "body": "public record Person(${1:string} ${2:Name});"
   },
-  "Creates a record type with deconstructor": {
+  "record type with deconstructor": {
     "prefix": "recordd",
     "body": [
-      "public record Person",
-      "{",
+      "public record Person\n{",
       "\tpublic Person(${1:string} ${2:name}, ${3:int} ${4:age}) => (${5:Name}, ${6:Age}) = ($2, $4);\n",
       "\tpublic $1 $5 { get; set; }",
-      "\tpublic $3 $6 { get; set; }\n",
-      "public void Deconstructor(out $1 $2, out $3 $4) => ($2, $4) = ($5, $6);",
-      "}"
+      "\tpublic $3 $6 { get; set; }\n\npublic void Deconstructor(out $1 $2, out $3 $4) => ($2, $4) = ($5, $6);\n}"
     ]
   },
-  "Creates a singleton class": {
+  "singleton class": {
     "prefix": "singleton",
-    "body": [
-      "public sealed class ${1:MyClass}",
-      "{",
-      "\tprivate static volatile I${2:MyObject} instance;",
-      "\tprivate static Object syncRootObject = new Object();\n",
-      "\tpublic static I${2} Instance",
-      "\t{",
-      "\t\tget",
-      "\t\t{",
-      "\t\t\tif (instance == null)",
-      "\t\t\t{",
-      "\t\t\t\tlock (syncRootObject)",
-      "\t\t\t\t{",
-      "\t\t\t\t\tif (instance == null)",
-      "\t\t\t\t\t{",
-      "\t\t\t\t\t\tinstance = new $0${3:MyObject}();",
-      "\t\t\t\t\t}",
-      "\t\t\t\t}",
-      "\t\t\t}",
-      "\t\t\treturn instance;",
-      "\t\t}",
-      "\t}",
-      "}"
-    ]
+    "body": "public sealed class ${1:MyClass}\n{\n\tprivate static volatile I${2:MyObject} instance;\n\tprivate static Object syncRootObject = new Object();\n\n\tpublic static I${2} Instance\n\t\n{\t\tget\n\t\t{\n\t\t\tif (instance == null)\n\t\t\t{\n\t\t\t\tlock (syncRootObject)\n\t\t\t\t{\n\t\t\t\t\tif (instance == null)\n\t\t\t\t\t{\n\t\t\t\t\t\tinstance = new $0${3:MyObject}();\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t\treturn instance;\n\t\t}\n\t}\n}"
   },
-  "Creates a singleton class with System.Lazy<T>": {
+  "singleton class with System.Lazy<T>": {
     "prefix": "singletonl",
     "body": [
-      "public sealed class ${1:MyClass} : I${2:MyObject}",
-      "{",
+      "public sealed class ${1:MyClass} : I${2:MyObject}\n{",
       "\tprivate static readonly Lazy<I${2}> _instance = new Lazy<I${2}>(() => new ${1}());\n",
       "\tpublic static I${2} Instance { get { return _instance.Value; } }",
       "\t",
@@ -289,83 +187,54 @@
       "\t}\n}"
     ]
   },
-  "Creates a singleton class as thread-safe without using locks": {
+  "singleton class as thread-safe without using locks": {
     "prefix": "singletonts",
     "body": [
-      "public sealed class ${1:MyClass} : I${2:MyObject}",
-      "{",
+      "public sealed class ${1:MyClass} : I${2:MyObject}\n{",
       "\tprivate static readonly I${2} _instance = new ${1}();\n",
       "\tstatic ${1}() {}\n",
       "\tprivate ${1}() {}\n",
-      "\tpublic static I${2} Instance { get { return _instance; } }",
-      "\t\n}"
+      "\tpublic static I${2} Instance { get { return _instance; } }\n\t\n}"
     ]
   },
-  "Creates a struct": {
+  "struct": {
     "prefix": "struct",
     "body": "public struct ${1:MyStruct}\n{\n\t$0\n}"
   },
-  "Creates a switch statement": {
+  "switch statement": {
     "prefix": "switch",
-    "body": [
-      "switch (${1:value})\n",
-      "\tcase ${2:value1}:",
-      "\t\tbreak;",
-      "\tdefault:",
-      "\t\tbreak;",
-      "}\n"
-    ]
+    "body": "switch (${1:value})\n{\n\tcase ${2:value1}:\n\t\tbreak;\n\tdefault:\n\t\tbreak;\n}\n"
   },
-  "Creates a C# 9 top-level statement": {
+  "C# 9 top-level statement": {
     "prefix": "tls",
     "body": "System.Console.WriteLine(\"${1:Hello World!}\");"
   },
-  "Creates a TODO comment": {
+  "TODO comment": {
     "prefix": "todo",
     "body": "// TODO: $0"
   },
-  "Creates a try catch": {
+  "try catch": {
     "prefix": "try",
-    "body": [
-      "try",
-      "{",
-      "\t$0",
-      "}",
-      "catch (${1:System.Exception} ex)",
-      "{",
-      "\t // TODO",
-      "}"
-    ]
+    "body": "try\n{\n\t$0\n}\ncatch (${1:System.Exception} ex)\n{\n\t // TODO\n}"
   },
-  "Creates a try catch finally": {
+  "try catch finally": {
     "prefix": "tryf",
     "body": [
-      "try",
-      "{",
-      "\t$0",
-      "}",
-      "catch (${1:System.Exception} ex)",
-      "{",
-      "\t // TODO",
-      "}",
-      "finally",
-      "{",
-      "\t",
-      "}"
+      "try\n{",
+      "\t$0\n}",
+      "catch (${1:System.Exception} ex)\n{",
+      "\t // TODO\n}",
+      "finally\n{",
+      "\t\n}"
     ]
   },
-  "Creates an using": {
+  "using": {
     "prefix": "using",
     "body": "using ${1:System}$0;"
   },
-  "Creates a while loop": {
+  "while loop": {
     "prefix": "while",
-    "body": [
-      "while (${1:true})",
-      "{",
-      "\t$0",
-      "}"
-    ]
+    "body": "while (${1:true})\n{\n\t$0\n}"
   },
   "csproj Generator for .NET Core 1.0": {
     "prefix": "csproj_1.0",
@@ -374,8 +243,7 @@
       "\t<PropertyGroup>",
       "\t\t<OutputType>Exe</OutputType>",
       "\t\t<TargetFramework>netcoreapp1.0</TargetFramework>",
-      "\t</PropertyGroup>",
-      "</Project>"
+      "\t</PropertyGroup>\n</Project>"
     ]
   },
   "csproj Generator for .NET Core 1.1": {
@@ -385,8 +253,7 @@
       "\t<PropertyGroup>",
       "\t\t<OutputType>Exe</OutputType>",
       "\t\t<TargetFramework>netcoreapp1.1</TargetFramework>",
-      "\t</PropertyGroup>",
-      "</Project>"
+      "\t</PropertyGroup>\n</Project>"
     ]
   },
   "csproj Generator for .NET Core 2.0": {
@@ -396,8 +263,7 @@
       "\t<PropertyGroup>",
       "\t\t<OutputType>Exe</OutputType>",
       "\t\t<TargetFramework>netcoreapp2.0</TargetFramework>",
-      "\t</PropertyGroup>",
-      "</Project>"
+      "\t</PropertyGroup>\n</Project>"
     ]
   },
   "csproj Generator for .NET Core 3.1": {
@@ -407,8 +273,7 @@
       "\t<PropertyGroup>",
       "\t\t<OutputType>Exe</OutputType>",
       "\t\t<TargetFramework>netcoreapp3.1</TargetFramework>",
-      "\t</PropertyGroup>",
-      "</Project>"
+      "\t</PropertyGroup>\n</Project>"
     ]
   },
   "csproj Generator for .NET 5": {
@@ -418,8 +283,7 @@
       "\t<PropertyGroup>",
       "\t\t<OutputType>Exe</OutputType>",
       "\t\t<TargetFramework>net5.0</TargetFramework>",
-      "\t</PropertyGroup>",
-      "</Project>"
+      "\t</PropertyGroup>\n</Project>"
     ]
   },
   "sln Generator for Visual Studio 2017 (.NET Core and ASP.NET Core)": {
@@ -442,8 +306,7 @@
       "\tEndGlobalSection",
       "\tGlobalSection(SolutionProperties) = preSolution",
       "\t\tHideSolutionNode = FALSE",
-      "\tEndGlobalSection",
-      "EndGlobal"
+      "\tEndGlobalSection\nEndGlobal"
     ]
   },
   "sln Generator for Visual Studio 2019 (.NET Core and ASP.NET Core)": {
@@ -509,7 +372,7 @@
     "prefix": "xml_<para>",
     "body": "/// <para>${1:content}</para>"
   },
-  "Xml Comment - <param> Should be used in the comment for a method declaration to describe one of the parameters for the method": {
+  "Xml Comment - <param> Should be used in the comment for a to describe one of the parameters for the method": {
     "prefix": "xml_<param>",
     "body": "/// <param name=\"${1:name}\">${2:description}</param>"
   },
@@ -525,7 +388,7 @@
     "prefix": "xml_<remarks>",
     "body": "/// <remarks>${1:description}</remarks>"
   },
-  "Xml Comment - <returns> Should be used in the comment for a method declaration to describe the return value": {
+  "Xml Comment - <returns> Should be used in the comment for a to describe the return value": {
     "prefix": "xml_<returns>",
     "body": "/// <returns>${1:description}</returns>"
   },
@@ -541,7 +404,7 @@
     "prefix": "xml_<summary>",
     "body": "/// <summary>${1:description}</summary>"
   },
-  "Xml Comment - <typeparam> Should be used in the comment for a generic type or method declaration to describe a type parameter": {
+  "Xml Comment - <typeparam> Should be used in the comment for a generic type or to describe a type parameter": {
     "prefix": "xml_<typeparam>",
     "body": "/// <typeparam name=\"${1:name}\">${2:description}</typeparam>"
   },
@@ -565,8 +428,7 @@
       "\t</ItemGroup>",
       "\t<ItemGroup>",
       "\t\t<PackageReference Include=\"Microsoft.AspNetCore.All\" Version=\"2.0.0\" />",
-      "\t</ItemGroup>",
-      "</Project>"
+      "\t</ItemGroup>\n</Project>"
     ]
   },
   "ASP.NET Core 2.1 csproj Generator": {
@@ -581,8 +443,7 @@
       "\t</ItemGroup>",
       "\t<ItemGroup>",
       "\t\t<PackageReference Include=\"Microsoft.AspNetCore.All\" Version=\"2.1.0\" />",
-      "\t</ItemGroup>",
-      "</Project>"
+      "\t</ItemGroup>\n</Project>"
     ]
   },
   "ASP.NET Core 3.1 csproj Generator": {
@@ -591,8 +452,7 @@
       "<Project Sdk=\"Microsoft.NET.Sdk.Web\">",
       "\t<PropertyGroup>",
       "\t\t<TargetFramework>netcoreapp3.1</TargetFramework>",
-      "\t</PropertyGroup>",
-      "</Project>"
+      "\t</PropertyGroup>\n</Project>"
     ]
   },
   "ASP.NET 5 csproj Generator": {
@@ -601,11 +461,10 @@
       "<Project Sdk=\"Microsoft.NET.Sdk.Web\">",
       "\t<PropertyGroup>",
       "\t\t<TargetFramework>net5.0</TargetFramework>",
-      "\t</PropertyGroup>",
-      "</Project>"
+      "\t</PropertyGroup>\n</Project>"
     ]
   },
-  "ASP.NET Core - Creates a HelloWorld sample - Startup": {
+  "ASP.NET Core - HelloWorld sample - Startup": {
     "prefix": "ac_#helloworld_Startup",
     "body": [
       "using System;",
@@ -616,8 +475,7 @@
       "using Microsoft.AspNetCore.Hosting;",
       "using Microsoft.AspNetCore.Http;",
       "using Microsoft.Extensions.DependencyInjection;\n",
-      "namespace WebApp",
-      "{",
+      "namespace WebApp\n{",
       "\tpublic class Startup",
       "\t{",
       "\t\tpublic void ConfigureServices(IServiceCollection services)",
@@ -633,11 +491,10 @@
       "\t\t\t{",
       "\t\t\t\tawait context.Response.WriteAsync(\"Hello World!\");",
       "\t\t\t});",
-      "\t\t}",
-      "\t}\n}"
+      "\t\t}\n\t}\n}"
     ]
   },
-  "ASP.NET Core - Creates a HelloWorld sample - WebApp": {
+  "ASP.NET Core - HelloWorld sample - WebApp": {
     "prefix": "ac_#helloworld_WebApp",
     "body": [
       "using System;",
@@ -649,8 +506,7 @@
       "using Microsoft.AspNetCore.Hosting;",
       "using Microsoft.Extensions.Configuration;",
       "using Microsoft.Extensions.Logging;\n",
-      "namespace WebApp",
-      "{",
+      "namespace WebApp\n{",
       "\tpublic class Program",
       "\t{",
       "\t\tpublic static void Main(string[] args)",
@@ -661,11 +517,10 @@
       "\t\tWebHost.CreateDefaultBuilder(args)",
       "\t\t\t.UseStartup<Startup>()",
       "\t\t\t.Build();",
-      "\t}",
-      "}"
+      "\t}\n}"
     ]
   },
-  "ASP.NET Core - Creates a HelloWorld sample - WebApi": {
+  "ASP.NET Core - HelloWorld sample - WebApi": {
     "prefix": "ac_#helloworld_WebApi",
     "body": [
       "using System;",
@@ -678,33 +533,23 @@
       "Console.ReadKey();"
     ]
   },
-  "ASP.NET Core - Creates a MVC/Api Action": {
+  "ASP.NET Core - MVC/Api Action": {
     "prefix": "ac_action",
-    "body": [
-      "[${1:HttpGet}(nameof($2))]",
-      "public async Task<IActionResult> ${2:ActionName}(${3:string} ${4:name})",
-      "{",
-      "\t$0",
-      "\treturn Ok;",
-      "}"
-    ]
+    "body": "[${1:HttpGet}(nameof($2))]\npublic async Task<IActionResult> ${2:ActionName}(${3:string} ${4:name})\n{\t$0\n\treturn Ok;\n}"
   },
-  "ASP.NET Core - Creates a comment block in ASP.NET": {
+  "ASP.NET Core - comment block in ASP.NET": {
     "prefix": "ac_comment",
     "body": "<%-- $0 -->"
   },
-  "ASP.NET Core - Creates a way to configure the JSON configuration provider": {
+  "ASP.NET Core - way to configure the JSON configuration provider": {
     "prefix": "ac_conf",
     "body": [
       "// Remember imports: using Microsoft.Extensions.Configuration;",
       "public IConfiguration Configuration { get; set; }\n",
-      "public Startup(IConfiguration configuration)",
-      "{",
-      "\tConfiguration = configuration;",
-      "}"
+      "public Startup(IConfiguration configuration)\n{\n\tConfiguration = configuration;\n}"
     ]
   },
-  "ASP.NET Core - Creates a way to configure the JSON configuration provider with a custom config file": {
+  "ASP.NET Core - way to configure the JSON configuration provider with a custom config file": {
     "prefix": "ac_conf_file",
     "body": [
       "var builder = new ConfigurationBuilder()",
@@ -715,7 +560,7 @@
       "Configuration = builder.Build();"
     ]
   },
-  "ASP.NET Core - Creates the base of a controller": {
+  "ASP.NET Core - base of a controller": {
     "prefix": "ac_controller",
     "body": [
       "namespace ${1:Name}.Controllers",
@@ -731,25 +576,22 @@
       "\t\t{",
       "\t\t\tViewData[\"Message\"] = \"Your welcome message\";\n",
       "\t\t\treturn View();",
-      "\t\t}",
-      "\t}\n"
+      "\t\t}\n\t}\n}"
     ]
   },
-  "ASP.NET Core - Creates the Startup constructor to be used with the web hosting environment": {
+  "ASP.NET Core - Startup constructor to be used with the web hosting environment": {
     "prefix": "ac_startupenv",
     "body": [
-      "public Startup(IHostingEnvironment env)",
-      "{",
+      "public Startup(IHostingEnvironment env)\n{",
       "\tvar builder = new ConfigurationBuilder()",
       "\t\t.SetBasePath(env.ContentRootPath)",
       "\t\t.AddJsonFile(\"appsettings.json\", optional: false, reloadOnChange: true)",
       "\t\t.AddJsonFile($\"appsettings.{env.EnvironmentName}.json\", optional: true)",
       "\t\t.AddEnvironmentVariables();\n",
-      "\tConfiguration = builder.Build();",
-      "}"
+      "\tConfiguration = builder.Build();\n}"
     ]
   },
-  "ASP.NET Core Web Api - Creates the base of a controller": {
+  "ASP.NET Core Web Api - base of a controller": {
     "prefix": "api_controller",
     "body": [
       "namespace ${1:Name}.Controllers\n{\n",
@@ -762,100 +604,62 @@
       "\t\t{",
       "\t\t\t$0",
       "\t\t\treturn Ok();",
-      "\t\t}",
-      "\t}\n}"
+      "\t\t}\n\t}\n}"
     ]
   },
-  "ASP.NET Core Web Api - Creates the Delete Action of the WebApi": {
+  "ASP.NET Core Web Api - Delete Action of the WebApi": {
     "prefix": "api_delete",
-    "body": [
-      "[HttpDelete(\"{${1:value}\\}\")]",
-      "public async Task ${2:DeleteAsync}(${3:string} $1)",
-      "{",
-      "\t$0",
-      "}"
-    ]
+    "body": "[HttpDelete(\"{${1:value}\\}\")]\npublic async Task ${2:DeleteAsync}(${3:string} $1)\n{\n\t$0\n}"
   },
-  "ASP.NET Core Web Api - Creates the Get Action of the WebApi": {
+  "ASP.NET Core Web Api - Get Action of the WebApi": {
     "prefix": "api_get",
-    "body": [
-      "[HttpGet(\"{${1:value}\\}\")]",
-      "public async Task<ActionResult<${2:string}>> ${3:GetAsync}(${4:string} $1)",
-      "{",
-      "\t$0",
-      "}"
-    ]
+    "body": "[HttpGet(\"{${1:value}\\}\")]\npublic async Task<ActionResult<${2:string}>> ${3:GetAsync}(${4:string} $1)\n{\n\t$0\n}"
   },
-  "ASP.NET Core Web Api - Creates the Put Action of the WebApi": {
+  "ASP.NET Core Web Api - Put Action of the WebApi": {
     "prefix": "api_put",
-    "body": [
-      "[HttpPut(\"{${1:value}\\}\")]",
-      "public async Task ${2:PutAsync}(${3:string} $1)",
-      "{",
-      "\t$0",
-      "}"
-    ]
+    "body": "[HttpPut(\"{${1:value}\\}\")]\npublic async Task ${2:PutAsync}(${3:string} $1)\n{\n\t$0\n}"
   },
-  "ASP.NET Core Web Api - Creates the Post Action of the WebApi": {
+  "ASP.NET Core Web Api - Post Action of the WebApi": {
     "prefix": "api_post",
-    "body": [
-      "[HttpPost(\"{${1:value}\\}\")]",
-      "public async Task ${2:PostAsync}([FromBody] ${3:string} $1)",
-      "{",
-      "\t$0",
-      "}"
-    ]
+    "body": "[HttpPost(\"{${1:value}\\}\")]\npublic async Task ${2:PostAsync}([FromBody] ${3:string} $1)\n{\n\t$0\n}"
   },
-  "ASP.NET Core Razor - Creates a code block for Razor": {
+  "ASP.NET Core Razor - code block for Razor": {
     "prefix": "rz_code",
     "body": "@code {\n\t$0\n}"
   },
-  "ASP.NET Core Razor - Creates a comment block for Razor": {
+  "ASP.NET Core Razor - comment block for Razor": {
     "prefix": "rz_comment",
     "body": "@* $0 *@"
   },
-  "ASP.NET Core Razor - Creates a directive block for Razor": {
+  "ASP.NET Core Razor - directive block for Razor": {
     "prefix": "rz_directive",
     "body": "@{\n\t$0\n}"
   },
-  "ASP.NET Core Razor - Creates a do while loop for Razor": {
+  "ASP.NET Core Razor - ": {
     "prefix": "rz_dowhile",
-    "body": [
-      "@{ var ${1:flag} = ${2:true}; }",
-      "@do",
-      "{",
-      "\t$0",
-      "} while ($1)"
-    ]
+    "body": "@{ var ${1:flag} = ${2:true}; }\n@do\n{\n\t$0\n} while ($1)"
   },
-  "ASP.NET Core Razor - Creates a for statement for Razor": {
+  "ASP.NET Core Razor - for statement for Razor": {
     "prefix": "rz_for",
-    "body": [
-      "@for (var ${1:i} = 0; $1 < ${2:length}; $1++)",
-      "{",
-      "\t$0",
-      "}"
-    ]
+    "body": "@for (var ${1:i} = 0; $1 < ${2:length}; $1++)\n{\n\t$0\n}"
   },
-  "ASP.NET Core Razor - Creates a foreach statement for Razor": {
+  "ASP.NET Core Razor - foreach statement for Razor": {
     "prefix": "rz_foreach",
     "body": [
-      "@foreach (var ${1:person} in ${2:people})",
-      "{",
+      "@foreach (var ${1:person} in ${2:people})\n{",
       "\t<${3:p}>${4:Name}: @$1.$4</$3>",
-      "\t$0",
-      "}"
+      "\t$0\n}"
     ]
   },
-  "ASP.NET Core Razor - Creates a functions block for Razor": {
+  "ASP.NET Core Razor - functions block for Razor": {
     "prefix": "rz_functions",
     "body": "@functions {\n\t$0\n}"
   },
-  "ASP.NET Core Razor - Creates an if statement for Razor": {
+  "ASP.NET Core Razor - if statement for Razor": {
     "prefix": "rz_if",
     "body": "@if (${1:true})\n{\n\t$0\n}"
   },
-  "ASP.NET Core Razor - Creates an if else statement for Razor": {
+  "ASP.NET Core Razor - if else statement for Razor": {
     "prefix": "rz_ifelse",
     "body": "@if (${1:true})\n{\n\t$0\n}\nelse\n{\n\t$2\n}"
   },
@@ -863,11 +667,11 @@
     "prefix": "rz_implements",
     "body": "@implements I${1:MyInterface}\n\n\t$0"
   },
-  "ASP.NET Core Razor - Creates an inherits directive for Razor": {
+  "ASP.NET Core Razor - inherits directive for Razor": {
     "prefix": "rz_inherits",
     "body": "@inherits ${1:MyClassToInheritFrom}\n\n\t$0"
   },
-  "ASP.NET Core Razor - Creates an inject directive for Razor": {
+  "ASP.NET Core Razor - inject directive for Razor": {
     "prefix": "rz_inject",
     "body": "@inject I${1:MyInterface} ${2:MyInterface}\n$0"
   },
@@ -879,39 +683,39 @@
     "prefix": "rz_namespace",
     "body": "@namespace ${1:MyNamespace}\n$0"
   },
-  "ASP.NET Core Razor - Creates a HTML markup for Razor": {
+  "ASP.NET Core Razor - HTML markup for Razor": {
     "prefix": "rz_raw",
     "body": "@Html.Raw(\"<${1:span}>${2:Hello World}</$1>\")"
   },
-  "ASP.NET Core Razor - Creates a RenderBody for Razor": {
+  "ASP.NET Core Razor - RenderBody for Razor": {
     "prefix": "rz_renderbody",
     "body": "@RenderBody()"
   },
-  "ASP.NET Core Razor - Creates a switch statement for Razor": {
+  "ASP.NET Core Razor - switch statement for Razor": {
     "prefix": "rz_switch",
     "body": "@switch (${1:value})\n{\n\tcase ${2:value1}:\n\t\tbreak;\n\tdefault:\n\t\tbreak;\n}\n$0"
   },
-  "ASP.NET Core Razor - Creates a try catch finally for Razor": {
+  "ASP.NET Core Razor - try catch finally for Razor": {
     "prefix": "rz_try",
     "body": "@try\n{\n\t$0\n}\ncatch (${1:Exception} ${2:ex})\n{\n\t<${3:p}>Error: @$2.Message</$3>\n}\nfinally\n{\n\t\n}"
   },
-  "ASP.NET Core Razor - Creates an using statement for Razor": {
+  "ASP.NET Core Razor - using statement for Razor": {
     "prefix": "rz_using",
     "body": "@using (${1:Html.BeginForm()})\n{\t$0\n}"
   },
-  "ASP.NET Core Razor - Creates a ViewBag for Razor": {
+  "ASP.NET Core Razor - ViewBag for Razor": {
     "prefix": "rz_viewbag",
     "body": "@ViewBag.${1:MyViewBagName}\n$0"
   },
-  "ASP.NET Core Razor - Creates a ViewData for Razor": {
+  "ASP.NET Core Razor - ViewData for Razor": {
     "prefix": "rz_viewdata",
     "body": "@ViewData[\"${1:myViewData}\"]\n$0"
   },
-  "ASP.NET Core Razor - Creates a while loop for Razor": {
+  "ASP.NET Core Razor": {
     "prefix": "rz_while",
     "body": "@{ var ${1:flag} = ${2:true}; }\n@while ($1)\n{\n\t$0\n\t$1 = ${3:false};\n}"
   },
-  ".NET Core - Creates a MS-Test class": {
+  ".NET Core - MS-Test class": {
     "prefix": "mstest",
     "body": "using Microsoft.VisualStudio.TestTools.UnitTesting;\nusing System;\n\nnamespace ${1:ProjectNamespace}.Test\n{\n\t[TestClass]\n\tpublic class ${2:ClassName}Test\n\t{\n\t\t[TestMethod]\n\t\tpublic void ${3:MethodName}()\n\t\t{\n\t\t\t\n\t\t}\n\t}\n}"
   },
@@ -931,7 +735,7 @@
       "</Project>"
     ]
   },
-  "gRPC .Net 5 - Creates the Program class for a simple Client": {
+  "gRPC .Net 5 - Program class for a simple Client": {
     "prefix": "gRPC_client_program",
     "body": [
       "using Greet;",
@@ -962,7 +766,7 @@
       "\t}\n"
     ]
   },
-  "gRPC .Net 5 - Creates a Proto sample file for the App": {
+  "gRPC .Net 5 - Proto sample file for the App": {
     "prefix": "gRPC_proto",
     "body": [
       "// Create a Proto folder and keep there this greet.proto file",
@@ -982,7 +786,7 @@
       "\tstring message = 1;\n}"
     ]
   },
-  "gRPC .Net 5 - Creates csproj for the Server": {
+  "gRPC .Net 5 - Creates csproj": {
     "prefix": "gRPC_server_csproj",
     "body": [
       "<Project Sdk=\"Microsoft.NET.Sdk.Web\">\n",
@@ -996,7 +800,7 @@
       "</Project>"
     ]
   },
-  "gRPC .Net 5 - Creates the Program class for the Server": {
+  "gRPC .Net 5 - Program class": {
     "prefix": "gRPC_server_program",
     "body": [
       "using Microsoft.AspNetCore.Hosting;",
@@ -1018,7 +822,7 @@
       "\t}\n}"
     ]
   },
-  "gRPC .Net 5 - Creates the Service class for the Server": {
+  "gRPC .Net 5 - Service class": {
     "prefix": "gRPC_server_service",
     "body": [
       "using Greet;",
@@ -1042,11 +846,11 @@
       "\t}\n"
     ]
   },
-  "gRPC .Net 5 - Creates the Settings (appsettings.json) content for the Server": {
+  "gRPC .Net 5 - Settings (appsettings.json) content": {
     "prefix": "gRPC_server_settings",
     "body": "{\n\t\"Logging\": {\n\t\t\"LogLevel\": {\n\t\t\t\"Default\": \"Information\"\n\t\t}\n\t},\n\t\"AllowedHosts\": \"*\",\n\t\"Kestrel\": {\n\t\t\"EndpointDefaults\": {\n\t\t\t\"Protocols\": \"Http2\"\n\t\t}\n\t}\n}"
   },
-  "gRPC .Net 5 - Creates the Startup class for the Server": {
+  "gRPC .Net 5 - Startup class": {
     "prefix": "gRPC_server_startup",
     "body": [
       "using Microsoft.AspNetCore.Builder;",

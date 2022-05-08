@@ -2,23 +2,7 @@
 {
   "HTML Boilerplate with Loader By Samyak": {
     "prefix": "q",
-    "body": [
-      "<!DOCTYPE html>",
-      "<html lang=\"en\">\n",
-      "\t<!-- Created/Designed By Samyak Bumb -->\n",
-      "\t<head>\n",
-      "\t\t<meta charset=\"UTF-8\">",
-      "\t\t<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">",
-      "\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">",
-      "\t\t<meta name=\"copyright\" content=\"Samyak Bumb\">\n",
-      "\t\t<title>${1:} By Samyak</title>\n",
-      "\t\t<link rel=\"stylesheet\" href=\"./style.css\">\n",
-      "\t</head>\n",
-      "\t<body>\n",
-      "\t\t${0:.}\n",
-      "\t</body>\n",
-      "</html>\n"
-    ]
+    "body": "<!DOCTYPE html>\n<html lang=\"en\">\n\n\t<!-- Created/Designed By Samyak Bumb -->\n\n\t<head>\n\n\t\t<meta charset=\"UTF-8\">\n\t\t<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n\t\t<meta name=\"copyright\" content=\"Samyak Bumb\">\n\n\t\t<title>${1:} By Samyak</title>\n\n\t\t<link rel=\"stylesheet\" href=\"./style.css\">\n\n\t</head>\n\n\t<body>\n\n\t\t${0:.}\n\n\t</body>\n\n</html>\n\n"
   },
   "Created/Designed By Samyak Bumb": {
     "prefix": "cd",

@@ -50,7 +50,7 @@
   },
   "interface": {
     "prefix": "interface",
-    "body": "__interface I${Interface}\n{\n\t$1\n};",
+    "body": "__interface I${Interface}\n{\n\t$1\n};"
   },
   "namespace": {
     "prefix": "namespace",

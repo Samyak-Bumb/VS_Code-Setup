@@ -117,7 +117,6 @@
   "security.workspace.trust.startupPrompt": "never",
   "security.workspace.trust.banner": "never",
   "terminal.integrated.gpuAcceleration": "off",
-  "workbench.editor.enablePreview": false,
   "terminal.integrated.allowChords": false,
   "terminal.integrated.cursorStyle": "line",
   "terminal.integrated.fontSize": 12.5,
@@ -240,7 +239,6 @@
   "[jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
-  "workbench.productIconTheme": "fluent-icons",
   "workbench.iconTheme": "material-icon-theme",
   "html.format.endWithNewline": true,
   "html.format.indentInnerHtml": true,
@@ -299,10 +297,8 @@
   "editor.letterSpacing": 0.1,
   "editor.suggest.localityBonus": true,
   "editor.inlayHints.fontSize": 30,
-  "editor.inlayHints.enabled": false,
   "editor.guides.indentation": false,
   "editor.guides.highlightActiveIndentation": false,
-  "breadcrumbs.enabled": false,
   "editor.hideCursorInOverviewRuler": true,
   "debug.showBreakpointsInOverviewRuler": true,
   "workbench.editor.untitled.hint": "hidden",
@@ -324,7 +320,6 @@
   "terminal.integrated.cursorBlinking": true,
   "workbench.editor.highlightModifiedTabs": true,
   "audioCues.noInlayHints": "off",
-  "editor.bracketPairColorization.enabled": true,
   "editor.guides.bracketPairs": "active",
   "editor.guides.bracketPairsHorizontal": false,
   "bracket-pair-colorizer-2.depreciation-notice": false,
@@ -358,5 +353,10 @@
   "task.quickOpen.history": 2,
   "workbench.editor.limit.enabled": true,
   "workbench.colorTheme": "Samyak Bumb",
+  "workbench.productIconTheme": "fluent-icons",
+  "workbench.editor.enablePreview": false,
+  "breadcrumbs.enabled": false,
+  "git.confirmSync": false,
+  "workbench.statusBar.visible": false,
   "workbench.activityBar.visible": false
 }

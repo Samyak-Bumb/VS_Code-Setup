@@ -8,7 +8,7 @@
       "\tmargin: 0;",
       "\tpadding: 0;",
       "\tbox-sizing: border-box;",
-      "\tfont-family: \"Baloo 2\", cursive\n}\n:root{\n\t--light: #fbfbfb;\n\t--dark: #111;\n\t--selection: #00d1b2;\n}",
+      "\tfont-family: \"Baloo 2\", cursive\n}\n:root{\n\t--light: #fbfbfb;\n\t--dark: #101010;\n\t--selection: #00d1b2;\n}",
       "::selection{",
       "\tcolor: var(--light);",
       "\tbackground-color: var(--selection)\n}",

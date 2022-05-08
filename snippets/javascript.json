@@ -16,9 +16,25 @@
     "prefix": "capitalizeString",
     "body": "const capitalize = str => str.charAt(0).toUpperCase() + str.slice(1)\n\ncapitalize(\"${0:jai Jinendra}\")"
   },
+  "Go Back to the Previous Page": {
+    "prefix": "previousPage",
+    "body": "const navigateBack = () => history.back();"
+  },
+  "Sleep Function": {
+    "prefix": "sleepFunction",
+    "body": "const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));"
+  },
+  "Get Selected Text": {
+    "prefix": "getSelectedTxt",
+    "body": "const SelectedTxt = () => window.getSelection().toString();\n\ngetSelectedTxt();"
+  },
   "Find the number of days between two days": {
     "prefix": "dayDiff",
     "body": "const dayDiff = (date1, date2) => Math.ceil(Math.abs(date1.getTime() - date2.getTime()) / 86400000)\n\ndayDiff(new Date(\"20${1:23}-${2:10}-${3:21}\"), new Date(\"20${4:24}-${5:10}-${6:22}\"))"
+  },
+  "Is Element Focused?": {
+    "prefix": "hasFocus?",
+    "body": "const hasFocus = (element) => element === document.activeElement;"
   },
   "Clear All Cookies": {
     "prefix": "clearCookie",
@@ -51,10 +67,6 @@
   "Reverse a string": {
     "prefix": "reverseString",
     "body": "const reverse = str => str.split('').reverse().join('');\n\nreverse('Hello world');"
-  },
-  "Get Selected Text": {
-    "prefix": "getSelectedTxt",
-    "body": "const getSelectedTxt = () => window.getSelection().toString();\n\ngetSelectedTxt();"
   },
   "Find the day of year": {
     "prefix": "dayOfYear",
@@ -101,9 +113,9 @@
     "body": "module.exports ={\n\t$0\n};\n"
   },
   "addEventListener": {
-  "prefix": "ael",
-  "body": "${1:btn}.addEventListener(\"${2:click}\",()=>{\n\t$0\n});"
-},
+    "prefix": "ael",
+    "body": "${1:btn}.addEventListener(\"${2:click}\",()=>{\n\t$0\n});"
+  },
   "exportNamedVariable": {
     "prefix": "env",
     "body": "export const ${1:exportVariable} = ${2:localVariable};\n"
