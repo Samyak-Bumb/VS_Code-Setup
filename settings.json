@@ -213,11 +213,6 @@
   "workbench.editor.mouseBackForwardToNavigate": false,
   "workbench.editor.scrollToSwitchTabs": true,
   "[html]": {
-    "editor.quickSuggestions": {
-      "other": true,
-      "comments": false,
-      "strings": false
-    },
     "editor.suggest.insertMode": "replace",
     "editor.defaultFormatter": "vscode.html-language-features"
   },
@@ -233,7 +228,6 @@
     "editor.defaultFormatter": "vscode.typescript-language-features",
   },
   "[json]": {
-    "editor.formatOnPaste": true,
     "editor.defaultFormatter": "vscode.json-language-features"
   },
   "[jsonc]": {
@@ -283,11 +277,6 @@
   "debug.console.closeOnEnd": true,
   "debug.console.fontSize": 12.5,
   "debug.showInStatusBar": "never",
-  "terminal.integrated.ignoreProcessNames": [
-    "starship",
-    "oh-my-posh",
-    "zsh"
-  ],
   "telemetry.telemetryLevel": "off",
   "markdown.preview.doubleClickToSwitchToEditor": false,
   "editor.lineHeight": 1.33,
@@ -352,11 +341,10 @@
   "editor.lineNumbers": "off",
   "task.quickOpen.history": 2,
   "workbench.editor.limit.enabled": true,
-  "workbench.colorTheme": "Samyak Bumb",
   "workbench.productIconTheme": "fluent-icons",
   "workbench.editor.enablePreview": false,
   "breadcrumbs.enabled": false,
   "git.confirmSync": false,
-  "workbench.statusBar.visible": false,
-  "workbench.activityBar.visible": false
+  "workbench.activityBar.visible": false,
+  "workbench.colorTheme": "Samyak Bumb"
 }
