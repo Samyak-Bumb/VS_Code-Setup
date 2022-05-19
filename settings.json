@@ -59,7 +59,7 @@
     "strings": false
   },
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "window.title": "${rootName} - {'' Code _ With _ Samyak ''} 😁",
+  "window.title": "${rootName} 😁",
   "window.doubleClickIconToClose": true,
   "window.autoDetectHighContrast": false,
   "window.openWithoutArgumentsInNewWindow": "off",
@@ -213,6 +213,11 @@
   "workbench.editor.mouseBackForwardToNavigate": false,
   "workbench.editor.scrollToSwitchTabs": true,
   "[html]": {
+    "editor.quickSuggestions": {
+      "other": true,
+      "strings": true,
+      "comments": false
+    },
     "editor.suggest.insertMode": "replace",
     "editor.defaultFormatter": "vscode.html-language-features"
   },
@@ -225,7 +230,7 @@
     "editor.suggest.insertMode": "replace"
   },
   "[javascript]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features",
+    "editor.defaultFormatter": "vscode.typescript-language-features"
   },
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
@@ -345,6 +350,7 @@
   "workbench.editor.enablePreview": false,
   "breadcrumbs.enabled": false,
   "git.confirmSync": false,
-  "workbench.activityBar.visible": false,
-  "workbench.colorTheme": "Samyak Bumb"
+  "workbench.statusBar.visible": false,
+  "workbench.colorTheme": "Samyak Bumb",
+  "workbench.activityBar.visible": false
 }
