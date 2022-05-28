@@ -8,12 +8,12 @@
       "\tmargin: 0;",
       "\tpadding: 0;",
       "\tbox-sizing: border-box;",
-      "\tfont-family: \"Baloo 2\", cursive\n}\n:root{\n\t--light: #fbfbfb;\n\t--dark: #101010;\n\t--selection: #00d1b2;\n}",
+      "\tfont-family: \"Baloo 2\", cursive\n}\n:root{\n\t--light: #fbfbfb;\n\t--dark: #010101;\n\t--selection: #00d1b2;\n}",
       "::selection{",
       "\tcolor: var(--light);",
       "\tbackground-color: var(--selection)\n}",
       /*
-      Light Green (White Bg *REQUIRED*): a7f5a9
+      Light Green (White BG *REQUIRED*): a7f5a9
       Light Crimson-Pink: ea4c89
       Light Blue: a8cefc, dbeafe
       Light Green: 00d1b2
@@ -26,7 +26,7 @@
       "\tmin-height: 100vh;",
       "\tcolor: var(--light);",
       "\tbackground-color: var(--dark)",
-      "}\n\n$0"
+      "}\n\n.$0{\n\t\n}"
     ]
   },
   "RGBA": {
