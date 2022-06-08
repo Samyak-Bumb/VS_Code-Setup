@@ -326,8 +326,9 @@
   "workbench.editor.enablePreview": false,
   "breadcrumbs.enabled": false,
   "git.confirmSync": false,
-  "workbench.statusBar.visible": false,
   "audioCues.volume": 0,
+  "workbench.activityBar.visible": false,
+  "pythonIndent.useTabOnHangingIndent": true,
   "workbench.colorTheme": "Samyak Bumb",
-  "workbench.activityBar.visible": false
+  "workbench.statusBar.visible": false
 }
