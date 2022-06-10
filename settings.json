@@ -327,8 +327,9 @@
   "breadcrumbs.enabled": false,
   "git.confirmSync": false,
   "audioCues.volume": 0,
-  "workbench.activityBar.visible": false,
   "pythonIndent.useTabOnHangingIndent": true,
-  "workbench.colorTheme": "Samyak Bumb",
-  "workbench.statusBar.visible": false
+  "workbench.statusBar.visible": false,
+  "editor.experimental.pasteActions.enabled": true,
+  "workbench.activityBar.visible": false,
+  "workbench.colorTheme": "Samyak Bumb"
 }
