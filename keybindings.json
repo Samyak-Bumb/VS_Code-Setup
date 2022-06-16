@@ -39,18 +39,8 @@
     "when": "notebookCellListFocused && !inputFocus"
   },
   {
-    "key": "shift+alt+d",
-    "command": "bookmarks.toggle",
-    "when": "editorTextFocus"
-  },
-  {
     "key": "ctrl+alt+k",
     "command": "-bookmarks.toggle",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "ctrl+alt+k",
-    "command": "bookmarks.jumpToNext",
     "when": "editorTextFocus"
   },
   {
@@ -608,10 +598,6 @@
     "when": "notificationFocus || notificationToastsVisible"
   },
   {
-    "key": "alt+x",
-    "command": "extension.cssrem.rem-switch-px"
-  },
-  {
     "key": "alt+z",
     "command": "-extension.cssrem.rem-switch-px"
   },
@@ -619,10 +605,6 @@
     "key": "ctrl+k e",
     "command": "-workbench.files.action.focusOpenEditorsView",
     "when": "workbench.explorer.openEditorsView.active"
-  },
-  {
-    "key": "ctrl+shift+s",
-    "command": "workbench.action.files.saveAs"
   },
   {
     "key": "ctrl+shift+a q",
@@ -682,5 +664,15 @@
     "key": "shift+pageup",
     "command": "-notebook.cell.cursorPageUpSelect",
     "when": "editorTextFocus && inputFocus && notebookEditorFocused"
+  },
+  {
+    "key": "ctrl+shift+y",
+    "command": "-workbench.debug.action.toggleRepl",
+    "when": "workbench.panel.repl.view.active"
+  },
+  {
+    "key": "alt+r",
+    "command": "-toggleFindRegex",
+    "when": "editorFocus"
   }
 ]
