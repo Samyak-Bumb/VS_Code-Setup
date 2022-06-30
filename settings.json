@@ -1,8 +1,8 @@
 {
   "editor.quickSuggestions": {
     "other": true,
-    "comments": false,
-    "strings": false
+    "strings": false,
+    "comments": false
   },
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "window.title": "${rootName} 😁",
@@ -147,17 +147,13 @@
   "workbench.editor.scrollToSwitchTabs": true,
   "[html]": {
     "editor.quickSuggestions": {
-      "other": true,
-      "strings": true,
-      "comments": false
+      "strings": true
     },
     "editor.suggest.insertMode": "replace",
     "editor.defaultFormatter": "vscode.html-language-features"
   },
   "[css]": {
     "editor.quickSuggestions": {
-      "other": true,
-      "comments": true,
       "strings": true
     },
     "editor.suggest.insertMode": "replace"
@@ -278,8 +274,13 @@
   "git.confirmSync": false,
   "audioCues.volume": 0,
   "editor.experimental.pasteActions.enabled": true,
-  "workbench.colorTheme": "Eva Dark",
-  "workbench.statusBar.visible": false,
   "breadcrumbs.enabled": false,
-  "workbench.activityBar.visible": false
+  "workbench.activityBar.visible": false,
+  "workbench.reduceMotion": "off",
+  "ahk++.compilePath": "E:\\AHK\\Compiler\\Ahk2Exe.exe",
+  "ahk++.executePath": "E:\\AHK\\AutoHotkeyU64.exe",
+  "ahk++.helpPath": "E:\\AHK\\AutoHotkey.chm",
+  "workbench.colorTheme": "Samyak Bumb",
+  "codesnap.showLineNumbers": false,
+  "codesnap.backgroundColor": "#8abdff"
 }

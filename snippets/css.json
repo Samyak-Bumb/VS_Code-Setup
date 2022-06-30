@@ -1,6 +1,6 @@
 // Created/Written By Samyak Bumb
 {
-  "CSS Boilerplate with Loader By Samyak": {
+  "CSS Boilerplate": {
     "prefix": "q",
     "body": [
       "@import url(\"https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;700&display=swap\");\n",
@@ -8,7 +8,7 @@
       "\tmargin: 0;",
       "\tpadding: 0;",
       "\tbox-sizing: border-box;",
-      "\tfont-family: \"Baloo 2\", cursive\n}\n:root{\n\t--light: #fbfbfb;\n\t--dark: #010101;\n\t--selection: #00d1b2;\n}",
+      "\tfont-family: \"Baloo 2\", cursive\n}\n:root{\n\t--light: #fbfbfb;\n\t--dark: #010101;\n\t--selection: #5773ff;\n}",
       "::selection{",
       "\tcolor: var(--light);",
       "\tbackground-color: var(--selection)\n}",
@@ -18,15 +18,13 @@
       Light Blue: a8cefc, dbeafe
       Light Green: 00d1b2
       Light Cyan: 9bf0f0
-      Light Pink: f775C1
-      Light Gray: e9ecef
       Dark Purple-Blue: 5773ff
       */
       "body{",
       "\tmin-height: 100vh;",
       "\tcolor: var(--light);",
       "\tbackground-color: var(--dark)",
-      "}\n\n.$0{\n\t\n}"
+      "}\n\n.${0:class}{\n\t\n}"
     ]
   },
   "RGBA": {

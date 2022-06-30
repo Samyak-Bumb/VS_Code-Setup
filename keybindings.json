@@ -39,16 +39,6 @@
     "when": "notebookCellListFocused && !inputFocus"
   },
   {
-    "key": "ctrl+alt+k",
-    "command": "-bookmarks.toggle",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "ctrl+alt+l",
-    "command": "-bookmarks.jumpToNext",
-    "when": "editorTextFocus"
-  },
-  {
     "key": "ctrl+f5",
     "command": "-workbench.action.debug.run",
     "when": "debuggersAvailable && debugState != 'initializing'"
@@ -377,11 +367,6 @@
   },
   {
     "key": "pageup",
-    "command": "-cursorPageUp",
-    "when": "textInputFocus"
-  },
-  {
-    "key": "pageup",
     "command": "-list.focusPageUp",
     "when": "listFocus && !inputFocus"
   },
@@ -389,11 +374,6 @@
     "key": "pageup",
     "command": "-workbench.action.interactivePlayground.pageUp",
     "when": "interactivePlaygroundFocus && !editorTextFocus"
-  },
-  {
-    "key": "pageup",
-    "command": "cursorTop",
-    "when": "textInputFocus"
   },
   {
     "key": "pagedown",
@@ -409,16 +389,6 @@
     "key": "pagedown",
     "command": "-selectNextPageSuggestion",
     "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
-  },
-  {
-    "key": "pagedown",
-    "command": "-cursorPageDown",
-    "when": "textInputFocus"
-  },
-  {
-    "key": "pagedown",
-    "command": "cursorBottom",
-    "when": "textInputFocus"
   },
   {
     "key": "pageup",
@@ -441,8 +411,7 @@
   },
   {
     "key": "ctrl+r",
-    "command": "workbench.extensions.action.refreshExtension",
-    "when": "workbench.views.extensions.installed.visible || searchMarketplaceExtensions"
+    "command": "workbench.extensions.action.refreshExtension"
   },
   {
     "key": "ctrl+f5",
@@ -487,10 +456,6 @@
     "key": "alt+q",
     "command": "editor.action.triggerSuggest",
     "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
-  },
-  {
-    "key": "ctrl+shift+a u",
-    "command": "update.checkForVSCodeUpdate"
   },
   {
     "key": "ctrl+m",
@@ -562,10 +527,6 @@
     "command": "keybindings.editor.resetKeybinding"
   },
   {
-    "key": "alt+e",
-    "command": "python.execInTerminal-icon"
-  },
-  {
     "key": "ctrl+shift+d",
     "command": "workbench.view.debug",
     "when": "viewContainer.workbench.view.debug.enabled"
@@ -587,10 +548,6 @@
   {
     "key": "ctrl+shift+a s",
     "command": "workbench.action.toggleStatusbarVisibility"
-  },
-  {
-    "key": "ctrl+shift+a c",
-    "command": "workbench.extensions.action.clearExtensionsSearchResults"
   },
   {
     "key": "escape",
@@ -674,5 +631,62 @@
     "key": "alt+r",
     "command": "-toggleFindRegex",
     "when": "editorFocus"
+  },
+  {
+    "key": "ctrl+shift+a d",
+    "command": "workbench.action.terminal.killAll"
+  },
+  {
+    "key": "f9",
+    "command": "ahk++.debug",
+    "when": "editorLangId == 'ahk'"
+  },
+  {
+    "key": "f9",
+    "command": "-ahk++.debug",
+    "when": "editorLangId == 'ahk'"
+  },
+  {
+    "key": "f5",
+    "command": "python.execInTerminal-icon",
+    "when": "editorLangId == 'python'"
+  },
+  {
+    "key": "shift+enter",
+    "command": "-notebook.cell.executeAndSelectBelow",
+    "when": "notebookCellListFocused && notebookCellType == 'markup' || notebookCellListFocused && notebookMissingKernelExtension && !notebookCellExecuting && notebookCellType == 'code' || notebookCellListFocused && !notebookCellExecuting && notebookCellType == 'code' && notebookKernelCount > 0 || notebookCellListFocused && !notebookCellExecuting && notebookCellType == 'code' && notebookKernelSourceCount > 0"
+  },
+  {
+    "key": "alt+enter",
+    "command": "-notebook.cell.executeAndInsertBelow",
+    "when": "notebookCellListFocused && notebookCellType == 'markup' || notebookCellListFocused && notebookMissingKernelExtension && !notebookCellExecuting && notebookCellType == 'code' || notebookCellListFocused && !notebookCellExecuting && notebookCellType == 'code' && notebookKernelCount > 0 || notebookCellListFocused && !notebookCellExecuting && notebookCellType == 'code' && notebookKernelSourceCount > 0"
+  },
+  {
+    "key": "ctrl+alt+enter",
+    "command": "-notebook.cell.execute",
+    "when": "notebookCellListFocused && notebookMissingKernelExtension && !notebookCellExecuting && notebookCellType == 'code' || notebookCellListFocused && !notebookCellExecuting && notebookCellType == 'code' && notebookKernelCount > 0 || notebookCellListFocused && !notebookCellExecuting && notebookCellType == 'code' && notebookKernelSourceCount > 0"
+  },
+  {
+    "key": "f5",
+    "command": "-debug.openView",
+    "when": "!debuggersAvailable"
+  },
+  {
+    "key": "ctrl+shift+a c",
+    "command": "workbench.extensions.action.clearExtensionsSearchResults"
+  },
+  {
+    "key": "alt+k",
+    "command": "keybindings.editor.recordSearchKeys",
+    "when": "inKeybindings"
+  },
+  {
+    "key": "alt+k",
+    "command": "-keybindings.editor.recordSearchKeys",
+    "when": "inKeybindings && inKeybindingsSearch"
+  },
+  {
+    "key": "ctrl+shift+a u",
+    "command": "workbench.extensions.action.updateAllExtensions"
   }
 ]
