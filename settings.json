@@ -5,7 +5,7 @@
     "comments": false
   },
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "window.title": "${rootName} 😁",
+  "window.title": "彡${rootName} 😁彡",
   "window.doubleClickIconToClose": true,
   "window.autoDetectHighContrast": false,
   "window.openWithoutArgumentsInNewWindow": "off",
@@ -263,9 +263,6 @@
   "css.format.newlineBetweenRules": false,
   "css.format.spaceAroundSelectorSeparator": true,
   "explorer.openEditors.visible": 0,
-  "editor.formatOnPaste": true,
-  "editor.formatOnSave": true,
-  "workbench.layoutControl.type": "menu",
   "editor.lineNumbers": "off",
   "task.quickOpen.history": 2,
   "workbench.editor.limit.enabled": true,
@@ -275,12 +272,21 @@
   "audioCues.volume": 0,
   "editor.experimental.pasteActions.enabled": true,
   "breadcrumbs.enabled": false,
-  "workbench.activityBar.visible": false,
   "workbench.reduceMotion": "off",
   "ahk++.compilePath": "E:\\AHK\\Compiler\\Ahk2Exe.exe",
   "ahk++.executePath": "E:\\AHK\\AutoHotkeyU64.exe",
   "ahk++.helpPath": "E:\\AHK\\AutoHotkey.chm",
-  "workbench.colorTheme": "Samyak Bumb",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
   "codesnap.showLineNumbers": false,
-  "codesnap.backgroundColor": "#8abdff"
+  "codesnap.backgroundColor": "#8abdff",
+  "workbench.layoutControl.type": "menu",
+  "github.copilot.enable": {
+    "*": false,
+    "yaml": false,
+    "plaintext": false,
+    "markdown": false
+  },
+  "workbench.colorTheme": "Samyak Bumb",
+  "workbench.activityBar.visible": false
 }
