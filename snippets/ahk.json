@@ -9,9 +9,10 @@
       "; Modified ......: DD-MM-YY",
       "; Author ........: Samyak Bumb",
       "; ==================================================================================\n",
+      "#Warn, UseUnsetLocal",
       "#NoEnv",
       "#MaxMem 4095",
-      "#SingleInstance, Force",
+      "#SingleInstance Force",
       "SendMode Input",
       "SetWorkingDir %A_ScriptDir%\n",
       "if not A_IsAdmin\n{\n\tRun *RunAs \"%A_ScriptFullPath%\"\n\tExitApp\n}\n; *****************************************************************************",
@@ -25,5 +26,15 @@
       "; \t${1:Comment}",
       "; *****************************************************************************"
     ]
-  }
+  },
+  "Square Comment": {
+    "prefix": "commentsq",
+    "body": [
+      ";[===================]",
+      ";[                   ]",
+      ";[\t${1:Comment Here}     ]",
+      ";[                   ]",
+      ";[===================]"
+    ]
+  },
 }

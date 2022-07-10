@@ -223,7 +223,6 @@
   "workbench.editor.untitled.hint": "hidden",
   "editor.glyphMargin": false,
   "terminal.integrated.mouseWheelScrollSensitivity": 2,
-  "editor.autoIndent": "advanced",
   "html.format.indentHandlebars": true,
   "audioCues.lineHasInlineSuggestion": "off",
   "audioCues.onDebugBreak": "off",
@@ -241,7 +240,6 @@
   "terminal.integrated.cursorBlinking": true,
   "workbench.editor.highlightModifiedTabs": true,
   "audioCues.noInlayHints": "off",
-  "editor.guides.bracketPairs": "active",
   "editor.guides.bracketPairsHorizontal": false,
   "audioCues.lineHasBreakpoint": "off",
   "audioCues.lineHasError": "off",
@@ -279,7 +277,6 @@
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
   "codesnap.showLineNumbers": false,
-  "codesnap.backgroundColor": "#8abdff",
   "workbench.layoutControl.type": "menu",
   "github.copilot.enable": {
     "*": false,
@@ -288,5 +285,23 @@
     "markdown": false
   },
   "workbench.colorTheme": "Samyak Bumb",
-  "workbench.activityBar.visible": false
+  "editor.autoIndent": "advanced",
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+  "window.commandCenter": true,
+  "git.postCommitCommand": "push",
+  "emmet.useInlineCompletions": true,
+  "workbench.activityBar.visible": false,
+  "workbench.editor.untitled.labelFormat": "name",
+  "C_Cpp.autocompleteAddParentheses": true,
+  "terminal.integrated.shellIntegration.enabled": true,
+  "C_Cpp.experimentalFeatures": "Enabled",
+  "C_Cpp.vcFormat.indent.accessSpecifiers": true,
+  "C_Cpp.vcFormat.indent.braces": true,
+  "C_Cpp.vcFormat.indent.caseContentsWhenBlock": true,
+  "C_Cpp.vcFormat.indent.caseLabels": true,
+  "C_Cpp.vcFormat.indent.preserveComments": true,
+  "C_Cpp.vcFormat.indent.preserveWithinParentheses": true,
+  "C_Cpp.vcFormat.space.beforeComma": true,
+  "C_Cpp.vcFormat.space.beforeEmptySquareBrackets": true,
+  "workbench.statusBar.visible": false
 }
