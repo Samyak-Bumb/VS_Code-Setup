@@ -1,5 +1,37 @@
 // Created/Written By Samyak Bumb
 {
+	"C Boilerplate": {
+		"prefix": "q",
+		"body": [
+			"#include <stdio.h>\n",
+			"int main()\n{\n\t$0\n",
+			"\treturn 0;\n}"
+		],
+	},
+	"Print": {
+		"prefix": "pr",
+		"body": "printf($0);"
+	},
+	"Scan": {
+		"prefix": "sca",
+		"body": "scanf(\"$1\", &$2);"
+	},
+	"Intger": {
+		"prefix": "in",
+		"body": "int ${1:name} = $2;"
+	},
+	"Float": {
+		"prefix": "flo",
+		"body": "float ${1:name} = $2;"
+	},
+	"Double": {
+		"prefix": "dou",
+		"body": "double ${1:name} = $2;"
+	},
+	"Character": {
+		"prefix": "cha",
+		"body": "char ${1:name} = $2;"
+	},
 	"for": {
 		"prefix": "for",
 		"body": "for (${size_t} ${i} = ${1:0}; ${i} < ${2:length}; ${i}++)\n{\n\t$3\n}"
@@ -15,6 +47,10 @@
 	"if": {
 		"prefix": "if",
 		"body": "if ($1)\n{\n\t$2\n}"
+	},
+	"if else": {
+		"prefix": "ife",
+		"body": "if ($1)\n{\n\t$2\n}\nelse\n{\n\t$3\n}"
 	},
 	"else": {
 		"prefix": "else",

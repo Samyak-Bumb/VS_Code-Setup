@@ -688,5 +688,13 @@
   {
     "key": "ctrl+shift+a u",
     "command": "workbench.extensions.action.updateAllExtensions"
+  },
+  {
+    "key": "ctrl+alt+/",
+    "command": "code-runner.run"
+  },
+  {
+    "key": "ctrl+alt+n",
+    "command": "-code-runner.run"
   }
 ]
