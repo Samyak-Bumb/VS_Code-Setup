@@ -3,10 +3,9 @@
     "prefix": "q",
     "body": [
       "; ==================================================================================",
-      "; Name ..........: Name.ahk",
+      "; Name ..........: ${1:Name}.ahk",
       "; Description ...: Description",
-      "; Shortcut ......: Shortcut Keys",
-      "; Modified ......: DD-MM-YY",
+      "; Modified ......: ${2:DD-MM-YY}",
       "; Author ........: Samyak Bumb",
       "; ==================================================================================\n",
       "#Warn, UseUnsetLocal",
@@ -15,8 +14,8 @@
       "#SingleInstance Force",
       "SendMode Input",
       "SetWorkingDir %A_ScriptDir%\n",
-      "if not A_IsAdmin\n{\n\tRun *RunAs \"%A_ScriptFullPath%\"\n\tExitApp\n}\n; *****************************************************************************",
-      "${1:Start Script}\n; *****************************************************************************\n"
+      "if not A_IsAdmin\n{\n\tRun *RunAs \"%A_ScriptFullPath%\"\n\tExitApp\n}\n\nMenu, Tray, Icon, F:\\ahk\\ico\\$3\n\n; *****************************************************************************",
+      "$0\n; *****************************************************************************\n"
     ]
   },
   "Line Comment": {

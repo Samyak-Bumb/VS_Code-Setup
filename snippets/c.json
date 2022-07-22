@@ -14,23 +14,23 @@
 	},
 	"Scan": {
 		"prefix": "sca",
-		"body": "scanf(\"$1\", &$2);"
+		"body": "scanf(\"$1\", &$0);"
 	},
 	"Intger": {
 		"prefix": "in",
-		"body": "int ${1:name} = $2;"
+		"body": "int $0;"
 	},
 	"Float": {
 		"prefix": "flo",
-		"body": "float ${1:name} = $2;"
+		"body": "float $0;"
 	},
 	"Double": {
 		"prefix": "dou",
-		"body": "double ${1:name} = $2;"
+		"body": "double $0;"
 	},
 	"Character": {
 		"prefix": "cha",
-		"body": "char ${1:name} = $2;"
+		"body": "char $0;"
 	},
 	"for": {
 		"prefix": "for",
@@ -54,15 +54,19 @@
 	},
 	"else": {
 		"prefix": "else",
-		"body": "else\n{\n\t$1\n}"
+		"body": "else\n{\n\t$0\n}"
 	},
 	"else if": {
-		"prefix": "else if",
+		"prefix": "elif",
 		"body": "else if ($1)\n{\n\t$2\n}"
+	},
+	"else if else": {
+		"prefix": "ifelif",
+		"body": "if ($1)\n{\n\t$2\n}\nelse if ($3)\n{\n\t$4\n}\nelse\n{\n\t$0\n}"
 	},
 	"enum": {
 		"prefix": "enum",
-		"body": "enum ${MyEnum}\n{\n\t$1\n};"
+		"body": "enum ${MyEnum}\n{\n\t01\n};"
 	},
 	"#ifdef": {
 		"prefix": "#ifdef",
@@ -82,7 +86,7 @@
 	},
 	"switch": {
 		"prefix": "switch",
-		"body": "switch (${switch_on})\n{\ndefault:\n\tbreak;$1\n}"
+		"body": "switch ($1)\n{\ncase $2:\n\t$0\n\tbreak;\n\ndefault:\n\tbreak;\n}"
 	},
 	"union": {
 		"prefix": "union",

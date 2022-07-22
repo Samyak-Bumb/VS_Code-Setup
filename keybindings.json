@@ -696,5 +696,9 @@
   {
     "key": "ctrl+alt+n",
     "command": "-code-runner.run"
+  },
+  {
+    "key": "ctrl+shift+a l",
+    "command": "workbench.action.editor.changeEOL"
   }
 ]

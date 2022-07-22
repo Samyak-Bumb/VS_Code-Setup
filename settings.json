@@ -233,10 +233,7 @@
   "editor.minimap.enabled": false,
   "github.gitAuthentication": false,
   "extensions.autoUpdate": false,
-  "python.terminal.activateEnvInCurrentTerminal": true,
-  "python.testing.pytestEnabled": true,
   "python.disableInstallationCheck": true,
-  "python.globalModuleInstallation": true,
   "terminal.integrated.cursorBlinking": true,
   "workbench.editor.highlightModifiedTabs": true,
   "audioCues.noInlayHints": "off",
@@ -283,7 +280,6 @@
     "plaintext": false,
     "markdown": false
   },
-  "workbench.colorTheme": "Samyak Bumb",
   "editor.autoIndent": "advanced",
   "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
   "window.commandCenter": true,
@@ -309,5 +305,8 @@
   "C_Cpp.vcFormat.newLine.closeBraceSameLine.emptyType": true,
   "C_Cpp.vcFormat.space.insertAfterSemicolon": true,
   "editor.lineNumbers": "off",
-  "workbench.activityBar.visible": false
+  "python.terminal.focusAfterLaunch": true,
+  "python.experiments.enabled": false,
+  "workbench.activityBar.visible": false,
+  "workbench.colorTheme": "Samyak Bumb"
 }
